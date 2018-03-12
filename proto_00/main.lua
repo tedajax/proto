@@ -22,6 +22,10 @@ function love.load()
     Game.dbgFont = love.graphics.newFont("assets/prstartk.ttf", 32)
     love.graphics.setFont(Game.dbgFont)
 
+    Game.time = {}
+    Game.time.elapsed = 0
+    Game.time.dt = 0
+
     -- Create canvas scaled to appropriate pixel size
     Game.canvas = love.graphics.newCanvas(Game.width, Game.height, "normal", 0)
     Game.canvas:setFilter("nearest", "nearest")
@@ -79,6 +83,9 @@ function love.draw(dt)
 end
 
 function Game:update(dt)
+    Game.time.elapsed = Game.time.elapsed + dt
+    Game.time.dt = dt
+
     local left = love.keyboard.isScancodeDown("left")
     local right = love.keyboard.isScancodeDown("right")
     local up = love.keyboard.isScancodeDown("up")

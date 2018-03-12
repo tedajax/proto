@@ -15,13 +15,15 @@ function Player:new(posX, posY)
     self.frictionX = 100
     self.frictionY = 200
     self.bulletSprite = Game.bulletSprite
-    self.burstInterval = 0.43
-    self.shotInterval = 0.07
+    self.burstInterval = 0.33
+    self.shotInterval = 0.04
     self.shotsPerBurst = 3
     self.minPosX = -70
     self.maxPosX = 40
     self.minPosY = -35
     self.maxPosY = 35
+    self.dashTime = 0.5
+    self.dashAccelMult = 3
 
     -- runtime values
     self.posX = posX or 0
@@ -32,6 +34,7 @@ function Player:new(posX, posY)
     self.sprite = nil
     self.shotTimer = 0
     self.shotsLeftInBurst = 0
+    self.dashTimer = 0
 
     return obj
 end
@@ -144,14 +147,15 @@ function Player:update(dt)
 end
 
 function Player:fireBullet(isBurstStart)
-    local bullet = Bullet:new(self.posX, self.posY, self.rot, 2)
+    local rot = self.rot + math.sin(Game.time.elapsed * 1000) * 0.5
+    local bullet = Bullet:new(self.posX, self.posY, rot, 2)
     bullet.sprite = Sprite:clone(self.bulletSprite)
 
     Game.entities:addEntity(bullet)
 
     if isBurstStart then
         local kx, ky = Vec2.angleDir(self.rot)
-        Game.camera:knock(-kx * 1, -ky * 1, 4)
+        -- Game.camera:knock(-kx * 1, -ky * 1, 4)
     end
 end
 

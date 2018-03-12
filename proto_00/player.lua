@@ -40,8 +40,8 @@ function Player:new(posX, posY)
 end
 
 function Player:update(dt)
-    local h = Input.horizontal
-    local v = Input.vertical
+    local h = Input:getAxis("horizontal")
+    local v = Input:getAxis("vertical")
 
     local inputLen = math.sqrt(h * h + v * v)
     if inputLen > 0 then
@@ -117,7 +117,7 @@ function Player:update(dt)
     self.rot = Math.lerp(self.rot, self.velY / self.maxSpeedY * 45, 20 * dt)
 
     -- shooting
-    if not Input.fire then
+    if not Input:getButton("fire") then
         self.shotTimer = 0
         self.shotsLeftInBurst = self.shotsPerBurst
     else

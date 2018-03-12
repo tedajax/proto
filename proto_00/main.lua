@@ -4,12 +4,9 @@ require 'player'
 require 'camera'
 require 'entity'
 require 'bullet'
+require 'input'
 
 Game = {}
-Input = {
-    horizontal = 0,
-    vertical = 0,
-}
 
 function love.load()
     local sx, sy = love.graphics.getDimensions()
@@ -18,6 +15,21 @@ function love.load()
     Game.conf.pixelSize = 8
     Game.width = sx / Game.conf.pixelSize
     Game.height = sy / Game.conf.pixelSize
+
+    Game.input = Input:new()
+    Game.input:addAxis("horizontal", -1, 1)
+    Game.input:addAxis("vertical", -1, 1)
+    Game.input:addButton("fire")
+    Game.input:addButton("dash")
+
+    Game.input:addBinding(InputBinding:new("axis", "horizontal", "left", -1))
+    Game.input:addBinding(InputBinding:new("axis", "horizontal", "right", 1))
+    Game.input:addBinding(InputBinding:new("axis", "vertical", "up", -1))
+    Game.input:addBinding(InputBinding:new("axis", "vertical", "down", 1))
+    Game.input:addBinding(InputBinding:new("button", "fire", "z"))
+    Game.input:addBinding(InputBinding:new("button", "dash", "x"))
+
+    Input = Game.input
 
     Game.dbgFont = love.graphics.newFont("assets/prstartk.ttf", 32)
     love.graphics.setFont(Game.dbgFont)
@@ -86,20 +98,7 @@ function Game:update(dt)
     Game.time.elapsed = Game.time.elapsed + dt
     Game.time.dt = dt
 
-    local left = love.keyboard.isScancodeDown("left")
-    local right = love.keyboard.isScancodeDown("right")
-    local up = love.keyboard.isScancodeDown("up")
-    local down = love.keyboard.isScancodeDown("down")
-
-    local inputX, inputY = 0, 0
-    if left then inputX = inputX - 1 end
-    if right then inputX = inputX + 1 end
-    if up then inputY = inputY - 1 end
-    if down then inputY = inputY + 1 end
-
-    Input.horizontal = inputX
-    Input.vertical = inputY
-    Input.fire = love.keyboard.isScancodeDown("z")
+    Input:update(dt)
 
     local scrollSpeed = 16 * dt
     Game.camera:move(scrollSpeed, 0)

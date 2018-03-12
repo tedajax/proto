@@ -35,6 +35,8 @@ function Player:new(posX, posY)
     self.shotTimer = 0
     self.shotsLeftInBurst = 0
     self.dashTimer = 0
+    self.dashDirX = 0
+    self.dashDirY = 0
 
     return obj
 end
@@ -49,32 +51,29 @@ function Player:update(dt)
         v = v / inputLen
     end
 
-    -- Calculate acceleartion
-    local accelX = h * self.accelX * dt
-    local accelY = v * self.accelY * dt
-
-    if accelX == 0 then
-        if self.velX > 0 then
-            self.velX = math.max(self.velX - self.frictionX * dt, 0)
-        elseif self.velX < 0 then
-            self.velX = math.min(self.velX + self.frictionX * dt, 0)
-        end
+    if Input:getButton("dash") then
+        self.dashDirX = h
+        self.dashDirY = v
+        self.dashTimer = self.dashTime
     end
 
-    if accelY == 0 then
-        if self.velY > 0 then
-            self.velY = math.max(self.velY - self.frictionY * dt, 0)
-        elseif self.velY < 0 then
-            self.velY = math.min(self.velY + self.frictionY * dt, 0)
-        end
+    if self.dashTimer <= 0 then
+        local accelX = h * self.accelX * dt
+        local accelY = v * self.accelY * dt
+        local frictionX = self.frictionX * dt
+        local frictionY = self.frictionY * dt
+
+        self:updateVel(accelX, accelY,
+            self.maxSpeedX, self.maxSpeedY,
+            frictionX, frictionY)
+    else
+        self.dashTimer = self.dashTimer - dt
+
+        local accelX = self.dashDirX * self.accelX * self.dashAccelMult * dt
+        local accelY = self.dashDirY * self.accelY * self.dashAccelMult * dt
+
+        self:updateVel(accelX, accelY, 1000, 1000, 0, 0)
     end
-
-    -- Update velocity and position
-    self.velX = self.velX + accelX
-    self.velY = self.velY + accelY
-
-    self.velX = Math.clamp(self.velX, -self.maxSpeedX, self.maxSpeedX)
-    self.velY = Math.clamp(self.velY, -self.maxSpeedY, self.maxSpeedY)
 
     self.posX = self.posX + self.velX * dt
     self.posY = self.posY + self.velY * dt
@@ -144,6 +143,31 @@ function Player:update(dt)
         self.sprite.posY = self.posY
         self.sprite.rot = self.rot
     end
+end
+
+function Player:updateVel(accelX, accelY, maxX, maxY, frictionX, frictionY)
+    if accelX == 0 then
+        if self.velX > 0 then
+            self.velX = math.max(self.velX - self.frictionX, 0)
+        elseif self.velX < 0 then
+            self.velX = math.min(self.velX + self.frictionX, 0)
+        end
+    end
+
+    if accelY == 0 then
+        if self.velY > 0 then
+            self.velY = math.max(self.velY - self.frictionY, 0)
+        elseif self.velY < 0 then
+            self.velY = math.min(self.velY + self.frictionY, 0)
+        end
+    end
+
+    -- Update velocity and position
+    self.velX = self.velX + accelX
+    self.velY = self.velY + accelY
+
+    self.velX = Math.clamp(self.velX, -maxX, maxX)
+    self.velY = Math.clamp(self.velY, -maxY, maxY)
 end
 
 function Player:fireBullet(isBurstStart)

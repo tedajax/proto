@@ -12,9 +12,9 @@ function love.load()
     local sx, sy = love.graphics.getDimensions()
 
     Game.conf = {}
-    Game.conf.pixelSize = 8
-    Game.width = sx / Game.conf.pixelSize
-    Game.height = sy / Game.conf.pixelSize
+    Game.width = 160
+    Game.height = 90
+    Game.conf.pixelSize = sx / Game.width
 
     Game.input = Input:new()
     Game.input:addAxis("horizontal", -1, 1)

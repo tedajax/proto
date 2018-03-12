@@ -22,8 +22,10 @@ function Player:new(posX, posY)
     self.maxPosX = 40
     self.minPosY = -35
     self.maxPosY = 35
-    self.dashTime = 0.5
+    self.dashTime = 0.2
     self.dashAccelMult = 3
+    self.dashMaxX = 80
+    self.dashMaxY = 100
 
     -- runtime values
     self.posX = posX or 0
@@ -72,7 +74,7 @@ function Player:update(dt)
         local accelX = self.dashDirX * self.accelX * self.dashAccelMult * dt
         local accelY = self.dashDirY * self.accelY * self.dashAccelMult * dt
 
-        self:updateVel(accelX, accelY, 1000, 1000, 0, 0)
+        self:updateVel(accelX, accelY, self.dashMaxX, self.dashMaxY, 0, 0)
     end
 
     self.posX = self.posX + self.velX * dt

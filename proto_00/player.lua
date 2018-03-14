@@ -1,4 +1,5 @@
 require 'algebra'
+require 'debug'
 
 Player = {}
 
@@ -8,11 +9,11 @@ function Player:new(posX, posY)
     self.__index = self
 
     -- config values
-    self.accelX = 800
+    self.accelX = 200
     self.accelY = 200
-    self.maxSpeedX = 40
+    self.maxSpeedX = 50
     self.maxSpeedY = 50
-    self.frictionX = 100
+    self.frictionX = 200
     self.frictionY = 200
     self.bulletSprite = Game.bulletSprite
     self.burstInterval = 0.33
@@ -22,9 +23,9 @@ function Player:new(posX, posY)
     self.maxPosX = 40
     self.minPosY = -35
     self.maxPosY = 35
-    self.dashTime = 0.2
-    self.dashAccelMult = 3
-    self.dashMaxX = 80
+    self.dashTime = 0.5
+    self.dashAccelMult = 1
+    self.dashMaxX = 100
     self.dashMaxY = 100
 
     -- runtime values
@@ -115,7 +116,7 @@ function Player:update(dt)
     end
 
     -- update rotation based on y velocity
-    self.rot = Math.lerp(self.rot, self.velY / self.maxSpeedY * 45, 20 * dt)
+    self.rot = Math.lerp(self.rot, Math.clamp(self.velY / self.maxSpeedY, -1, 1) * 45, 20 * dt)
 
     -- shooting
     if not Input:getButton("fire") then
@@ -145,22 +146,28 @@ function Player:update(dt)
         self.sprite.posY = self.posY
         self.sprite.rot = self.rot
     end
+
+    Debug.Text:push(string.format("x: %d, y: %d", self.posX, self.posY))
+    Debug.Text:push(string.format("vx: %d, vy: %d", self.velX, self.velY))
+    Debug.Text:push(string.format("maxX: %d, maxY: %d", self.maxSpeedX, self.maxSpeedY))
 end
 
 function Player:updateVel(accelX, accelY, maxX, maxY, frictionX, frictionY)
+    -- apply friction when no input present
+    -- friction will not allow the velocity to change direction
     if accelX == 0 then
         if self.velX > 0 then
-            self.velX = math.max(self.velX - self.frictionX, 0)
+            self.velX = math.max(self.velX - frictionX, 0)
         elseif self.velX < 0 then
-            self.velX = math.min(self.velX + self.frictionX, 0)
+            self.velX = math.min(self.velX + frictionX, 0)
         end
     end
 
     if accelY == 0 then
         if self.velY > 0 then
-            self.velY = math.max(self.velY - self.frictionY, 0)
+            self.velY = math.max(self.velY - frictionY, 0)
         elseif self.velY < 0 then
-            self.velY = math.min(self.velY + self.frictionY, 0)
+            self.velY = math.min(self.velY + frictionY, 0)
         end
     end
 
@@ -168,8 +175,19 @@ function Player:updateVel(accelX, accelY, maxX, maxY, frictionX, frictionY)
     self.velX = self.velX + accelX
     self.velY = self.velY + accelY
 
-    self.velX = Math.clamp(self.velX, -maxX, maxX)
-    self.velY = Math.clamp(self.velY, -maxY, maxY)
+    -- clamp velocity by applying double friction
+    local frictionScl = 1
+    if self.velX > maxX then
+        self.velX = math.max(self.velX - accelX * frictionScl, maxX)
+    elseif self.velX < -maxX then
+        self.velX = math.min(self.velX + accelX * frictionScl, -maxX)
+    end
+
+    if self.velY > maxY then
+        self.velY = math.max(self.velY - accelY * frictionScl, maxY)
+    elseif self.velY < -maxY then
+        self.velY = math.min(self.velY + accelY * frictionScl, -maxY)
+    end
 end
 
 function Player:fireBullet(isBurstStart)
@@ -192,6 +210,11 @@ function Player:render(dt)
 
 end
 
+-- should always return true hehehe...
+function Player:isDashing()
+    return self.dashTimer > 0
+end
+
 function Player:debugRender()
-    love.graphics.print(string.format("x: %d, y: %d", self.posX, self.posY), 5, 5)
+
 end

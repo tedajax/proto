@@ -5,6 +5,7 @@ require 'camera'
 require 'entity'
 require 'bullet'
 require 'input'
+require 'gamedebug'
 
 Game = {}
 
@@ -31,7 +32,7 @@ function love.load()
 
     Input = Game.input
 
-    Game.dbgFont = love.graphics.newFont("assets/prstartk.ttf", 32)
+    Game.dbgFont = love.graphics.newFont("assets/prstartk.ttf", 18)
     love.graphics.setFont(Game.dbgFont)
 
     Game.time = {}
@@ -73,6 +74,7 @@ function love.keyreleased(keypressed)
 end
 
 function love.update(dt)
+    Debug.Text:clear()
     Game:update(dt)
 end
 
@@ -124,5 +126,6 @@ function Game:render(dt)
 end
 
 function Game:debugRender()
-    Game.player:debugRender()
+    --Game.player:debugRender()
+    Debug.Text:render(dt)
 end

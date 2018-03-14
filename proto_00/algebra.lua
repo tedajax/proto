@@ -74,6 +74,10 @@ function Math.clamp(n, min, max)
     end
 end
 
+function Math.clamp01(n)
+    return Math.clamp(n, 0, 1)
+end
+
 Math.PI = math.pi
 Math.TWO_PI = math.pi * 2
 Math.PI_OVER_2 = math.pi / 2

@@ -6,6 +6,7 @@ require 'entity'
 require 'bullet'
 require 'input'
 require 'gamedebug'
+require 'enemy'
 
 Game = {}
 
@@ -60,6 +61,10 @@ function love.load()
     Game.player.sprite = playerSprite
 
     Game.entities:addEntity(Game.player)
+
+    for i = 1, 20 do
+        Game.entities:addEntity(Enemy:new((i + 10) * 5, i - 10))
+    end
 
     Game.camera = Camera:new()
 end

@@ -8,6 +8,7 @@ function Entity:new(id)
 
     obj.id = id
     obj.shouldDestroy = false
+    obj.tag = "default"
 
     return obj
 end

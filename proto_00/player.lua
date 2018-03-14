@@ -8,6 +8,8 @@ function Player:new(posX, posY)
     setmetatable(obj, self)
     self.__index = self
 
+    self.tag = "player"
+
     -- config values
     self.accelX = 200
     self.accelY = 200

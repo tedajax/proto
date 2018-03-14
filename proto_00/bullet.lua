@@ -16,6 +16,7 @@ function Bullet:new(posX, posY, rot, lifetime)
     obj.speed = 200
     obj.lifetime = lifetime or 0
     obj.shouldDestroy = false
+    obj.tag = "player_bullet"
 
     return obj
 end

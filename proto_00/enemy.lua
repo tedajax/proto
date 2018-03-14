@@ -12,6 +12,7 @@ function Enemy:new(posX, posY)
     obj.posX = posX or 0
     obj.posY = posY or 0
     obj.rot = 0
+    obj.size = 5
 
     return obj
 end

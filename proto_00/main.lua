@@ -1,4 +1,5 @@
 Util = require 'util'
+Physics = require 'physics'
 require 'sprite'
 require 'player'
 require 'camera'
@@ -7,15 +8,56 @@ require 'bullet'
 require 'input'
 require 'gamedebug'
 require 'enemy'
+require 'imagemngr'
 
 Game = {}
 
+function beginContact(a, b, coll)
+    Game.physics:beginContact(a, b, coll)
+end
+
+function endContact(a, b, coll)
+    Game.physics:endContact(a, b, coll)
+end
+
+function preSolve(a, b, coll)
+    Game.physics:preSolve(a, b, coll)
+end
+
+function postSolve(a, b, coll, normImp, tanImp)
+    Game.physics:postSolve(a, b, coll, normImp, tanImp)
+end
+
 function love.load()
+    math.randomseed(os.time())
+
     local sx, sy = love.graphics.getDimensions()
 
+    local layers = {
+        DEFAULT = 0,
+        PLAYER = 1,
+        ENEMY = 2,
+        PLAYER_ATTACK = 3,
+        ENEMY_ATTACK = 4,
+    }
+
+    local masks = {
+        0,
+        bit.bor(1, 4),
+        bit.bor(2, 8),
+        bit.bor(1, 4, 8),
+        bit.bor(2, 4, 8),
+    }
+
+    Game.physics = Physics(8, 0, -9.81,
+        beginContact, endContact, preSolve, postSolve,
+        layers, masks)
+
     Game.conf = {}
-    Game.width = 160
-    Game.height = 90
+    Game.width = 160 * 1
+    Game.height = 90 * 1
+    Game.scrWidth = sx
+    Game.scrHeight = sy
     Game.conf.pixelSize = sx / Game.width
 
     Game.input = Input:new()
@@ -46,24 +88,22 @@ function love.load()
 
     Game.entities = EntitySystem:new()
 
-    Game.images = {}
-    Game.images["player"] = love.graphics.newImage("assets/ship.png")
-    Game.images["bullet"] = love.graphics.newImage("assets/bullet.png")
+    Game.images = ImageMngr:new()
+    Game.images:load("player", "assets/ship.png")
+    Game.images:load("bullet", "assets/bullet.png")
+    Game.images:load("charge_shot_bg", "assets/charge_shot_bg.png")
+    Game.images:load("charge_shot_fg", "assets/charge_shot_fg.png")
 
-    for k, v in pairs(Game.images) do
-        v:setFilter("nearest", "nearest")
-    end
+    Game.bulletSprite = Game.images:createSprite("bullet")
 
-    Game.bulletSprite = Sprite:new(Game.images["bullet"])
-
-    local playerSprite = Sprite:new(Game.images["player"])
+    local playerSprite = Game.images:createSprite("player")
     Game.player = Player:new(0, 0)
     Game.player.sprite = playerSprite
 
     Game.entities:addEntity(Game.player)
 
     for i = 1, 20 do
-        Game.entities:addEntity(Enemy:new((i + 10) * 5, i - 10))
+        Game.entities:addEntity(Enemy:new((i + 1) * 50, math.random(-30, 30)))
     end
 
     Game.camera = Camera:new()
@@ -80,6 +120,7 @@ end
 
 function love.update(dt)
     Debug.Text:clear()
+    Debug.Messages:update(dt)
     Game:update(dt)
 end
 
@@ -99,11 +140,19 @@ function love.draw(dt)
         Game.conf.pixelSize, Game.conf.pixelSize)
 
     Game:debugRender()
+
+    local fpsStr = string.format("FPS: %d", love.timer.getFPS())
+    local strWidth = Game.dbgFont:getWidth(fpsStr)
+    love.graphics.printf(fpsStr, Game.scrWidth - strWidth, 5, strWidth, "right")
+
+    Debug.Messages:render()
 end
 
 function Game:update(dt)
     Game.time.elapsed = Game.time.elapsed + dt
     Game.time.dt = dt
+
+    Game.physics:update(dt)
 
     Input:update(dt)
 
@@ -131,6 +180,5 @@ function Game:render(dt)
 end
 
 function Game:debugRender()
-    --Game.player:debugRender()
     Debug.Text:render(dt)
 end

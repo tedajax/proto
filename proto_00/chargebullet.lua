@@ -4,9 +4,9 @@ require 'algebra'
 ChargeBullet = {}
 
 ChargeBullet.States = {
-    charging = 1,
-    charged = 2,
-    launched = 3,
+    CHARGING = 1,
+    CHARGED = 2,
+    LAUNCHED = 3,
 }
 
 function ChargeBullet:new(px, py, r, lifetime)
@@ -14,6 +14,10 @@ function ChargeBullet:new(px, py, r, lifetime)
     setmetatable(obj, self)
     self.__index = self
 
+    -- Config
+    obj.speed = 40
+
+    -- Runtime
     obj.posX = px or 0
     obj.posY = py or 0
     obj.rot = r or 0
@@ -22,11 +26,9 @@ function ChargeBullet:new(px, py, r, lifetime)
     obj.targetX = 0
     obj.targetY = 0
     obj.lifetime = lifetime or 0
-
-    obj.state = ChargeBullet.States.charging
-
-    obj.maxRadius = 4
-    obj.speed = 40
+    obj.state = ChargeBullet.States.CHARGING
+    obj.spriteBg = Game.images:createSprite("charge_shot_bg")
+    obj.spriteFg = Game.images:createSprite("charge_shot_fg")
 
     return obj
 end
@@ -37,7 +39,7 @@ function ChargeBullet:setTarget(target)
 end
 
 function ChargeBullet:launch()
-    self.state = ChargeBullet.States.launched
+    self.state = ChargeBullet.States.LAUNCHED
 end
 
 function ChargeBullet:destroy()
@@ -45,7 +47,7 @@ function ChargeBullet:destroy()
 end
 
 function ChargeBullet:update(dt)
-    if self.state == ChargeBullet.States.launched and self.lifetime > 0 then
+    if self.state == ChargeBullet.States.LAUNCHED and self.lifetime > 0 then
         self.lifetime = self.lifetime - dt
         if self.lifetime <= 0 then
             self:destroy()
@@ -61,8 +63,8 @@ function ChargeBullet:update(dt)
     end
 
     if self.state == ChargeBullet.States.charging and self.chargeFrac >= 1 then
-        self.state = ChargeBullet.States.charged
-    elseif self.state == ChargeBullet.States.launched then
+        self.state = ChargeBullet.States.CHARGED
+    elseif self.state == ChargeBullet.States.LAUNCHED then
         self.targetX = self.posX + math.cos(Math.radians(self.rot)) * 100
         self.targetY = self.posY + math.sin(Math.radians(self.rot)) * 100
 
@@ -74,9 +76,34 @@ function ChargeBullet:update(dt)
         self.posX = self.posX + dirX * self.speed * dt
         self.posY = self.posY + dirY * self.speed * dt
     end
+
+    self.spriteBg.sclX = self.chargeFrac
+    self.spriteBg.sclY = self.chargeFrac
+
+    self.spriteBg.posX = self.posX
+    self.spriteBg.posY = self.posY
+    self.spriteFg.posX = self.posX
+    self.spriteFg.posY = self.posY
+
+    self.spriteBg.rot = self.spriteBg.rot + 180 * dt
+    self.spriteFg.rot = self.spriteFg.rot - 180 * dt
+
+    local s = 1 + math.sin(Game.time.elapsed * 10) * 0.2
+    self.spriteFg.sclX = s
+    self.spriteFg.sclY = s
 end
 
 function ChargeBullet:render(dt)
-    love.graphics.circle("fill", math.floor(self.posX), math.floor(self.posY), self.maxRadius * Math.clamp01(self.chargeFrac));
+    --love.graphics.setColor(255, 255, 63, 191)
+
+    love.graphics.setColor(255, 255, 255, 255)
+    self.spriteBg:render()
+    love.graphics.setColor(255, 255, 255, 127)
+
+    if self.chargeFrac >= 1 then
+        self.spriteFg:render()
+    end
+
+    love.graphics.setColor(255, 255, 255, 255)
 end
 

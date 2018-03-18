@@ -228,7 +228,7 @@ end
 
 function Player:createBullet(bulletType, px, py, r, lifetime)
     if bulletType == "bullet" then
-        return Bullet:new(px, py, r, lifetime)
+        return Bullet:new("bullet", px, py, r, lifetime)
     elseif bulletType == "charged" then
         return ChargeBullet:new(px, py, r, lifetime)
     end
@@ -243,7 +243,6 @@ function Player:fireBullet(isBurstStart)
     local rot = self.rot + math.sin(Game.time.elapsed * 1000) * 0.5
     local sx, sy = self:getShotPos()
     local bullet = self:createBullet("bullet", sx, sy, rot, 2)
-    bullet.sprite = Sprite:clone(self.bulletSprite)
 
     Game.entities:addEntity(bullet)
 
@@ -269,8 +268,4 @@ end
 -- should always return true hehehe...
 function Player:isDashing()
     return self.dashTimer > 0
-end
-
-function Player:debugRender()
-
 end

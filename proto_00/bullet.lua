@@ -1,28 +1,53 @@
+Physics = require 'physics'
 require 'algebra'
 require 'entity'
 
 Bullet = {}
 
-function Bullet:new(posX, posY, rot, lifetime)
+function Bullet:new(sprName, posX, posY, rot, lifetime)
     local obj = Game.entities:createEntity()
 
     setmetatable(obj, self)
     self.__index = self
 
-    obj.sprite = nil
-    obj.posX = posX or 0
-    obj.posY = posY or 0
-    obj.rot = rot or 0
+    obj.sprite = Game.images:createSprite(sprName)
     obj.speed = 200
     obj.lifetime = lifetime or 0
     obj.shouldDestroy = false
     obj.tag = "player_bullet"
 
+
+    obj.shape = love.physics.newRectangleShape(8, 2)
+    obj.body = love.physics.newBody(Game.physics.world, 4, 1)
+    obj.fixture = love.physics.newFixture(obj.body, obj.shape)
+
+    obj.body:setType("dynamic")
+    obj.body:setGravityScale(0)
+    obj.body:setBullet(true)
+    obj.body:setFixedRotation(true)
+
+    obj.fixture:setSensor(true)
+    obj.fixture:setUserData(obj)
+
+    obj.body:setPosition(posX, posY)
+    obj.body:setAngle(Math.radians(rot))
+
+    Game.physics:setBodyLayer(obj.body, Game.physics.layers.PLAYER_ATTACK)
+
     return obj
+end
+
+function Bullet:onDestroy()
+    self.fixture:destroy()
+    self.body:destroy()
 end
 
 function Bullet:destroy()
     self.shouldDestroy = true
+end
+
+function Bullet:setPosition(px, py)
+    self.body:setPosition(self.posX, self.posY)
 end
 
 function Bullet:update(dt)
@@ -33,17 +58,23 @@ function Bullet:update(dt)
         end
     end
 
-    local vx = math.cos(Math.radians(self.rot)) * self.speed * dt
-    local vy = math.sin(Math.radians(self.rot)) * self.speed * dt
+    self.rot = self.body:getAngle()
 
-    self.posX = self.posX + vx
-    self.posY = self.posY + vy
+    local vx = math.cos(self.rot) * self.speed
+    local vy = math.sin(self.rot) * self.speed
+    self.body:setLinearVelocity(vx, vy)
+
+    self.posX, self.posY = self.body:getPosition()
 
     if self.sprite ~= nil then
         self.sprite.posX = self.posX
         self.sprite.posY = self.posY
-        self.sprite.rot = self.rot
+        self.sprite.rot = Math.degrees(self.rot)
     end
+end
+
+function Bullet:onCollEnter(other, coll)
+    self:destroy()
 end
 
 function Bullet:render(dt)

@@ -53,6 +53,9 @@ function EntitySystem:update(dt)
     end
 
     for i, id in ipairs(self.toDestroyQueue) do
+        if type(self.entities[id].onDestroy) == "function" then
+            self.entities[id]:onDestroy()
+        end
         self.entities[id] = nil
         self.toDestroyQueue[i] = nil
     end

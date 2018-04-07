@@ -50,8 +50,8 @@ function Player:new(posX, posY)
     obj.dashTimer = 0
     obj.dashDirX = 0
     obj.dashDirY = 0
-    obj.shotOffX = 4
-    obj.shotOffY = -1
+    obj.shotOffX = 8
+    obj.shotOffY = -6
 
     return obj
 end
@@ -187,13 +187,15 @@ function Player:update(dt)
 
     -- update sprite positioning
     if self.sprite ~= nil then
+        self.sprite.sclX = 1
+        self.sprite.sclX = 1
         self.sprite.posX = self.posX
         self.sprite.posY = self.posY
-        self.sprite.rot = self.rot
+        -- self.sprite.rot = self.rot
     end
 
     Debug.Text:push(string.format("charge: %f", self.chargeTimer / self.fullChargeTime))
-    Debug.Text:push(string.format("x: %d, y: %d", self.posX, self.posY))
+    Debug.Text:push(string.format("x: %f, y: %f", self.posX, self.posY))
     Debug.Text:push(string.format("vx: %d, vy: %d", self.velX, self.velY))
     Debug.Text:push(string.format("maxX: %d, maxY: %d", self.maxSpeedX, self.maxSpeedY))
 end

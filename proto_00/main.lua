@@ -9,6 +9,7 @@ require 'input'
 require 'gamedebug'
 require 'enemy'
 require 'imagemngr'
+require 'hsv'
 
 Game = {}
 
@@ -54,8 +55,8 @@ function love.load()
         layers, masks)
 
     Game.conf = {}
-    Game.width = 160 * 1
-    Game.height = 90 * 1
+    Game.width = 160 -- 1280
+    Game.height = 90 -- 720
     Game.scrWidth = sx
     Game.scrHeight = sy
     Game.conf.pixelSize = sx / Game.width
@@ -89,7 +90,7 @@ function love.load()
     Game.entities = EntitySystem:new()
 
     Game.images = ImageMngr:new()
-    Game.images:load("player", "assets/ship.png")
+    Game.images:load("player", "assets/space_wizard.png")
     Game.images:load("bullet", "assets/bullet.png")
     Game.images:load("charge_shot_bg", "assets/charge_shot_bg.png")
     Game.images:load("charge_shot_fg", "assets/charge_shot_fg.png")
@@ -127,7 +128,7 @@ end
 function love.draw(dt)
     love.graphics.setCanvas(Game.canvas)
     Game.camera:push()
-        love.graphics.clear(44, 232, 245)
+        love.graphics.clear(7, 0, 25)
 
         Game:render(dt)
     Game.camera:pop()
@@ -165,7 +166,7 @@ function Game:update(dt)
 end
 
 function Game:render(dt)
-    love.graphics.setColor(54, 0, 255)
+    love.graphics.setColor(0, 0, 0)
     for i = -12, 12 do
         for j = -4, 4 do
             local rx = i * 16 + math.floor(Game.player.posX / 32) * 32

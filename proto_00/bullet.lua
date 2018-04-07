@@ -15,7 +15,7 @@ function Bullet:new(sprName, posX, posY, rot, lifetime)
     obj.lifetime = lifetime or 0
     obj.shouldDestroy = false
     obj.tag = "player_bullet"
-
+    obj.timeOff = Game.time.elapsed
 
     obj.shape = love.physics.newRectangleShape(8, 2)
     obj.body = love.physics.newBody(Game.physics.world, 4, 1)
@@ -79,6 +79,8 @@ end
 
 function Bullet:render(dt)
     if self.sprite ~= nil then
+        local r, g, b = rgbFromHsv((self.lifetime * 360) + self.timeOff, 1, 1)
+        love.graphics.setColor(r, g, b)
         self.sprite:render(dt)
     end
 end

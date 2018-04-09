@@ -50,15 +50,16 @@ function love.load()
         bit.bor(2, 4, 8),
     }
 
-    Game.physics = Physics(8, 0, -9.81,
+    Game.physics = Physics(64, 0, -9.81,
         beginContact, endContact, preSolve, postSolve,
         layers, masks)
 
     Game.conf = {}
-    Game.width = 160 -- 1280
-    Game.height = 90 -- 720
+    Game.width = 1280
+    Game.height = 720
     Game.scrWidth = sx
     Game.scrHeight = sy
+    Game.timescale = 1
     Game.conf.pixelSize = sx / Game.width
 
     Game.input = Input:new()
@@ -90,7 +91,7 @@ function love.load()
     Game.entities = EntitySystem:new()
 
     Game.images = ImageMngr:new()
-    Game.images:load("player", "assets/space_wizard.png")
+    Game.images:load("player", "assets/space_wizard2.png")
     Game.images:load("bullet", "assets/bullet.png")
     Game.images:load("charge_shot_bg", "assets/charge_shot_bg.png")
     Game.images:load("charge_shot_fg", "assets/charge_shot_fg.png")
@@ -110,19 +111,23 @@ function love.load()
     Game.camera = Camera:new()
 end
 
-function love.keypressed(keypressed)
-    if keypressed == "escape" then
+function love.keypressed(key)
+    if key == "escape" then
         love.event.quit()
+    elseif key == "=" then
+        Game.timescale = 1
+    elseif key == "-" then
+        Game.timescale = 0.1
     end
 end
 
-function love.keyreleased(keypressed)
+function love.keyreleased(key)
 end
 
 function love.update(dt)
     Debug.Text:clear()
     Debug.Messages:update(dt)
-    Game:update(dt)
+    Game:update(dt * Game.timescale)
 end
 
 function love.draw(dt)
@@ -157,9 +162,9 @@ function Game:update(dt)
 
     Input:update(dt)
 
-    local scrollSpeed = 16 * dt
-    Game.camera:move(scrollSpeed, 0)
-    Game.player.posX = Game.player.posX + scrollSpeed
+    -- local scrollSpeed = 16 * 8 * dt
+    -- Game.camera:move(scrollSpeed, 0)
+    -- Game.player.posX = Game.player.posX + scrollSpeed
 
     Game.camera:update(dt)
     Game.entities:update(dt)
@@ -167,11 +172,13 @@ end
 
 function Game:render(dt)
     love.graphics.setColor(0, 0, 0)
+    local tw = 16 * 8
     for i = -12, 12 do
         for j = -4, 4 do
-            local rx = i * 16 + math.floor(Game.player.posX / 32) * 32
+            -- local rx = i * tw + math.floor(Game.player.posX / tw * 2) * tw * 2
+            local rx = i * tw + math.floor(Game.player.posX / (tw * 2)) * (tw * 2)
             if i % 2 == j % 2 then
-                love.graphics.rectangle("fill", rx, j * 16, 16, 16)
+                love.graphics.rectangle("fill", rx, j * tw, tw, tw)
             end
         end
     end

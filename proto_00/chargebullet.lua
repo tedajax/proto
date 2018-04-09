@@ -15,7 +15,7 @@ function ChargeBullet:new(px, py, r, lifetime)
     self.__index = self
 
     -- Config
-    obj.speed = 40
+    obj.speed = 320
 
     -- Runtime
     obj.posX = px or 0
@@ -30,6 +30,8 @@ function ChargeBullet:new(px, py, r, lifetime)
     obj.spriteBg = Game.images:createSprite("charge_shot_bg")
     obj.spriteFg = Game.images:createSprite("charge_shot_fg")
     obj.timeOff = Game.time.elapsed
+
+    obj.spriteFg.rot = 45
 
     return obj
 end
@@ -78,8 +80,9 @@ function ChargeBullet:update(dt)
         self.posY = self.posY + dirY * self.speed * dt
     end
 
-    self.spriteBg.sclX = self.chargeFrac
-    self.spriteBg.sclY = self.chargeFrac
+    local s = self.chargeFrac - 0.2 + ((math.sin(Game.time.elapsed * 10) + 1) / 2) * 0.2
+    self.spriteBg.sclX = s * 8
+    self.spriteBg.sclY = s * 8
 
     self.spriteBg.posX = self.posX
     self.spriteBg.posY = self.posY
@@ -87,23 +90,23 @@ function ChargeBullet:update(dt)
     self.spriteFg.posY = self.posY
 
     self.spriteBg.rot = self.spriteBg.rot + 180 * dt
-    self.spriteFg.rot = self.spriteFg.rot - 180 * dt
+    self.spriteFg.rot = self.spriteFg.rot + 180 * dt
 
-    local s = self.chargeFrac - 0.2 + ((math.sin(Game.time.elapsed * 10) + 1) / 2) * 0.2
-    self.spriteFg.sclX = s
-    self.spriteFg.sclY = s
+    local s = self.chargeFrac - 0.2 + ((math.sin(Game.time.elapsed * 25) + 1) / 2) * 0.3
+    self.spriteFg.sclX = s * 8
+    self.spriteFg.sclY = s * 8
 end
 
 function ChargeBullet:render(dt)
     --love.graphics.setColor(255, 255, 63, 191)
 
     love.graphics.setColor(255, 255, 255, 255)
-    local r, g, b = rgbFromHsv(Game.time.elapsed * 90 + self.timeOff, 1, 1)
+    local r, g, b = rgbFromHsv((Game.time.elapsed - self.timeOff) * 90, 1, 1)
     love.graphics.setColor(r, g, b)
     self.spriteBg:render()
     love.graphics.setColor(255, 255, 255, 127)
 
-        local r, g, b = rgbFromHsv(Game.time.elapsed * 90 + self.timeOff + 180, 1, 1)
+        local r, g, b = rgbFromHsv((Game.time.elapsed - self.timeOff * 2) * 500, 0.2, 1)
         love.graphics.setColor(r, g, b, 127)
         self.spriteFg:render()
 

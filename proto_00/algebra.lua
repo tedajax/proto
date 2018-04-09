@@ -134,6 +134,14 @@ function Math.mod(a, b)
     end
 end
 
+function Math.nsin(r)
+    return (math.sin(r) + 1) / 2
+end
+
+function Math.ncos(r)
+    return (math.cos(r) + 1) / 2
+end
+
 function Math.lerpDegrees(a, b, t)
     local ar, br = Math.radians(a), Math.radians(b)
 
@@ -144,4 +152,10 @@ function Math.lerpDegrees(a, b, t)
     local cy = Math.lerp(ay, by, t)
 
     return Vec2.getAngle(cx, cy)
+end
+
+function Math.distance(x1, y1, x2, y2)
+    local dx = x2 - x1
+    local dy = y2 - y1
+    return math.sqrt(dx * dx + dy * dy)
 end

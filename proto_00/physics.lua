@@ -40,14 +40,17 @@ end
 function Physics:postSolve(a, b, coll, normImp, tanImp)
 end
 
-function Physics:setBodyLayer(body, layer)
+function Physics:setBodyLayer(body, layer, group)
     local fixtures = body:getFixtureList()
     local mask = self.masks[layer + 1]
+    local category = bit.lshift(1, layer)
+    local group = group or 0
+
     for i, f in ipairs(fixtures) do
         if layer == self.layers.DEFAULT then
-            f:setFilterData(0, 0, 0)
+            f:setFilterData(0, 0, group)
         else
-            f:setFilterData(bit.lshift(1, layer), mask, 0)
+            f:setFilterData(bit.lshift(1, layer), mask, group)
         end
     end
 end

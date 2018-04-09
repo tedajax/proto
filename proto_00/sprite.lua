@@ -1,6 +1,12 @@
 require 'algebra'
+local bit = require 'bit'
 
 Sprite = {}
+Sprite.Flip = {
+    NONE = 0,
+    X = 1,
+    Y = 2,
+}
 
 function Sprite:new(image)
     local obj = {}
@@ -20,6 +26,7 @@ function Sprite:new(image)
     obj.sclY = 1
     obj.ognX = 0.5
     obj.ognY = 0.5
+    obj.flip = Sprite.Flip.NONE
 
     return obj
 end
@@ -44,10 +51,20 @@ function Sprite:render(dt)
     local ox = self.ognX * self.width
     local oy = self.ognY * self.height
 
+    local sx, sy = self.sclX, self.sclY
+
+    if bit.band(self.flip, Sprite.Flip.X) ~= 0 then
+        sx = sx * -1
+    end
+
+    if bit.band(self.flip, Sprite.Flip.Y) ~= 0 then
+        sy = sy * -1
+    end
+
     love.graphics.draw(self.image,
         self.posX, self.posY,
         Math.radians(self.rot),
-        self.sclX, self.sclY,
+        sx, sy,
         ox, oy)
 end
 

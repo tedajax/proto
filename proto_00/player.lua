@@ -1,6 +1,7 @@
 require 'algebra'
 require 'debug'
 require 'chargebullet'
+require 'rainbowtrail'
 
 Player = {}
 
@@ -12,27 +13,27 @@ function Player:new(posX, posY)
     obj.tag = "player"
 
     -- config values
-    obj.accelX = 200
-    obj.accelY = 200
-    obj.maxSpeedX = 50
-    obj.maxSpeedY = 50
-    obj.frictionX = 200
-    obj.frictionY = 200
+    obj.accelX = 1600
+    obj.accelY = 1600
+    obj.maxSpeedX = 400
+    obj.maxSpeedY = 400
+    obj.frictionX = 1600
+    obj.frictionY = 1600
     obj.bulletSprite = Game.bulletSprite
     obj.burstInterval = 0.53
-    obj.shotInterval = 0.07
+    obj.shotInterval = 0.08
     obj.shotsPerBurst = 3
     obj.burstPerHold = 1
     obj.chargeShotDelay = 0.2
     obj.fullChargeTime = 0.33
-    obj.minPosX = -70
-    obj.maxPosX = 40
-    obj.minPosY = -35
-    obj.maxPosY = 35
+    obj.minPosX = -560
+    obj.maxPosX = 320
+    obj.minPosY = -280
+    obj.maxPosY = 280
     obj.dashTime = 0.5
-    obj.dashAccelMult = 1
-    obj.dashMaxX = 100
-    obj.dashMaxY = 100
+    obj.dashAccelMult = 3
+    obj.dashMaxX = 800
+    obj.dashMaxY = 800
 
     -- runtime values
     obj.posX = posX or 0
@@ -50,8 +51,10 @@ function Player:new(posX, posY)
     obj.dashTimer = 0
     obj.dashDirX = 0
     obj.dashDirY = 0
-    obj.shotOffX = 8
-    obj.shotOffY = -6
+    obj.shotOffX = 40
+    obj.shotOffY = -48
+
+    obj.trail = RainbowTrail:new()
 
     return obj
 end
@@ -66,7 +69,13 @@ function Player:update(dt)
         v = v / inputLen
     end
 
-    if Input:getButton("dash") then
+    -- if h > 0 then
+    --     self.sprite.flip = Sprite.Flip.NONE
+    -- elseif h < 0 then
+    --     self.sprite.flip = Sprite.Flip.X
+    -- end
+
+    if Input:getButtonPressed("dash") then
         self.dashDirX = h
         self.dashDirY = v
         self.dashTimer = self.dashTime
@@ -187,12 +196,14 @@ function Player:update(dt)
 
     -- update sprite positioning
     if self.sprite ~= nil then
-        self.sprite.sclX = 1
-        self.sprite.sclX = 1
+        self.sprite.sclX = 8
+        self.sprite.sclY = 8
         self.sprite.posX = self.posX
         self.sprite.posY = self.posY
         -- self.sprite.rot = self.rot
     end
+
+    self.trail:update(self.posX, self.posY, dt)
 
     Debug.Text:push(string.format("charge: %f", self.chargeTimer / self.fullChargeTime))
     Debug.Text:push(string.format("x: %f, y: %f", self.posX, self.posY))
@@ -237,7 +248,7 @@ function Player:createBullet(bulletType, px, py, r, lifetime)
 end
 
 function Player:getShotPos()
-    local sx, sy = Vec2.rotate(self.shotOffX, self.shotOffY, self.rot)
+    local sx, sy = Vec2.rotate(self.shotOffX, self.shotOffY, 0)
     return self.posX + sx, self.posY + sy
 end
 
@@ -261,7 +272,11 @@ function Player:createChargedBullet()
 end
 
 function Player:render(dt)
+    self.trail:render()
+
     if self.sprite ~= nil then
+
+        love.graphics.setColor(255, 255, 255)
         self.sprite:render(dt)
     end
 

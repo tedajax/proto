@@ -1,12 +1,12 @@
 require 'algebra'
 
 HSV_INDEX_LOOKUP = {
-    { c = 1, x = 2 },
-    { c = 2, x = 1 },
-    { c = 2, x = 3 },
-    { c = 3, x = 2 },
-    { c = 3, x = 1 },
-    { c = 1, x = 3 },
+    { 1, 2, 3 },
+    { 2, 1, 3 },
+    { 2, 3, 1 },
+    { 3, 2, 1 },
+    { 3, 1, 2 },
+    { 1, 3, 2 },
 }
 
 HSV_RGB_BUFFER = { 0, 0, 0 }
@@ -21,6 +21,10 @@ function rgbFromHsv(h, s, v, a)
     v = v or 0
     a = a or 255
 
+    if s <= 0 then
+        return v * 255, v * 255, v * 255, a
+    end
+
     local hh = h / 60
 
     local c = v * s
@@ -31,8 +35,9 @@ function rgbFromHsv(h, s, v, a)
 
     local hi = math.floor(hh)
     local hueTable = HSV_INDEX_LOOKUP[hi + 1]
-    rgb[hueTable.c] = (c + m) * 255
-    rgb[hueTable.x] = (x + m) * 255
+    rgb[hueTable[1]] = (c + m) * 255
+    rgb[hueTable[2]] = (x + m) * 255
+    rgb[hueTable[3]] = m * 255
 
     return rgb[1], rgb[2], rgb[3], a
 end

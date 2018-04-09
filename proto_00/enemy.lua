@@ -10,7 +10,7 @@ function Enemy:new(posX, posY)
 
     obj.tag = "enemy"
 
-    obj.size = 12
+    obj.size = 64
     obj.dmgTime = 0.05
 
     obj.health = Health:new(4)

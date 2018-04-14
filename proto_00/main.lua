@@ -95,6 +95,7 @@ function love.load()
     Game.images:load("bullet", "assets/bullet.png")
     Game.images:load("charge_shot_bg", "assets/charge_shot_bg.png")
     Game.images:load("charge_shot_fg", "assets/charge_shot_fg.png")
+    Game.images:load("clown", "assets/giant_clown.png")
 
     Game.bulletSprite = Game.images:createSprite("bullet")
 
@@ -104,8 +105,10 @@ function love.load()
 
     Game.entities:addEntity(Game.player)
 
-    for i = 1, 20 do
-        Game.entities:addEntity(Enemy:new((i + 1) * 50, math.random(-30, 30)))
+    Game.debugEnabled = false
+
+    for i = 1, 1 do
+        Game.entities:addEntity(Enemy:new((i + 1) * 500, math.random(-30, 30)))
     end
 
     Game.camera = Camera:new()
@@ -118,6 +121,8 @@ function love.keypressed(key)
         Game.timescale = 1
     elseif key == "-" then
         Game.timescale = 0.1
+    elseif key == "f12" then
+        Game.debugEnabled = not Game.debugEnabled
     end
 end
 
@@ -162,9 +167,9 @@ function Game:update(dt)
 
     Input:update(dt)
 
-    -- local scrollSpeed = 16 * 8 * dt
-    -- Game.camera:move(scrollSpeed, 0)
-    -- Game.player.posX = Game.player.posX + scrollSpeed
+    Game.scrollSpeed = 16 * 8 * dt
+    Game.camera:move(Game.scrollSpeed, 0)
+    Game.player.posX = Game.player.posX + Game.scrollSpeed
 
     Game.camera:update(dt)
     Game.entities:update(dt)
@@ -188,5 +193,7 @@ function Game:render(dt)
 end
 
 function Game:debugRender()
-    Debug.Text:render(dt)
+    if Game.debugEnabled then
+        Debug.Text:render(dt)
+    end
 end

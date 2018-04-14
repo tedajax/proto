@@ -47,7 +47,7 @@ function Sprite:clone(sprite)
     return obj
 end
 
-function Sprite:render(dt)
+function Sprite:render()
     local ox = self.ognX * self.width
     local oy = self.ognY * self.height
 

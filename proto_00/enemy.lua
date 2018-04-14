@@ -13,7 +13,7 @@ function Enemy:new(posX, posY)
     obj.size = 64
     obj.dmgTime = 0.05
 
-    obj.health = Health:new(4)
+    obj.health = Health:new(40)
     obj.health.onDamage = function(h, amt) obj.dmgTimer = obj.dmgTime end
     obj.health.onDeath = function(h) obj:destroy() end
 
@@ -37,6 +37,9 @@ function Enemy:new(posX, posY)
 
     Game.physics:setBodyLayer(obj.body, Game.physics.layers.ENEMY)
 
+    obj.sprite = Game.images:createSprite("clown")
+    obj.move = false
+
     return obj
 end
 
@@ -56,6 +59,23 @@ function Enemy:update(dt)
 
     self.posX, self.posY = self.body:getPosition()
     self.rot = self.body:getAngle()
+
+    if self.posX < Game.camera.posX + 350 then
+        self.move = true
+    end
+
+    if self.move then
+        self.posX = self.posX + Game.scrollSpeed
+    end
+
+    self.posY = math.sin(Game.time.elapsed * 2) * 50
+
+    self.body:setPosition(self.posX, self.posY)
+
+    self.sprite.sclX = 8
+    self.sprite.sclY = 8
+    self.sprite.posX = self.posX
+    self.sprite.posY = self.posY
 end
 
 function Enemy:onCollEnter(other, coll)
@@ -64,12 +84,13 @@ function Enemy:onCollEnter(other, coll)
     end
 end
 
-function Enemy:render(dt)
+function Enemy:render()
     local hw = self.size / 2
     if self.dmgTimer > 0 then
         love.graphics.setColor(255, 0, 0)
     else
         love.graphics.setColor(255, 255, 255)
     end
-    love.graphics.rectangle("fill", self.posX - hw, self.posY - hw, self.size, self.size)
+    self.sprite:render()
+    --love.graphics.rectangle("fill", self.posX - hw, self.posY - hw, self.size, self.size)
 end

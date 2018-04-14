@@ -15,7 +15,7 @@ function ChargeBullet:new(px, py, r, lifetime)
     self.__index = self
 
     -- Config
-    obj.speed = 320
+    obj.speed = 640
 
     -- Runtime
     obj.posX = px or 0
@@ -80,7 +80,7 @@ function ChargeBullet:update(dt)
         self.posY = self.posY + dirY * self.speed * dt
     end
 
-    local s = self.chargeFrac - 0.2 + ((math.sin(Game.time.elapsed * 10) + 1) / 2) * 0.2
+    local s = (self.chargeFrac * 1.4) - 0.2 + ((math.sin(Game.time.elapsed * 10) + 1) / 2) * 0.2
     self.spriteBg.sclX = s * 8
     self.spriteBg.sclY = s * 8
 
@@ -92,7 +92,7 @@ function ChargeBullet:update(dt)
     self.spriteBg.rot = self.spriteBg.rot + 180 * dt
     self.spriteFg.rot = self.spriteFg.rot + 180 * dt
 
-    local s = self.chargeFrac - 0.2 + ((math.sin(Game.time.elapsed * 25) + 1) / 2) * 0.3
+    local s = (self.chargeFrac * 1.4) - 0.2 + ((math.sin(Game.time.elapsed * 25) + 1) / 2) * 0.3
     self.spriteFg.sclX = s * 8
     self.spriteFg.sclY = s * 8
 end

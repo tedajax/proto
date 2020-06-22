@@ -1,71 +1,88 @@
-Debug = {}
+function debug_init(font, enabled)
+    Debug = {
+        enabled = enabled or true,
+        font = font,
+        watch_config = {
+            offsetX = 5, offsetY = 5,
+            lineHeight = 20
+        },
+        watches = {},
+        log_config = {
+            offsetX = -5, offsetY = 5,
+            lineHeight = 20, maxLines = 8
+        },
+        logs = {}
+    }
+end
 
-Debug.Text = {
-    offX = 5,
-    offY = 5,
-    lineHeight = 20,
-    lines = {},
+function debug_update(dt)
+    if not Debug.enabled then
+        return
+    end
 
-    push = function(self, str)
-        assert(type(str) == "string")
-        table.insert(self.lines, str)
-    end,
+    local n = #Debug.watches
+    for i = n, 1, -1 do
+        Debug.watches[i] = nil
+    end
 
-    clear = function(self)
-        for i, _ in ipairs(self.lines) do
-            self.lines[i] = nil
-        end
-    end,
-
-    render = function(self, dt)
-        local x = self.offX
-        local y = self.offY
-
-        for i, str in ipairs(self.lines) do
-            love.graphics.print(str, x, y + ((i - 1) * self.lineHeight))
-        end
-    end,
-}
-
-Debug.Messages = {
-    offX = 5,
-    offY = 20,
-    lineHeight = 20,
-    maxLines = 8,
-    messages = {},
-
-    log = function(self, msg, duration)
-        local duration = duration or 2
-        table.insert(self.messages, { msg = msg, time = duration, flagged = false })
-    end,
-
-    update = function(self, dt)
-        table.sort(self.messages, function(a, b) return a.time > b.time end)
-        for i, m in ipairs(self.messages) do
-            m.time = m.time - dt
-            if m.time <= 0 then
-                table.remove(self.messages, i)
+    local n = #Debug.logs
+    for i = n, 1, -1 do
+        local log = Debug.logs[i]
+        log.time = log.time - dt
+        if log.time <= 0 then
+            for j = i, n do
+                Debug.logs[j] = Debug.logs[j + 1]
             end
         end
-    end,
+    end
+end
 
-    render = function(self)
-        local len = math.min(table.getn(self.messages), self.maxLines)
+function debug_render()
+    if not Debug.enabled then
+        return
+    end
 
-        local w, h = love.graphics.getDimensions()
+    love.graphics.setFont(Debug.font)
 
-        love.graphics.setColor(255, 0, 0)
-        for i = 1, len do
-            local msg = self.messages[i]
-            if msg == nil then
-                break
-            end
-            local alpha = 1
-            if msg.time < 0.5 then
-                alpha = msg.time / 0.5
-            end
-            love.graphics.setColor(255, 0, 0, 255 * alpha)
-            love.graphics.print(msg.msg, self.offX, h - self.offY - ((i - 1) * self.lineHeight))
+    love.graphics.setColor(0, 1, 0)
+    for i, watch in ipairs(Debug.watches) do
+        local offsetX = Debug.watch_config.offsetX
+        local offsetY = Debug.watch_config.offsetY
+        love.graphics.print(watch, 
+            offsetX,
+            (i - 1) * Debug.watch_config.lineHeight + offsetY)
+    end
+
+    local screenWidth, _ = love.graphics.getDimensions()
+
+    love.graphics.setColor(1, 0, 0)
+    for i, log in ipairs(Debug.logs) do
+        local alpha = 1
+        if log.time < 0.5 then
+            alpha = log.time / 0.5
         end
-    end,
-}
+        local width = Debug.font:getWidth(log.message)
+        local offsetX = Debug.log_config.offsetX
+        local offsetY = Debug.log_config.offsetY
+        love.graphics.setColor(1, 0, 0, alpha)
+        love.graphics.print(log.message,
+            offsetX + screenWidth - width,
+            offsetY + (i - 1) * Debug.log_config.lineHeight)
+    end
+end
+
+function debug_watch(message)
+    table.insert(Debug.watches, message)
+end
+
+function debug_log(message, duration)
+    duration = duration or math.huge
+    table.insert(Debug.logs, { message = message, time = duration})
+end
+
+function debug_log_clear()
+    local n = #Debug.logs
+    for i = n, 1, -1 do
+        Debug.logs[i] = nil
+    end
+end

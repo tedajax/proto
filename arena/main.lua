@@ -3,6 +3,7 @@ require 'input'
 require 'gamedebug'
 require 'hsv'
 require 'camera'
+require 'gamestate'
 
 Game = {}
 
@@ -11,7 +12,7 @@ function love.load()
 
     local sx, sy = love.graphics.getDimensions()
 
-    physics_init(64, 0, -9.81)
+    physics_init(64, 0, 300)
 
     Game.conf = {}
     Game.width = 320
@@ -35,22 +36,26 @@ function love.load()
         }
     })
 
-    Game.dbgFont = love.graphics.newFont("assets/prstartk.ttf", 18)
-    love.graphics.setFont(Game.dbgFont)
+    debug_init(love.graphics.newFont("assets/prstartk.ttf", 18))
 
     Game.time = {}
     Game.time.elapsed = 0
     Game.time.dt = 0
 
     -- Create canvas scaled to appropriate pixel size
-    Game.canvas = love.graphics.newCanvas(Game.width, Game.height, { format = "normal", msaa = 0 })
+    Game.canvas = love.graphics.newCanvas(Game.width, Game.height,
+        { format = "normal", msaa = 0 })
     Game.canvas:setFilter("nearest", "nearest")
 
-    Game.debugEnabled = false
+    gamestates_init({
+        play = {
+            init = play_init,
+            update = play_update,
+            render = play_render
+        }
+    })
 
-    Game.camera = Camera:new()
-
-    player = { x = 0, y = 0 }
+    gamestate_switch("play")
 end
 
 function love.keypressed(key)
@@ -61,7 +66,13 @@ function love.keypressed(key)
     elseif key == "-" then
         Game.timescale = 0.1
     elseif key == "f12" then
-        Game.debugEnabled = not Game.debugEnabled
+        Debug.enabled = not Debug.enabled
+    elseif key == "l" then
+        debug_log_clear()
+    elseif key == "j" then
+        debug_log(tostring(love.math.random(0, 10)), 5)
+    elseif key == "~" then
+        debug.debug()
     end
 end
 
@@ -69,17 +80,16 @@ function love.keyreleased(key)
 end
 
 function love.update(dt)
-    Debug.Text:clear()
-    Debug.Messages:update(dt)
+    debug_update(dt)
     input_update()
-    game_update(dt * Game.timescale)
+    gamestates_update(dt * Game.timescale)
     
-    Debug.Text:push(string.format("FPS: %d", love.timer.getFPS()));
+    debug_watch(string.format("FPS: %d", love.timer.getFPS()))
 end
 
-function love.draw(dt)
+function love.draw()
     love.graphics.setCanvas(Game.canvas)
-    game_render(dt)
+    gamestates_render()
     love.graphics.setCanvas()
 
     love.graphics.setColor(255, 255, 255)
@@ -88,58 +98,52 @@ function love.draw(dt)
         0,
         4, 4)
 
-    if Game.debugEnabled then
-        Debug.Text:render(dt)
-    end
-
-
-    Debug.Text:render()
-    Debug.Messages:render()
+    debug_render()
 end
 
-function game_update(dt)
+function play_init()
+    Game.camera = Camera:new()
+    player = {}
+    player.body = love.physics.newBody(physics.world, 0, 0, "dynamic")
+    player.footShape = love.physics.newCircleShape(8)
+    player.footFixture = love.physics.newFixture(player.body, player.footShape)
+    player.bodyShape = love.physics.newRectangleShape(0, -6, 16, 18)
+    player.bodyFixture = love.physics.newFixture(player.body, player.bodyShape)
+
+    ground = {}
+    ground.body = love.physics.newBody(physics.world, 0, 90, "static")
+    ground.shape = love.physics.newEdgeShape(-320, 0, 320, 0)
+    ground.fixture = love.physics.newFixture(ground.body, ground.shape)
+end
+
+function play_update(dt)
     Game.time.elapsed = Game.time.elapsed + dt
     Game.time.dt = dt
 
     physics_update(dt)
 
     local ix, iy = input_get_axis("horizontal"), input_get_axis("vertical")
-
-    local norm = function(x, y)
-        local l = math.sqrt(x * x + y * y)
-        if l ~= 0 then
-            return x / l, y / l
-        else
-            return 0, 0
-        end
-    end
-
     ix, iy = norm(ix, iy)
-
-    player.x = player.x + ix * 100 * dt
-    player.y = player.y + iy * 100 * dt
 end
 
-function game_render(dt)
+function play_render(dt)
     love.graphics.clear()
 
     love.graphics.setColor(1, 1, 1)
 
-    local t = math.fmod(Game.time.elapsed, 1)
-    local height = 100
-    local dist = 200
-    
-    local calc = function(x)
-        return x * x * -4 + x * 4
-    end
-
-    love.graphics.setColor(1, 1, 0)
-    love.graphics.circle("fill", t * dist, Game.height - calc(t) * height, 4)
-
     camera_push(Game.camera)
-
         love.graphics.setColor(1, 1, 0)
-        love.graphics.rectangle("fill", player.x - 3, player.y - 3, 8, 8)
-
+        
+        for i, fixture in ipairs(player.body:getFixtureList()) do
+            local fixtureType = fixture:getType()
+            if fixtureType == "circle" then
+                local shape = fixture:getShape()
+                local px, py = player.body:getWorldPoints(shape:getPoint())
+                love.graphics.circle("line", px, py, shape:getRadius())
+            elseif fixtureType == "polygon" then
+                local shape = fixture:getShape()
+                love.graphics.polygon("line", player.body:getWorldPoints(shape:getPoints()))
+            end
+        end    
     camera_pop()
 end

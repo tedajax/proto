@@ -37,3 +37,15 @@ function lerp(a, b, t)
     return a + (b - a) * t
 end
 
+function parabolic(t)
+    return -4 * t * t + 4 * t
+end
+
+function norm(x, y)
+    local l = math.sqrt(x * x + y * y)
+    if l ~= 0 then
+        return x / l, y / l
+    else
+        return 0, 0
+    end
+end

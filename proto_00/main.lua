@@ -55,8 +55,8 @@ function love.load()
         layers, masks)
 
     Game.conf = {}
-    Game.width = 1280
-    Game.height = 720
+    Game.width = 320
+    Game.height = 180
     Game.scrWidth = sx
     Game.scrHeight = sy
     Game.timescale = 1
@@ -85,7 +85,7 @@ function love.load()
     Game.time.dt = 0
 
     -- Create canvas scaled to appropriate pixel size
-    Game.canvas = love.graphics.newCanvas(Game.width, Game.height, "normal", 0)
+    Game.canvas = love.graphics.newCanvas(Game.width, Game.height, { format = "normal", msaa = 0 })
     Game.canvas:setFilter("nearest", "nearest")
 
     Game.entities = EntitySystem:new()

@@ -196,8 +196,8 @@ function Player:update(dt)
 
     -- update sprite positioning
     if self.sprite ~= nil then
-        self.sprite.sclX = 8
-        self.sprite.sclY = 8
+        self.sprite.sclX = 1
+        self.sprite.sclY = 1
         self.sprite.posX = self.posX
         self.sprite.posY = self.posY
         -- self.sprite.rot = self.rot

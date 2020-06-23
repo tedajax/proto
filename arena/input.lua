@@ -22,6 +22,7 @@ function input_init(config)
     for i, control in ipairs(controls) do
         control.min = control.min or 0
         control.max = control.max or 1
+        control.thresh = control.thresh or 0.5
 
         input.controls[control.id] = {
             def = control,
@@ -34,6 +35,8 @@ function input_init(config)
 
     for i, binding in ipairs(bindings) do
         assert(input.controls[binding.controlId] ~= nil)
+
+        binding.value = binding.value or 1
 
         binding.control = input.controls[binding.controlId]
         table.insert(input.bindings, binding)
@@ -60,7 +63,7 @@ function input_update()
 end
 
 local function clamp(v, control)
-    return math.min(math.max(control.def.min, v), control.def.max)
+    return math.min(math.max(control.def.min, v or 0), control.def.max)
 end
 
 function input_get_axis(controlId)
@@ -74,15 +77,18 @@ function input_get_axis_delta(controlId)
 end
 
 function input_get_button(controlId)
+    local control = input.controls[controlId]
     return clamp(control.value, control) >= control.def.thresh
 end
 
 function input_get_button_down(controlId)
+    local control = input.controls[controlId]
     return clamp(control.value, control) >= control.def.thresh and
         clamp(control.lastValue, control) < control.def.thresh
 end
 
 function input_get_button_up(controlId)
+    local control = input.controls[controlId]
     return clamp(control.value, control) < control.def.thresh and
         clamp(control.lastValue, control) >= control.def.thresh
 end

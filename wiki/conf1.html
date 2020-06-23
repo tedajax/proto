@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Config Files (日本語) - LOVE</title>
+<meta name="generator" content="MediaWiki 1.24.2" />
+<link rel="ExportRDF" type="application/rdf+xml" title="Config Files (日本語)" href="" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch_desc.php" title="LOVE (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="api.php_action_rsd" />
+<link rel="alternate" hreflang="x-default" href="config_files1.html" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+<link rel="alternate" type="application/atom+xml" title="LOVE Atom feed" href="" />
+<link rel="canonical" href="config_files1.html" />
+<link rel="stylesheet" href="" />
+<!--[if IE 6]><link rel="stylesheet" href="ie60fixes.css" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="ie70fixes.css" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: love2d_wiki:resourceloader:filter:minify-css:7:daf253d59690fd9cabb6b95510bce103 */</style>
+<script src=""></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Config_Files_(日本語)","wgTitle":"Config Files (日本語)","wgCurRevisionId":24361,"wgRevisionId":24361,"wgArticleId":4388,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["LÖVE","Callbacks"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Config_Files_(日本語)","wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"conf.lua_(日本語)","wgInternalRedirectTargetUrl":"/wiki/Config_Files_(%E6%97%A5%E6%9C%AC%E8%AA%9E)"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":1,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rows":25,"showhiddencats":0,"shownumberswatching":1,"showtoolbar":1,"skin":"love","stubthreshold":0,"thumbsize":5,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":1,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"watchrollback":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs102":false,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs108":false,"searchNs109":false,"searchNs500":false,"searchNs501":false,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"});},{},{});
+/* cache key: love2d_wiki:resourceloader:filter:minify-js:7:201bb6cc0b4c032fe7bbe209a0125541 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.action.view.redirect","ext.smw.style","mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Config_Files_日本語 skin-love action-view">
+<div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				
+						<div id="p-cactions" role="navigation">
+			<h5>Views</h5>
+
+			<div>
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="config_files1.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk"><a href="talk_config_files.html" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="" rel="archives" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+	
+				<h1 id="firstHeading" class="firstHeading" lang="en">Config Files (日本語)</h1>
+
+				<div id="bodyContent">
+					<!-- <div id="siteSub">From LOVE</div> -->
+
+					<!-- <div id="contentSub">(Redirected from <a href="" title="conf.lua (日本語)">conf.lua (日本語)</a>)</div> -->
+										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><h2><span class="mw-headline" id=".E3.81.AF.E3.81.98.E3.82.81.E3.81.AB">はじめに</span></h2>
+<p><code>conf.lua</code> ファイルがゲームのフォルダ (または .love ファイル) にある場合、そのファイルは LÖVE のモジュールが読み込まれる<i>前に</i>実行されます。このファイルは love.conf 関数を上書きするために使用でき、後で LÖVE の 'boot' スクリプトにより呼ばれます。 love.conf 関数により、構成オプション、およびウィンドウのデフォルトの大きさ、読み込まれるモジュール、およびその他の要素などを変更できます。
+</p>
+<h2><span class="mw-headline" id="love.conf">love.conf</span></h2>
+<p><code>love.conf</code> 関数は引数を一つ使用します: テーブルの中にある全てのデフォルト値を望むものへ上書きできます。ウィンドウのデフォルトの大きさを変更したい場合は、例えばこう記述します:
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="lua source-lua"><pre class="de1"><span class="kw1">function</span> love<span class="sy0">.</span>conf<span class="br0">&#40;</span>t<span class="br0">&#41;</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>width <span class="sy0">=</span> <span class="nu0">1024</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>height <span class="sy0">=</span> <span class="nu0">768</span>
+<span class="kw1">end</span></pre></div></div>
+<p>physics モジュールまたは joystick モジュールが不要であれば、下記を記述します。
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="lua source-lua"><pre class="de1"><span class="kw1">function</span> love<span class="sy0">.</span>conf<span class="br0">&#40;</span>t<span class="br0">&#41;</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>joystick <span class="sy0">=</span> <span class="kw4">false</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>physics <span class="sy0">=</span> <span class="kw4">false</span>
+<span class="kw1">end</span></pre></div></div>
+<p>ゲームの発表時は未使用のモジュールへ false を設定することは推奨されます。これにより起動開始時間を多少短縮して(特に joystick モジュールを無効にした場合)、メモリの使用量を(多少)減らせます。
+</p><p>注意すべきことは <a href="love61.html" title="love.filesystem (日本語)">love.filesystem</a> と <a href="love62.html" title="love (日本語)">love</a> モジュールは対象外であり、無効化できません。また、 <a href="love55.html" title="love.graphics (日本語)">love.graphics</a> を有効にするには <a href="love63.html" title="love.window (日本語)">love.window</a> が必要です。
+</p><p><br />
+LÖVE version 0.9.2 以前では、構成ファイルに異常があると、ゲームは起動はせず、エラーメッセージすら表示されません。ゲームが読み込まれない場合、最初に構成ファイルの異常を調べる必要がありました。 LÖVE version 0.10.2 以降では、構成ファイルに異常があると、青色のエラー画面で構成ファイルの異常内容を表示します。
+</p>
+<h2><span class="mw-headline" id=".E6.9C.80.E6.96.B0.E7.89.88.E3.81.AE.E6.A7.8B.E6.88.90.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB">最新版の構成ファイル</span></h2>
+<p>下記は LÖVE <a href="115.html" title="11.3 (日本語)">11.3</a> のオプションとデフォルト値のリストです:
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="lua source-lua"><pre class="de1"><span class="kw1">function</span> love<span class="sy0">.</span>conf<span class="br0">&#40;</span>t<span class="br0">&#41;</span>
+    t<span class="sy0">.</span>identity <span class="sy0">=</span> <span class="kw4">nil</span>                    <span class="co1">-- セーブ・ディレクトリの名称 (string)</span>
+    t<span class="sy0">.</span>appendidentity <span class="sy0">=</span> <span class="kw4">false</span>            <span class="co1">-- このフラグはソースディレクトリの後にセーブディレクトリのファイルを検索するどうか (boolean)</span>
+    t<span class="sy0">.</span>version <span class="sy0">=</span> <span class="st0">&quot;11.3&quot;</span>                  <span class="co1">-- このゲームの作成に使用した LÖVE のバージョン (string)</span>
+    t<span class="sy0">.</span>console <span class="sy0">=</span> <span class="kw4">false</span>                   <span class="co1">-- コンソールの表示 (boolean, Windows 専用)</span>
+    t<span class="sy0">.</span>accelerometerjoystick <span class="sy0">=</span> <span class="kw4">true</span>      <span class="co1">-- iOS と Andorid で加速度センサーをジョイスティックと見せかけることを有効にするか (boolean)</span>
+    t<span class="sy0">.</span>externalstorage <span class="sy0">=</span> <span class="kw4">false</span>           <span class="co1">-- true にすると Android で外部ストレージにファイルの保存 (およびセーブ・ディレクトリからの読み込み) を行います (boolean)</span>
+    t<span class="sy0">.</span>gammacorrect <span class="sy0">=</span> <span class="kw4">false</span>              <span class="co1">-- 対応システムでの動作時、ガンマ補正レンダリングを有効にするか (boolean)</span>
+&#160;
+    t<span class="sy0">.</span>audio<span class="sy0">.</span>mic <span class="sy0">=</span> <span class="kw4">false</span>                 <span class="co1">-- Android で録音機能 (マイク) のアクセスと使用許可を得るかどうか (boolean)</span>
+    t<span class="sy0">.</span>audio<span class="sy0">.</span>mixwithsystem <span class="sy0">=</span> <span class="kw4">true</span>        <span class="co1">-- LÖVE の起動中に他のアプリのバックグラウンド音楽を再生を続けるか (boolean, iOS と Android のみ)</span>
+&#160;
+    t<span class="sy0">.</span>window<span class="sy0">.</span>title <span class="sy0">=</span> <span class="st0">&quot;Untitled&quot;</span>         <span class="co1">-- ウィンドウのタイトル (string)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>icon <span class="sy0">=</span> <span class="kw4">nil</span>                 <span class="co1">-- ウィンドウのアイコンとして使用する画像のファイルパス (string)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>width <span class="sy0">=</span> <span class="nu0">800</span>                <span class="co1">-- ウィンドウの幅 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>height <span class="sy0">=</span> <span class="nu0">600</span>               <span class="co1">-- ウィンドウの高さ (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>borderless <span class="sy0">=</span> <span class="kw4">false</span>         <span class="co1">-- ウィンドウの境界線を非表示 (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>resizable <span class="sy0">=</span> <span class="kw4">false</span>          <span class="co1">-- 利用者がウィンドウの大きさを変更できるかどうか (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>minwidth <span class="sy0">=</span> <span class="nu0">1</span>               <span class="co1">-- ウィンドウの大きさが変更可能な場合におけるウィンドウの最小の幅 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>minheight <span class="sy0">=</span> <span class="nu0">1</span>              <span class="co1">-- ウィンドウの大きさが変更可能な場合におけるウィンドウの最小の高さ (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>fullscreen <span class="sy0">=</span> <span class="kw4">false</span>         <span class="co1">-- 全画面表示の有効化 (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>fullscreentype <span class="sy0">=</span> <span class="st0">&quot;desktop&quot;</span> <span class="co1">-- 排他的な全画面表示 (&quot;exclusive&quot;) またはデスクトップ (&quot;desktop&quot;) による全画面表示方式の中から選択 (string)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>usedpiscale <span class="sy0">=</span> <span class="kw4">true</span>         <span class="co1">-- DPI の自動スケーリングの有効化 (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>vsync <span class="sy0">=</span> <span class="nu0">1</span>                  <span class="co1">-- 垂直同期の有効化 (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>msaa <span class="sy0">=</span> <span class="nu0">0</span>                   <span class="co1">-- 多重サンプリングされたアンチエイリアシングにて使用するサンプル数 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>depth <span class="sy0">=</span> <span class="kw4">nil</span>                <span class="co1">-- 深度バッファにおけるビット当たりのサンプル数です</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>stencil <span class="sy0">=</span> <span class="kw4">nil</span>              <span class="co1">-- ステンシルバッファにおけるビット当たりのサンプル数です</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>display <span class="sy0">=</span> <span class="nu0">1</span>                <span class="co1">-- ウィンドウの表示先となるモニタの番号 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>highdpi <span class="sy0">=</span> <span class="kw4">false</span>            <span class="co1">-- Retina ディスプレイ上のウィンドウで high-dpi モードを有効にするか (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>x <span class="sy0">=</span> <span class="kw4">nil</span>                    <span class="co1">-- 指定先のディスプレイにあるウィンドウ位置の x 座標 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>y <span class="sy0">=</span> <span class="kw4">nil</span>                    <span class="co1">-- 指定先のディスプレイにあるウィンドウ位置の y 座標 (number)</span>
+&#160;
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>audio <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- audio モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>data <span class="sy0">=</span> <span class="kw4">true</span>               <span class="co1">-- data モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>event <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- event モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>font <span class="sy0">=</span> <span class="kw4">true</span>               <span class="co1">-- font モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>graphics <span class="sy0">=</span> <span class="kw4">true</span>           <span class="co1">-- graphics モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>image <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- image モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>joystick <span class="sy0">=</span> <span class="kw4">true</span>           <span class="co1">-- joystick モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>keyboard <span class="sy0">=</span> <span class="kw4">true</span>           <span class="co1">-- keyboard モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span><span class="kw3">math</span> <span class="sy0">=</span> <span class="kw4">true</span>               <span class="co1">-- math モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>mouse <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- mouse モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>physics <span class="sy0">=</span> <span class="kw4">true</span>            <span class="co1">-- physics モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>sound <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- sound モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>system <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- system モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>thread <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- thread モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>timer <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- timer モジュールの有効化 (boolean)、無効にすると love.update のデルタ時間は 0 になります。</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>touch <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- touch モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>video <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- video モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>window <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- window モジュールの有効化 (boolean)</span>
+<span class="kw1">end</span></pre></div></div>
+<h2><span class="mw-headline" id=".E3.83.95.E3.83.A9.E3.82.B0">フラグ</span></h2>
+<h4><span class="mw-headline" id="identity">identity</span></h4>
+<p>このフラグはゲーム用のセーブ・ディレクトリの名前を設定します。作成場所ではなく、名前のみ指定することに注意してください。
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="lua source-lua"><pre class="de1">t<span class="sy0">.</span>identity <span class="sy0">=</span> <span class="st0">&quot;gabe_HL3&quot;</span> <span class="co1">-- 正しい</span>
+t<span class="sy0">.</span>identity <span class="sy0">=</span> <span class="st0">&quot;c:/Users/gabe/HL3&quot;</span> <span class="co1">-- 誤り</span></pre></div></div>
+<p>構成ファイル以外でセーブ・ディレクトリを設定するには <a href="love.filesystem15.html" title="love.filesystem.setIdentity (日本語)">love.filesystem.setIdentity</a> を使用します。
+</p>
+<h4><span class="mw-headline" id="appendidentity">appendidentity</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;11.0 (日本語)&#124;11.0]]">
+<tr>
+<td><i> <b>LÖVE <a href="114.html" title="11.0 (日本語)">11.0</a> から使用可能</b> </i>
+</td></tr>
+<tr>
+<td> <small>このフラグは以前のバージョンでは非対応です。</small>
+</td></tr></table>
+<p>このフラグはゲームディレクトリの後にセーブディレクトリを検索するか設定します (<code>true</code> または <code>false</code>)。
+</p>
+<h4><span class="mw-headline" id="version">version</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.8.0 (日本語)&#124;0.8.0]]">
+<tr>
+<td><i> <b>LÖVE <a href="0.81.html" title="0.8.0 (日本語)">0.8.0</a> から使用可能</b> </i>
+</td></tr>
+<tr>
+<td> <small>このフラグは以前のバージョンでは非対応です。</small>
+</td></tr></table>
+<p><code>t.version</code> は文字列であり、ゲームの制作に使用された LÖVE のバージョン表記です。
+</p><p>LÖVE <a href="114.html" title="11.0 (日本語)">11.0</a> 以前では、 <code>"<i>X.Y.Z</i>"</code> 形式であり、 <code><i>X</i></code> は上位リリース番号、 <code><i>Y</i></code> は下位リリース番号、および <code><i>Z</i></code> は修正レベルです。 <a href="114.html" title="11.0 (日本語)">11.0</a> 以降では、 <code>"<i>X.Y.Z</i>"</code> 形式であり、 <code><i>X</i></code> および <code><i>Y</i></code> は上位と下位のリリース番号です。
+</p><p>このフラグを構成ファイルに設定した場合はゲーム実行開始時に、現在のバージョンの LÖVE とゲームとの互換性がないならば LÖVE は警告を表示します。デフォルトでは実行中の LÖVE のバージョンです。
+</p>
+<h4><span class="mw-headline" id="console">console</span></h4>
+<p>ゲームのウィンドウの横にコンソールを開くかどうかを設定します (Windows 専用)。注意: OSX では、ターミナルから LÖVE を実行することによりコンソール出力を取得できます。また、 LÖVE <a href="0.103.html" title="0.10.2 (日本語)">0.10.2</a> の Windows 版では、 <code>love.exe</code> ではなく <code>lovec.exe</code> で実行中の場合もコンソール出力を取得できます。
+</p>
+<h4><span class="mw-headline" id="accelerometerjoystick">accelerometerjoystick</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.10.0 (日本語)&#124;0.10.0]]">
+<tr>
+<td><i> <b>LÖVE <a href="0.104.html" title="0.10.0 (日本語)">0.10.0</a> から使用可能</b> </i>
+</td></tr>
+<tr>
+<td> <small>このフラグは以前のバージョンでは非対応です。</small>
+</td></tr></table>
+<p>iOS と Andorid で加速度センサーデバイスを三軸の<a href="joystick.html" title="Joystick (日本語)">ジョイスティック</a>として割り当てるかどうかを設定します。この機能を使用しない場合は加速度センサーを停止することにより CPU の使用量を減らせるかもしれません。
+</p>
+<h4><span class="mw-headline" id="externalstorage">externalstorage</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.10.1 (日本語)&#124;0.10.1]]">
+<tr>
+<td><i> <b>LÖVE <a href="0.105.html" title="0.10.1 (日本語)">0.10.1</a> から使用可能</b> </i>
+</td></tr>
+<tr>
+<td> <small>このフラグは以前のバージョンでは非対応です。</small>
+</td></tr></table>
+<p>Android でファイルを外部ストレージ (true)、または内部ストレージ (false) に保存するかどうかを設定します。
+</p>
+<h4><span class="mw-headline" id="gammacorrect">gammacorrect</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.10.0 (日本語)&#124;0.10.0]]">
+<tr>
+<td><i> <b>LÖVE <a href="0.104.html" title="0.10.0 (日本語)">0.10.0</a> から使用可能</b> </i>
+</td></tr>
+<tr>
+<td> <small>このフラグは以前のバージョンでは非対応です。</small>
+</td></tr></table>
+<p>システムで対応している場合に、<a href="love.graphics84.html" title="love.graphics.isGammaCorrect (日本語)">ガンマ補正レンダリング</a>を有効にするかどうかを設定します。
+</p>
+<h4><span class="mw-headline" id="audio.mic">audio.mic</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;11.3 (日本語)&#124;11.3]]">
+<tr>
+<td><i> <b>LÖVE <a href="115.html" title="11.3 (日本語)">11.3</a> から使用可能</b> </i>
+</td></tr>
+<tr>
+<td> <small>このフラグは以前のバージョンでは非対応です。</small>
+</td></tr></table>
+<p>ユーザからマイクのアクセス許可を要求します。許可時は <a href="love.audio8.html" title="love.audio.getRecordingDevices (日本語)"> love.audio.getRecordingDevices</a> で利用できる録音デバイスのリストを取得できます。却下時は <a href="love.audio8.html" title="love.audio.getRecordingDevices (日本語)">love.audio.getRecordingDevices</a> を呼び出すと空テーブルを返し、ユーザにメッセージを通知します。
+</p>
+<h4><span class="mw-headline" id="audio.mixwithsystem">audio.mixwithsystem</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;11.0 (日本語)&#124;11.0]]">
+<tr>
+<td><i> <b>LÖVE <a href="114.html" title="11.0 (日本語)">11.0</a> から使用可能</b> </i>
+</td></tr>
+<tr>
+<td> <small>このフラグは以前のバージョンでは非対応です。</small>
+</td></tr></table>
+<p>LÖVE の起動中に、他のアプリのバックグラウンド音声や音楽を再生するか設定します。詳細情報は <a href="love.system3.html" title="love.system.hasBackgroundMusic (日本語)">love.system.hasBackgroundMusic</a> をご確認ください。
+</p>
+<h4><span class="mw-headline" id="window">window</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.9.0 (日本語)&#124;0.9.0]]">
+<tr>
+<td><i> <b>LÖVE <a href="0.93.html" title="0.9.0 (日本語)">0.9.0</a> から使用可能</b> </i>
+</td></tr>
+<tr>
+<td> <small>これらのフラグsは以前のバージョンでは非対応です。</small>
+</td></tr></table>
+<p><a href="love.window12.html" title="love.window.setMode (日本語)">love.window.setMode</a> をコードから最初に呼ぶまでウィンドウの作成を延期することが可能になります。こうするには、 <code>t.window = nil</code> (または旧版では <code>t.screen = nil</code>) にて設定してください。これが処理された場合は、最初の <a href="love.window12.html" title="love.window.setMode (日本語)">love.window.setMode</a> の前に <a href="love55.html" title="love.graphics (日本語)">love.graphics</a> に属する関数をコードから呼び出すと LÖVE はクラッシュします。
+</p><p><code>t.window</code> テーブルは LÖVE <a href="0.93.html" title="0.9.0 (日本語)">0.9.0</a> 以前のバージョンでは <code>t.screen</code> の名称でした。 <code>t.screen</code> テーブルは LÖVE 0.9.0 の love.conf では存在せず、 <code>t.window</code> テーブルは LÖVE 0.8.0 の love.conf では存在しません。 この意味は使用されている LÖVE のバージョンに関する正確なテーブルを使用することに注意しない場合には、 <b>love.conf</b> の実行は失敗します (従って保護機能によりデフォルト値に復帰されます)。
+</p>
+<h4><span class="mw-headline" id="window.title">window.title</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.9.0 (日本語)&#124;0.9.0]]">
+<tr>
+<td><i> <b>LÖVE <a href="0.93.html" title="0.9.0 (日本語)">0.9.0</a> から使用可能</b> </i>
+</td></tr>
+<tr>
+<td> <small>このフラグは以前のバージョンでは非対応です。</small>
+</td></tr></table>
+<p>ゲームのウィンドウのタイトルを設定します。構成ファイル以外でウィンドウのタイトルを変更するには <a href="love.window15.html" title="love.window.setTitle (日本語)">love.window.setTitle</a> を使用します。
+</p>
+<h4><span class="mw-headline" id="window.icon">window.icon</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.9.0 (日本語)&#124;0.9.0]]">
+<tr>
+<td><i> <b>LÖVE <a href="0.93.html" title="0.9.0 (日本語)">0.9.0</a> から使用可能</b> </i>
+</td></tr>
+<tr>
+<td> <small>このフラグは以前のバージョンでは非対応です。</small>
+</td></tr></table>
+<p>ウィンドウのアイコンとして使用する画像のファイルパスです。全てのオペレーティングシステムが非常に大きいアイコンの画像に対応しているわけではありません。 <a href="love.window16.html" title="love.window.setIcon (日本語)">love.window.setIcon</a> でアイコンを変更できます。
+</p>
+<h4><span class="mw-headline" id="window.width_.26_window.height">window.width &amp; window.height</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.9.0 (日本語)&#124;0.9.0]]">
+<tr>
+<td><i> <b>LÖVE <a href="0.93.html" title="0.9.0 (日本語)">0.9.0</a> から使用可能</b> </i>
+</td></tr>
+<tr>
+<td> <small>これらのフラグは以前のバージョンでは非対応です。</small>
+</td></tr></table>
+<p>ウィンドウの寸法を設定します。これらのフラグへ 0 を設定する場合、LÖVE は自動的に利用者のデスクトップの寸法を使用します。
+</p>
+<h4><span class="mw-headline" id="window.borderless">window.borderless</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.9.0 (日本語)&#124;0.9.0]]">
+<tr>
+<td><i> <b>LÖVE <a href="0.93.html" title="0.9.0 (日本語)">0.9.0</a> から使用可能</b> </i>
+</td></tr>
+<tr>
+<td> <small>このフラグは以前のバージョンでは非対応です。</small>
+</td></tr></table>
+<p>ウィンドウからボーダー・ビジュアルを除去します。オペレーティング・システム間での効果に警戒することに注意してください。
+</p>
+<h4><span class="mw-headline" id="window.resizable">window.resizable</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.9.0 (日本語)&#124;0.9.0]]">
+<tr>
+<td><i> <b>LÖVE <a href="0.93.html" title="0.9.0 (日本語)">0.9.0</a> から使用可能</b> </i>
+</td></tr>
+<tr>
+<td> <small>このフラグは以前のバージョンでは非対応です。</small>
+</td></tr></table>
+<p>true に設定された場合は利用者によりゲーム・ウィンドウの大きさを変更することを許可します。
+</p>
+<h4><span class="mw-headline" id="window.minwidth_.26_window.minheight">window.minwidth &amp; window.minheight</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.9.0 (日本語)&#124;0.9.0]]">
+<tr>
+<td><i> <b>LÖVE <a href="0.93.html" title="0.9.0 (日本語)">0.9.0</a> から使用可能</b> </i>
+</td></tr>
+<tr>
+<td> <small>これらのフラグsは以前のバージョンでは非対応です。</small>
+</td></tr></table>
+<p>利用者がウィンドウの大きさを変更できる場合にゲームのウィンドウの最小幅および高さを設定します。 <code>window.width</code> および <code>window.height</code> へ低い値を設定する場合、 LÖVE は <code>window.minwidth</code> および <code>window.minheight</code> を用いて常に最小寸法を指定します。
+</p>
+<h4><span class="mw-headline" id="window.fullscreen">window.fullscreen</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.9.0 (日本語)&#124;0.9.0]]">
+<tr>
+<td><i> <b>LÖVE <a href="0.93.html" title="0.9.0 (日本語)">0.9.0</a> から使用可能</b> </i>
+</td></tr>
+<tr>
+<td> <small>このフラグは以前のバージョンでは非対応です。</small>
+</td></tr></table>
+<p>ゲームを全画面表示 (<code>true</code>) またはウィンドウ (<code>false</code>) 表示方式で実行するかどうかを指定します。全画面表示に関しては <a href="love.window17.html" title="love.window.setFullscreen (日本語)">love.window.setFullscreen</a> または <a href="love.window12.html" title="love.window.setMode (日本語)">love.window.setMode</a> を用いて全画面表示・ウィンドウ表示の相互間切り替えを行うことができます。
+</p>
+<h4><span class="mw-headline" id="window.fullscreentype">window.fullscreentype</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.9.0 (日本語)&#124;0.9.0]]">
+<tr>
+<td><i> <b>LÖVE <a href="0.93.html" title="0.9.0 (日本語)">0.9.0</a> から使用可能</b> </i>
+</td></tr>
+<tr>
+<td> <small>このフラグは以前のバージョンでは非対応です。</small>
+</td></tr></table>
+<p><a href="fullscreentype2.html" title="FullscreenType (日本語)">全画面表示方式</a>から指定します (<code>exclusive</code> または <code>desktop</code>)。
+一般的に <code>desktop</code> を推奨しますが、特定のオペレーティング・システムでは <code>exclusive</code> 方式のほうが制限は少ないです (注釈: <a href="0.94.html" title="0.9.2 (日本語)">0.9.2</a> 以前では <code>exclusive</code> ではなく <code>normal</code> を使用します)。
+</p>
+<h4><span class="mw-headline" id="window.usedpiscale">window.usedpiscale</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;11.3 (日本語)&#124;11.3]]">
+<tr>
+<td><i> <b>LÖVE <a href="115.html" title="11.3 (日本語)">11.3</a> から使用可能</b> </i>
+</td></tr>
+<tr>
+<td> <small>このフラグは以前のバージョンでは非対応です。</small>
+</td></tr></table>
+<p><a href="love.window18.html" title="love.window.getDPIScale (日本語)">DPI</a> の自動スケーリングの有効、または無効化を設定します。
+</p>
+<h4><span class="mw-headline" id="window.vsync">window.vsync</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.9.0 (日本語)&#124;0.9.0]]">
+<tr>
+<td><i> <b>LÖVE <a href="0.93.html" title="0.9.0 (日本語)">0.9.0</a> から使用可能</b> </i>
+</td></tr>
+<tr>
+<td> <small>このフラグは以前のバージョンでは非対応です。</small>
+</td></tr></table>
+<p>垂直同期 (VSYNC) の有効または無効化します。 VSYNC は安定したフレームレートでゲームを持続させることで画面のティアリング (ちらつき、歪み) に関する問題を予防できます。無効化に関しての理解と豊富な知識がなければ VSYNC を有効にしたままにおくことを推奨します。 11.0 以前では、この値はブール値です (<code>true</code> または <code>false</code>)。 LÖVE 11.0 以降では、この値は数値です (1 は垂直同期の有効化、 0 は垂直同期の無効化、 -1 は対応時に適応型垂直同期を使用します)。
+</p><p>iOS での注意点として、垂直同期は常時有効であり変更不能です。
+</p>
+<h4><span class="mw-headline" id="window.depth">window.depth</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;11.0 (日本語)&#124;11.0]]">
+<tr>
+<td><i> <b>LÖVE <a href="114.html" title="11.0 (日本語)">11.0</a> から使用可能</b> </i>
+</td></tr>
+<tr>
+<td> <small>このフラグは以前のバージョンでは非対応です。</small>
+</td></tr></table>
+<p>深度バッファにおけるビット当たりのサンプル数です (16/24/32 より指定。デフォルトは <code>nil</code>)
+</p>
+<h4><span class="mw-headline" id="window.stencil">window.stencil</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;11.0 (日本語)&#124;11.0]]">
+<tr>
+<td><i> <b>LÖVE <a href="114.html" title="11.0 (日本語)">11.0</a> から使用可能</b> </i>
+</td></tr>
+<tr>
+<td> <small>このフラグは以前のバージョンでは非対応です。</small>
+</td></tr></table>
+<p>ステンシルバッファにおけるビット当たりのサンプル数です (通常は 8 を指定。デフォルトは <code>nil</code>)
+</p>
+<h4><span class="mw-headline" id="window.msaa">window.msaa</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.9.2 (日本語)&#124;0.9.2]]">
+<tr>
+<td><i> <b>LÖVE <a href="0.94.html" title="0.9.2 (日本語)">0.9.2</a> から使用可能</b> </i>
+</td></tr>
+<tr>
+<td> <small>このフラグは以前のバージョンでは非対応です。</small>
+</td></tr></table>
+<p>多重サンプリングされたアンチエイアシングで使用するサンプル数。
+</p>
+<h4><span class="mw-headline" id="window.display">window.display</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.9.0 (日本語)&#124;0.9.0]]">
+<tr>
+<td><i> <b>LÖVE <a href="0.93.html" title="0.9.0 (日本語)">0.9.0</a> から使用可能</b> </i>
+</td></tr>
+<tr>
+<td> <small>このフラグは以前のバージョンでは非対応です。</small>
+</td></tr></table>
+<p>マルチモニターを利用できるならば、ウィンドウを表示するディスプレイの番号を指定します。
+</p>
+<h4><span class="mw-headline" id="window.highdpi">window.highdpi</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.9.1 (日本語)&#124;0.9.1]]">
+<tr>
+<td><i> <b>LÖVE <a href="0.95.html" title="0.9.1 (日本語)">0.9.1</a> から使用可能</b> </i>
+</td></tr>
+<tr>
+<td> <small>このフラグは以前のバージョンでは非対応です。</small>
+</td></tr></table>
+<p><a href="love.window19.html" title="love.window.fromPixels (日本語)">love.window.getPixelScale</a>, <a href="love.window20.html" title="love.window.toPixels (日本語)">love.window.toPixels</a>, および <a href="love.window19.html" title="love.window.fromPixels (日本語)">love.window.fromPixels</a> を参照してください。正確な表示を確実にするためにコードの微調整が必要であるため、Retina ディスプレイが搭載されている Mac または iOS システムでゲームの動作確認ができない場合は、このオプションは無効にしたままにしておくことを推奨します。
+</p><p>LÖVE <a href="114.html" title="11.0 (日本語)">11.0</a> 以降より、このフラグに関係なく Android で High DPI は常時有効であることに注意してください。
+</p>
+<h4><span class="mw-headline" id="window.x_.26_window.y">window.x &amp; window.y</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.9.2 (日本語)&#124;0.9.2]]">
+<tr>
+<td><i> <b>LÖVE <a href="0.94.html" title="0.9.2 (日本語)">0.9.2</a> から使用可能</b> </i>
+</td></tr>
+<tr>
+<td> <small>これらのフラグは以前のバージョンでは非対応です。</small>
+</td></tr></table>
+<p>利用者の画面上にあるウィンドウの位置を設定します。代わりに <a href="love.window21.html" title="love.window.setPosition (日本語)">love.window.setPosition</a> を位置の即時変更にて使用することができます。
+</p>
+<h4><span class="mw-headline" id="window.fsaa">window.fsaa</span></h4>
+<table class="removed-new-section" bgcolor="#ffacac" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-oldin="&#91;&#91;0.10.0 (日本語)&#124;0.10.0]]">
+<tr>
+<td><i> <b>LÖVE <a href="0.93.html" title="0.9.0 (日本語)">0.9.0</a> まで使用可能でしたが LÖVE <a href="0.104.html" title="0.10.0 (日本語)">0.10.0</a> で廃止されました</b> </i>
+</td></tr>
+<tr>
+<td> <small>このフラグは window.msaa フラグへ変更されました。</small>
+</td></tr></table>
+<p>多重サンプリングされたアンチエイアシングで使用するサンプル数。
+</p>
+<h4><span class="mw-headline" id="window.srgb">window.srgb</span></h4>
+<table class="removed-new-section" bgcolor="#ffacac" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-oldin="&#91;&#91;0.10.0 (日本語)&#124;0.10.0]]">
+<tr>
+<td><i> <b>LÖVE <a href="0.95.html" title="0.9.1 (日本語)">0.9.1</a> まで使用可能でしたが LÖVE <a href="0.104.html" title="0.10.0 (日本語)">0.10.0</a> で廃止されました</b> </i>
+</td></tr>
+<tr>
+<td> <small>このフラグは gammacorrect フラグへ変更されました。</small>
+</td></tr></table>
+<p>このウィンドウのフラグを有効にすると、主画面へ描画された全ての物に対して線形 RGB 色空間から sRGB 色空間へ自動的に色を変換します － ウィンドウの表面はガンマ空間の sRGB として処理されます。これはガンマ補正表示の要素のみであり、混乱しやすい高度な話題であるため、意味が理解できない場合は、このオプションは無効化しておくことを推奨します。
+</p>
+<h4><span class="mw-headline" id=".E3.83.AA.E3.83.AA.E3.83.BC.E3.82.B9.E3.83.BB.E3.83.A2.E3.83.BC.E3.83.89">リリース・モード</span></h4>
+<table class="removed-new-section" bgcolor="#ffacac" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-oldin="&#91;&#91;0.9.0 (日本語)&#124;0.9.0]]">
+<tr>
+<td><i> <b>LÖVE <a href="0.81.html" title="0.8.0 (日本語)">0.8.0</a> まで使用可能でしたが LÖVE <a href="0.93.html" title="0.9.0 (日本語)">0.9.0</a> で廃止されました</b> </i>
+</td></tr>
+<tr>
+<td> <small>このフラグは以降のバージョンでは非対応です。</small>
+</td></tr></table>
+<p><br />
+<code>t.release</code> を有効にしたとき、 LÖVE は<a href="love64.html" title="love.releaseerrhand (日本語)">リリース・エラー・ハンドラ</a>を使用します。これにより、デフォルトの情報は少しだけ出力されるようになります。もちろん、オーバーライドできます。
+</p><p>デフォルトのリリース・エラー・ハンドラは開発者と連絡を取るための情報として conf.lua にて指定された <i>title, author および url</i> の値を使用して遊技者へ通知メッセージを出力します。
+</p><p>リリース・モードで結合型実行形式 (fused mode) を有効にしたゲームを実行する場合は LÖVE のセーブ・ディレクトリには保存されません。正確には Windows において、以前は <code>%APPDATA%\\LOVE\\game</code> でしたが、現在は <code>%APPDATA%\\game</code> となります。この概念は Windows 以外の動作環境でも適用されます。
+</p>
+<h2><span class="mw-headline" id=".E6.97.A7.E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3">旧バージョン</span></h2>
+<p>下記は LÖVE <a href="114.html" title="11.0 (日本語)">11.0</a> ～ <a href="116.html" title="11.2 (日本語)">11.2</a> までのオプションとデフォルト値のリストです:
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="lua source-lua"><pre class="de1"><span class="kw1">function</span> love<span class="sy0">.</span>conf<span class="br0">&#40;</span>t<span class="br0">&#41;</span>
+    t<span class="sy0">.</span>identity <span class="sy0">=</span> <span class="kw4">nil</span>                    <span class="co1">-- セーブ・ディレクトリの名称 (string)</span>
+    t<span class="sy0">.</span>appendidentity <span class="sy0">=</span> <span class="kw4">false</span>            <span class="co1">-- このフラグはソースディレクトリの後にセーブディレクトリのファイルを検索するどうか (boolean)</span>
+    t<span class="sy0">.</span>version <span class="sy0">=</span> <span class="st0">&quot;11.0&quot;</span>                  <span class="co1">-- このゲームの作成に使用した LÖVE のバージョン (string)</span>
+    t<span class="sy0">.</span>console <span class="sy0">=</span> <span class="kw4">false</span>                   <span class="co1">-- コンソールの表示 (boolean, Windows 専用)</span>
+    t<span class="sy0">.</span>accelerometerjoystick <span class="sy0">=</span> <span class="kw4">true</span>      <span class="co1">-- iOS と Andorid で加速度センサーをジョイスティックと見せかけることを有効にするか (boolean)</span>
+    t<span class="sy0">.</span>externalstorage <span class="sy0">=</span> <span class="kw4">false</span>           <span class="co1">-- true にすると Android で外部ストレージにファイルの保存 (およびセーブ・ディレクトリからの読み込み) を行います (boolean)</span>
+    t<span class="sy0">.</span>gammacorrect <span class="sy0">=</span> <span class="kw4">false</span>              <span class="co1">-- 対応システムでの動作時、ガンマ補正レンダリングを有効にするか (boolean)</span>
+&#160;
+    t<span class="sy0">.</span>audio<span class="sy0">.</span>mixwithsystem <span class="sy0">=</span> <span class="kw4">true</span>        <span class="co1">-- LÖVE の起動中に他のアプリのバックグラウンド音楽を再生を続けるか (boolean, iOS と Android のみ)</span>
+&#160;
+    t<span class="sy0">.</span>window<span class="sy0">.</span>title <span class="sy0">=</span> <span class="st0">&quot;Untitled&quot;</span>         <span class="co1">-- ウィンドウのタイトル (string)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>icon <span class="sy0">=</span> <span class="kw4">nil</span>                 <span class="co1">-- ウィンドウのアイコンとして使用する画像のファイルパス (string)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>width <span class="sy0">=</span> <span class="nu0">800</span>                <span class="co1">-- ウィンドウの幅 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>height <span class="sy0">=</span> <span class="nu0">600</span>               <span class="co1">-- ウィンドウの高さ (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>borderless <span class="sy0">=</span> <span class="kw4">false</span>         <span class="co1">-- ウィンドウの境界線を非表示 (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>resizable <span class="sy0">=</span> <span class="kw4">false</span>          <span class="co1">-- 利用者がウィンドウの大きさを変更できるかどうか (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>minwidth <span class="sy0">=</span> <span class="nu0">1</span>               <span class="co1">-- ウィンドウの大きさが変更可能な場合におけるウィンドウの最小の幅 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>minheight <span class="sy0">=</span> <span class="nu0">1</span>              <span class="co1">-- ウィンドウの大きさが変更可能な場合におけるウィンドウの最小の高さ (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>fullscreen <span class="sy0">=</span> <span class="kw4">false</span>         <span class="co1">-- 全画面表示の有効化 (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>fullscreentype <span class="sy0">=</span> <span class="st0">&quot;desktop&quot;</span> <span class="co1">-- 排他的な全画面表示 (&quot;exclusive&quot;) またはデスクトップ (&quot;desktop&quot;) による全画面表示方式の中から選択 (string)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>vsync <span class="sy0">=</span> <span class="nu0">1</span>                  <span class="co1">-- 垂直同期の有効化 (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>msaa <span class="sy0">=</span> <span class="nu0">0</span>                   <span class="co1">-- 多重サンプリングされたアンチエイリアシングにて使用するサンプル数 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>depth <span class="sy0">=</span> <span class="kw4">nil</span>                <span class="co1">-- 深度バッファにおけるビット当たりのサンプル数です</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>stencil <span class="sy0">=</span> <span class="kw4">nil</span>              <span class="co1">-- ステンシルバッファにおけるビット当たりのサンプル数です</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>display <span class="sy0">=</span> <span class="nu0">1</span>                <span class="co1">-- ウィンドウの表示先となるモニタの番号 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>highdpi <span class="sy0">=</span> <span class="kw4">false</span>            <span class="co1">-- Retina ディスプレイ上のウィンドウで high-dpi モードを有効にするか (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>x <span class="sy0">=</span> <span class="kw4">nil</span>                    <span class="co1">-- 指定先のディスプレイにあるウィンドウ位置の x 座標 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>y <span class="sy0">=</span> <span class="kw4">nil</span>                    <span class="co1">-- 指定先のディスプレイにあるウィンドウ位置の y 座標 (number)</span>
+&#160;
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>audio <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- audio モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>data <span class="sy0">=</span> <span class="kw4">true</span>               <span class="co1">-- data モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>event <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- event モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>font <span class="sy0">=</span> <span class="kw4">true</span>               <span class="co1">-- font モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>graphics <span class="sy0">=</span> <span class="kw4">true</span>           <span class="co1">-- graphics モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>image <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- image モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>joystick <span class="sy0">=</span> <span class="kw4">true</span>           <span class="co1">-- joystick モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>keyboard <span class="sy0">=</span> <span class="kw4">true</span>           <span class="co1">-- keyboard モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span><span class="kw3">math</span> <span class="sy0">=</span> <span class="kw4">true</span>               <span class="co1">-- math モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>mouse <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- mouse モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>physics <span class="sy0">=</span> <span class="kw4">true</span>            <span class="co1">-- physics モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>sound <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- sound モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>system <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- system モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>thread <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- thread モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>timer <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- timer モジュールの有効化 (boolean)、無効にすると love.update のデルタ時間は 0 になります。</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>touch <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- touch モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>video <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- video モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>window <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- window モジュールの有効化 (boolean)</span>
+<span class="kw1">end</span></pre></div></div>
+<p>下記は LÖVE <a href="0.105.html" title="0.10.1 (日本語)">0.10.1</a> および <a href="0.103.html" title="0.10.2 (日本語)">0.10.2</a> のオプションとデフォルト値における全てのリストです:
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="lua source-lua"><pre class="de1"><span class="kw1">function</span> love<span class="sy0">.</span>conf<span class="br0">&#40;</span>t<span class="br0">&#41;</span>
+    t<span class="sy0">.</span>identity <span class="sy0">=</span> <span class="kw4">nil</span>                    <span class="co1">-- セーブ・ディレクトリの名称 (string)</span>
+    t<span class="sy0">.</span>version <span class="sy0">=</span> <span class="st0">&quot;0.10.2&quot;</span>                <span class="co1">-- このゲームの作成に使用した LÖVE のバージョン (string)</span>
+    t<span class="sy0">.</span>console <span class="sy0">=</span> <span class="kw4">false</span>                   <span class="co1">-- コンソールの表示 (boolean, Windows 専用)</span>
+    t<span class="sy0">.</span>accelerometerjoystick <span class="sy0">=</span> <span class="kw4">true</span>      <span class="co1">-- iOS と Andorid で加速度センサーをジョイスティックと見せかけることを有効にするか (boolean)</span>
+    t<span class="sy0">.</span>externalstorage <span class="sy0">=</span> <span class="kw4">false</span>           <span class="co1">-- true にすると Android で外部ストレージにファイルの保存 (およびセーブ・ディレクトリからの読み込み) を行います (boolean)</span>
+    t<span class="sy0">.</span>gammacorrect <span class="sy0">=</span> <span class="kw4">false</span>              <span class="co1">-- 対応システムでの動作時、ガンマ補正レンダリングを有効にするか (boolean)</span>
+&#160;
+    t<span class="sy0">.</span>window<span class="sy0">.</span>title <span class="sy0">=</span> <span class="st0">&quot;Untitled&quot;</span>         <span class="co1">-- ウィンドウのタイトル (string)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>icon <span class="sy0">=</span> <span class="kw4">nil</span>                 <span class="co1">-- ウィンドウのアイコンとして使用する画像のファイルパス (string)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>width <span class="sy0">=</span> <span class="nu0">800</span>                <span class="co1">-- ウィンドウの幅 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>height <span class="sy0">=</span> <span class="nu0">600</span>               <span class="co1">-- ウィンドウの高さ (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>borderless <span class="sy0">=</span> <span class="kw4">false</span>         <span class="co1">-- ウィンドウの境界線を非表示 (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>resizable <span class="sy0">=</span> <span class="kw4">false</span>          <span class="co1">-- 利用者がウィンドウの大きさを変更できるかどうか (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>minwidth <span class="sy0">=</span> <span class="nu0">1</span>               <span class="co1">-- ウィンドウの大きさが変更可能な場合におけるウィンドウの最小の幅 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>minheight <span class="sy0">=</span> <span class="nu0">1</span>              <span class="co1">-- ウィンドウの大きさが変更可能な場合におけるウィンドウの最小の高さ (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>fullscreen <span class="sy0">=</span> <span class="kw4">false</span>         <span class="co1">-- 全画面表示の有効化 (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>fullscreentype <span class="sy0">=</span> <span class="st0">&quot;desktop&quot;</span> <span class="co1">-- 排他的な全画面表示 (&quot;exclusive&quot;) またはデスクトップ (&quot;desktop&quot;) による全画面表示方式の中から選択 (string)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>vsync <span class="sy0">=</span> <span class="kw4">true</span>               <span class="co1">-- 垂直同期の有効化 (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>msaa <span class="sy0">=</span> <span class="nu0">0</span>                   <span class="co1">-- 多重サンプリングされたアンチエイリアシングにて使用するサンプル数 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>display <span class="sy0">=</span> <span class="nu0">1</span>                <span class="co1">-- ウィンドウの表示先となるモニタの番号 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>highdpi <span class="sy0">=</span> <span class="kw4">false</span>            <span class="co1">-- Retina ディスプレイ上のウィンドウで high-dpi モードを有効にするか (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>x <span class="sy0">=</span> <span class="kw4">nil</span>                    <span class="co1">-- 指定先のディスプレイにあるウィンドウ位置の x 座標 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>y <span class="sy0">=</span> <span class="kw4">nil</span>                    <span class="co1">-- 指定先のディスプレイにあるウィンドウ位置の y 座標 (number)</span>
+&#160;
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>audio <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- audio モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>event <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- event モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>graphics <span class="sy0">=</span> <span class="kw4">true</span>           <span class="co1">-- graphics モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>image <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- image モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>joystick <span class="sy0">=</span> <span class="kw4">true</span>           <span class="co1">-- joystick モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>keyboard <span class="sy0">=</span> <span class="kw4">true</span>           <span class="co1">-- keyboard モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span><span class="kw3">math</span> <span class="sy0">=</span> <span class="kw4">true</span>               <span class="co1">-- math モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>mouse <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- mouse モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>physics <span class="sy0">=</span> <span class="kw4">true</span>            <span class="co1">-- physics モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>sound <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- sound モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>system <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- system モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>timer <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- timer モジュールの有効化 (boolean)、無効にすると love.update のデルタ時間は 0 になります。</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>touch <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- touch モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>video <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- video モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>window <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- window モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>thread <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- thread モジュールの有効化 (boolean)</span>
+<span class="kw1">end</span></pre></div></div>
+<p>下記は LÖVE <a href="0.104.html" title="0.10.0 (日本語)">0.10.0</a> のオプションとデフォルト値のリストです:
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="lua source-lua"><pre class="de1"><span class="kw1">function</span> love<span class="sy0">.</span>conf<span class="br0">&#40;</span>t<span class="br0">&#41;</span>
+    t<span class="sy0">.</span>identity <span class="sy0">=</span> <span class="kw4">nil</span>                    <span class="co1">-- セーブ・ディレクトリの名称 (string)</span>
+    t<span class="sy0">.</span>version <span class="sy0">=</span> <span class="st0">&quot;0.10.0&quot;</span>                <span class="co1">-- このゲームの作成に使用した LÖVE のバージョン (string)</span>
+    t<span class="sy0">.</span>console <span class="sy0">=</span> <span class="kw4">false</span>                   <span class="co1">-- コンソールの表示 (boolean, Windows 専用)</span>
+    t<span class="sy0">.</span>accelerometerjoystick <span class="sy0">=</span> <span class="kw4">true</span>      <span class="co1">-- iOS と Andorid で加速度センサーをジョイスティックと見せかけることを有効にするか (boolean)</span>
+    t<span class="sy0">.</span>gammacorrect <span class="sy0">=</span> <span class="kw4">false</span>              <span class="co1">-- 対応システムでの動作時、ガンマ補正レンダリングを有効にするか (boolean)</span>
+&#160;
+    t<span class="sy0">.</span>window<span class="sy0">.</span>title <span class="sy0">=</span> <span class="st0">&quot;Untitled&quot;</span>         <span class="co1">-- ウィンドウのタイトル (string)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>icon <span class="sy0">=</span> <span class="kw4">nil</span>                 <span class="co1">-- ウィンドウのアイコンとして使用する画像のファイルパス (string)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>width <span class="sy0">=</span> <span class="nu0">800</span>                <span class="co1">-- ウィンドウの幅 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>height <span class="sy0">=</span> <span class="nu0">600</span>               <span class="co1">-- ウィンドウの高さ (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>borderless <span class="sy0">=</span> <span class="kw4">false</span>         <span class="co1">-- ウィンドウの境界線を非表示 (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>resizable <span class="sy0">=</span> <span class="kw4">false</span>          <span class="co1">-- 利用者がウィンドウの大きさを変更できるかどうか (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>minwidth <span class="sy0">=</span> <span class="nu0">1</span>               <span class="co1">-- ウィンドウの大きさが変更可能な場合におけるウィンドウの最小の幅 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>minheight <span class="sy0">=</span> <span class="nu0">1</span>              <span class="co1">-- ウィンドウの大きさが変更可能な場合におけるウィンドウの最小の高さ (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>fullscreen <span class="sy0">=</span> <span class="kw4">false</span>         <span class="co1">-- 全画面表示の有効化 (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>fullscreentype <span class="sy0">=</span> <span class="st0">&quot;desktop&quot;</span> <span class="co1">-- 排他的な全画面表示 (&quot;exclusive&quot;) またはデスクトップ (&quot;desktop&quot;) による全画面表示方式の中から選択 (string)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>vsync <span class="sy0">=</span> <span class="kw4">true</span>               <span class="co1">-- 垂直同期の有効化 (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>msaa <span class="sy0">=</span> <span class="nu0">0</span>                   <span class="co1">-- 多重サンプリングされたアンチエイリアシングにて使用するサンプル数 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>display <span class="sy0">=</span> <span class="nu0">1</span>                <span class="co1">-- ウィンドウの表示先となるモニタの番号 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>highdpi <span class="sy0">=</span> <span class="kw4">false</span>            <span class="co1">-- Retina ディスプレイ上のウィンドウで high-dpi モードを有効にするか (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>x <span class="sy0">=</span> <span class="kw4">nil</span>                    <span class="co1">-- 指定先のディスプレイにあるウィンドウ位置の x 座標 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>y <span class="sy0">=</span> <span class="kw4">nil</span>                    <span class="co1">-- 指定先のディスプレイにあるウィンドウ位置の y 座標 (number)</span>
+&#160;
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>audio <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- audio モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>event <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- event モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>graphics <span class="sy0">=</span> <span class="kw4">true</span>           <span class="co1">-- graphics モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>image <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- image モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>joystick <span class="sy0">=</span> <span class="kw4">true</span>           <span class="co1">-- joystick モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>keyboard <span class="sy0">=</span> <span class="kw4">true</span>           <span class="co1">-- keyboard モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span><span class="kw3">math</span> <span class="sy0">=</span> <span class="kw4">true</span>               <span class="co1">-- math モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>mouse <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- mouse モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>physics <span class="sy0">=</span> <span class="kw4">true</span>            <span class="co1">-- physics モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>sound <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- sound モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>system <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- system モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>timer <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- timer モジュールの有効化 (boolean)、無効にすると love.update のデルタ時間は 0 になります。</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>touch <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- touch モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>video <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- video モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>window <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- window モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>thread <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- thread モジュールの有効化 (boolean)</span>
+<span class="kw1">end</span></pre></div></div>
+<p>下記は LÖVE <a href="0.94.html" title="0.9.2 (日本語)">0.9.2</a> のオプションとデフォルト値のリストです:
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="lua source-lua"><pre class="de1"><span class="kw1">function</span> love<span class="sy0">.</span>conf<span class="br0">&#40;</span>t<span class="br0">&#41;</span>
+    t<span class="sy0">.</span>identity <span class="sy0">=</span> <span class="kw4">nil</span>                   <span class="co1">-- セーブ・ディレクトリの名称 (string)</span>
+    t<span class="sy0">.</span>version <span class="sy0">=</span> <span class="st0">&quot;0.9.2&quot;</span>                <span class="co1">-- このゲームの作成に使用した LÖVE のバージョン (string)</span>
+    t<span class="sy0">.</span>console <span class="sy0">=</span> <span class="kw4">false</span>                  <span class="co1">-- コンソールの表示 (boolean, Windows 専用)</span>
+&#160;
+    t<span class="sy0">.</span>window<span class="sy0">.</span>title <span class="sy0">=</span> <span class="st0">&quot;Untitled&quot;</span>        <span class="co1">-- ウィンドウのタイトル (string)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>icon <span class="sy0">=</span> <span class="kw4">nil</span>                <span class="co1">-- ウィンドウのアイコンとして使用する画像のファイルパス (string)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>width <span class="sy0">=</span> <span class="nu0">800</span>               <span class="co1">-- ウィンドウの幅 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>height <span class="sy0">=</span> <span class="nu0">600</span>              <span class="co1">-- ウィンドウの高さ (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>borderless <span class="sy0">=</span> <span class="kw4">false</span>        <span class="co1">-- ウィンドウの境界線を非表示 (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>resizable <span class="sy0">=</span> <span class="kw4">false</span>         <span class="co1">-- 利用者がウィンドウの大きさを変更できるかどうか (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>minwidth <span class="sy0">=</span> <span class="nu0">1</span>              <span class="co1">-- ウィンドウの大きさが変更可能な場合におけるウィンドウの最小の幅 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>minheight <span class="sy0">=</span> <span class="nu0">1</span>             <span class="co1">-- ウィンドウの大きさが変更可能な場合におけるウィンドウの最小の高さ (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>fullscreen <span class="sy0">=</span> <span class="kw4">false</span>        <span class="co1">-- 全画面表示の有効化 (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>fullscreentype <span class="sy0">=</span> <span class="st0">&quot;normal&quot;</span> <span class="co1">-- デフォルト的な全画面表示 (&quot;normal&quot;) またはデスクトップ (&quot;desktop&quot;) による全画面表示方式の中から選択 (string)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>vsync <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- 垂直同期の有効化 (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>fsaa <span class="sy0">=</span> <span class="nu0">0</span>                  <span class="co1">-- 多重サンプリングされたアンチエイリアシングにて使用するサンプル数 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>display <span class="sy0">=</span> <span class="nu0">1</span>               <span class="co1">-- ウィンドウの表示先となるモニタの番号 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>highdpi <span class="sy0">=</span> <span class="kw4">false</span>           <span class="co1">-- Retina ディスプレイ上のウィンドウで high-dpi モードを有効にするか (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>srgb <span class="sy0">=</span> <span class="kw4">false</span>              <span class="co1">-- 画面描画時の sRGB ガンマ補正の有効化 (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>x <span class="sy0">=</span> <span class="kw4">nil</span>                   <span class="co1">-- 指定先のディスプレイにあるウィンドウ位置の x 座標 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>y <span class="sy0">=</span> <span class="kw4">nil</span>                   <span class="co1">-- 指定先のディスプレイにあるウィンドウ位置の y 座標 (number)</span>
+&#160;
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>audio <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- audio モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>event <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- event モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>graphics <span class="sy0">=</span> <span class="kw4">true</span>          <span class="co1">-- graphics モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>image <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- image モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>joystick <span class="sy0">=</span> <span class="kw4">true</span>          <span class="co1">-- joystick モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>keyboard <span class="sy0">=</span> <span class="kw4">true</span>          <span class="co1">-- keyboard モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span><span class="kw3">math</span> <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- math モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>mouse <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- mouse モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>physics <span class="sy0">=</span> <span class="kw4">true</span>           <span class="co1">-- physics モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>sound <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- sound モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>system <span class="sy0">=</span> <span class="kw4">true</span>            <span class="co1">-- system モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>timer <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- timer モジュールの有効化 (boolean)、無効にすると love.update のデルタ時間は 0 になります。</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>window <span class="sy0">=</span> <span class="kw4">true</span>            <span class="co1">-- window モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>thread <span class="sy0">=</span> <span class="kw4">true</span>            <span class="co1">-- thread モジュールの有効化 (boolean)</span>
+<span class="kw1">end</span></pre></div></div>
+<p>下記は LÖVE <a href="0.95.html" title="0.9.1 (日本語)">0.9.1</a> のオプションとデフォルト値のリストです:
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="lua source-lua"><pre class="de1"><span class="kw1">function</span> love<span class="sy0">.</span>conf<span class="br0">&#40;</span>t<span class="br0">&#41;</span>
+    t<span class="sy0">.</span>identity <span class="sy0">=</span> <span class="kw4">nil</span>                   <span class="co1">-- セーブ・ディレクトリの名称 (string)</span>
+    t<span class="sy0">.</span>version <span class="sy0">=</span> <span class="st0">&quot;0.9.1&quot;</span>                <span class="co1">-- このゲームの作成に使用した LÖVE のバージョン (string)</span>
+    t<span class="sy0">.</span>console <span class="sy0">=</span> <span class="kw4">false</span>                  <span class="co1">-- コンソールの表示 (boolean, Windows 専用)</span>
+&#160;
+    t<span class="sy0">.</span>window<span class="sy0">.</span>title <span class="sy0">=</span> <span class="st0">&quot;Untitled&quot;</span>        <span class="co1">-- ウィンドウのタイトル (string)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>icon <span class="sy0">=</span> <span class="kw4">nil</span>                <span class="co1">-- ウィンドウのアイコンとして使用する画像のファイルパス (string)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>width <span class="sy0">=</span> <span class="nu0">800</span>               <span class="co1">-- ウィンドウの幅 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>height <span class="sy0">=</span> <span class="nu0">600</span>              <span class="co1">-- ウィンドウの高さ (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>borderless <span class="sy0">=</span> <span class="kw4">false</span>        <span class="co1">-- ウィンドウの境界線を非表示 (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>resizable <span class="sy0">=</span> <span class="kw4">false</span>         <span class="co1">-- 利用者がウィンドウの大きさを変更できるかどうか (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>minwidth <span class="sy0">=</span> <span class="nu0">1</span>              <span class="co1">-- ウィンドウの大きさが変更可能な場合におけるウィンドウの最小の幅 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>minheight <span class="sy0">=</span> <span class="nu0">1</span>             <span class="co1">-- ウィンドウの大きさが変更可能な場合におけるウィンドウの最小の高さ (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>fullscreen <span class="sy0">=</span> <span class="kw4">false</span>        <span class="co1">-- 全画面表示の有効化 (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>fullscreentype <span class="sy0">=</span> <span class="st0">&quot;normal&quot;</span> <span class="co1">-- 準的な全画面表示またはデスクトップによる全画面表示方式 (string)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>vsync <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- 垂直同期の有効化 (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>fsaa <span class="sy0">=</span> <span class="nu0">0</span>                  <span class="co1">-- 多重サンプリングされたアンチエイリアシングにて使用するサンプル数 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>display <span class="sy0">=</span> <span class="nu0">1</span>               <span class="co1">-- ウィンドウの表示先となるモニタの番号 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>highdpi <span class="sy0">=</span> <span class="kw4">false</span>           <span class="co1">-- Retina ディスプレイ上のウィンドウで high-dpi モードを有効にするか (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>srgb <span class="sy0">=</span> <span class="kw4">false</span>              <span class="co1">-- 画面描画時の sRGB ガンマ補正の有効化 (boolean)</span>
+&#160;
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>audio <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- audio モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>event <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- event モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>graphics <span class="sy0">=</span> <span class="kw4">true</span>          <span class="co1">-- graphics モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>image <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- image モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>joystick <span class="sy0">=</span> <span class="kw4">true</span>          <span class="co1">-- joystick モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>keyboard <span class="sy0">=</span> <span class="kw4">true</span>          <span class="co1">-- keyboard モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span><span class="kw3">math</span> <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- math モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>mouse <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- mouse モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>physics <span class="sy0">=</span> <span class="kw4">true</span>           <span class="co1">-- physics モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>sound <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- sound モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>system <span class="sy0">=</span> <span class="kw4">true</span>            <span class="co1">-- system モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>timer <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- timer モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>window <span class="sy0">=</span> <span class="kw4">true</span>            <span class="co1">-- window モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>thread <span class="sy0">=</span> <span class="kw4">true</span>            <span class="co1">-- thread モジュールの有効化 (boolean)</span>
+<span class="kw1">end</span></pre></div></div>
+<p>下記は LÖVE <a href="0.93.html" title="0.9.0 (日本語)">0.9.0</a> のオプションとデフォルト値のリストです:
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="lua source-lua"><pre class="de1"><span class="kw1">function</span> love<span class="sy0">.</span>conf<span class="br0">&#40;</span>t<span class="br0">&#41;</span>
+    t<span class="sy0">.</span>identity <span class="sy0">=</span> <span class="kw4">nil</span>                   <span class="co1">-- セーブ・ディレクトリの名称 (string)</span>
+    t<span class="sy0">.</span>version <span class="sy0">=</span> <span class="st0">&quot;0.9.0&quot;</span>                <span class="co1">-- このゲームの作成に使用した LÖVE のバージョン (string)</span>
+    t<span class="sy0">.</span>console <span class="sy0">=</span> <span class="kw4">false</span>                  <span class="co1">-- コンソールの表示 (boolean, Windows 専用)</span>
+&#160;
+    t<span class="sy0">.</span>window<span class="sy0">.</span>title <span class="sy0">=</span> <span class="st0">&quot;Untitled&quot;</span>        <span class="co1">-- ウィンドウのタイトル (string)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>icon <span class="sy0">=</span> <span class="kw4">nil</span>                <span class="co1">-- ウィンドウのアイコンとして使用する画像のファイルパス (string)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>width <span class="sy0">=</span> <span class="nu0">800</span>               <span class="co1">-- ウィンドウの幅 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>height <span class="sy0">=</span> <span class="nu0">600</span>              <span class="co1">-- ウィンドウの高さ (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>borderless <span class="sy0">=</span> <span class="kw4">false</span>        <span class="co1">-- ウィンドウの境界線を非表示 (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>resizable <span class="sy0">=</span> <span class="kw4">false</span>         <span class="co1">-- 利用者がウィンドウの大きさを変更できるかどうか (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>minwidth <span class="sy0">=</span> <span class="nu0">1</span>              <span class="co1">-- ウィンドウの大きさが変更可能な場合におけるウィンドウの最小の幅 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>minheight <span class="sy0">=</span> <span class="nu0">1</span>             <span class="co1">-- ウィンドウの大きさが変更可能な場合におけるウィンドウの最小の高さ (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>fullscreen <span class="sy0">=</span> <span class="kw4">false</span>        <span class="co1">-- 全画面表示の有効化 (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>fullscreentype <span class="sy0">=</span> <span class="st0">&quot;normal&quot;</span> <span class="co1">-- 準的な全画面表示またはデスクトップによる全画面表示方式 (string)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>vsync <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- 垂直同期の有効化 (boolean)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>fsaa <span class="sy0">=</span> <span class="nu0">0</span>                  <span class="co1">-- 多重サンプリングされたアンチエイリアシングにて使用するサンプル数 (number)</span>
+    t<span class="sy0">.</span>window<span class="sy0">.</span>display <span class="sy0">=</span> <span class="nu0">1</span>               <span class="co1">-- ウィンドウの表示先となるモニタの番号 (number)</span>
+&#160;
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>audio <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- audio モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>event <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- event モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>graphics <span class="sy0">=</span> <span class="kw4">true</span>          <span class="co1">-- graphics モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>image <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- image モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>joystick <span class="sy0">=</span> <span class="kw4">true</span>          <span class="co1">-- joystick モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>keyboard <span class="sy0">=</span> <span class="kw4">true</span>          <span class="co1">-- keyboard モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span><span class="kw3">math</span> <span class="sy0">=</span> <span class="kw4">true</span>              <span class="co1">-- math モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>mouse <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- mouse モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>physics <span class="sy0">=</span> <span class="kw4">true</span>           <span class="co1">-- physics モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>sound <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- sound モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>system <span class="sy0">=</span> <span class="kw4">true</span>            <span class="co1">-- system モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>timer <span class="sy0">=</span> <span class="kw4">true</span>             <span class="co1">-- timer モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>window <span class="sy0">=</span> <span class="kw4">true</span>            <span class="co1">-- window モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>thread <span class="sy0">=</span> <span class="kw4">true</span>            <span class="co1">-- thread モジュールの有効化 (boolean)</span>
+<span class="kw1">end</span></pre></div></div>
+<p>下記は LÖVE <a href="0.81.html" title="0.8.0 (日本語)">0.8.0</a> のオプションとデフォルト値のリストです:
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="lua source-lua"><pre class="de1"><span class="kw1">function</span> love<span class="sy0">.</span>conf<span class="br0">&#40;</span>t<span class="br0">&#41;</span>
+    t<span class="sy0">.</span>title <span class="sy0">=</span> <span class="st0">&quot;Untitled&quot;</span>        <span class="co1">-- ゲームのウィンドウ・タイトル (string)</span>
+    t<span class="sy0">.</span>author <span class="sy0">=</span> <span class="st0">&quot;Unnamed&quot;</span>        <span class="co1">-- ゲーム開発者の名称 (string)</span>
+    t<span class="sy0">.</span>url <span class="sy0">=</span> <span class="kw4">nil</span>                 <span class="co1">-- ゲームのウェブサイトの URL アドレス (string)</span>
+    t<span class="sy0">.</span>identity <span class="sy0">=</span> <span class="kw4">nil</span>            <span class="co1">-- セーブ・ディレクトリの名称 (string)</span>
+    t<span class="sy0">.</span>version <span class="sy0">=</span> <span class="st0">&quot;0.8.0&quot;</span>         <span class="co1">-- このゲームの作成に使用した LÖVE のバージョン (string)</span>
+    t<span class="sy0">.</span>console <span class="sy0">=</span> <span class="kw4">false</span>           <span class="co1">-- コンソールの表示 (boolean, Windows 専用)</span>
+    t<span class="sy0">.</span>release <span class="sy0">=</span> <span class="kw4">false</span>           <span class="co1">-- リリース・モードの有効化 (boolean)</span>
+    t<span class="sy0">.</span>screen<span class="sy0">.</span>width <span class="sy0">=</span> <span class="nu0">800</span>        <span class="co1">-- ウィンドウの幅 (number)</span>
+    t<span class="sy0">.</span>screen<span class="sy0">.</span>height <span class="sy0">=</span> <span class="nu0">600</span>       <span class="co1">-- ウィンドウの高さ (number)</span>
+    t<span class="sy0">.</span>screen<span class="sy0">.</span>fullscreen <span class="sy0">=</span> <span class="kw4">false</span> <span class="co1">-- 全画面表示の有効化 (boolean)</span>
+    t<span class="sy0">.</span>screen<span class="sy0">.</span>vsync <span class="sy0">=</span> <span class="kw4">true</span>       <span class="co1">-- 垂直同期の有効化 (boolean)</span>
+    t<span class="sy0">.</span>screen<span class="sy0">.</span>fsaa <span class="sy0">=</span> <span class="nu0">0</span>           <span class="co1">-- MSAA のサンプル数 (number)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>joystick <span class="sy0">=</span> <span class="kw4">true</span>   <span class="co1">-- joystick モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>audio <span class="sy0">=</span> <span class="kw4">true</span>      <span class="co1">-- audio モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>keyboard <span class="sy0">=</span> <span class="kw4">true</span>   <span class="co1">-- keyboard モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>event <span class="sy0">=</span> <span class="kw4">true</span>      <span class="co1">-- event モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>image <span class="sy0">=</span> <span class="kw4">true</span>      <span class="co1">-- image モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>graphics <span class="sy0">=</span> <span class="kw4">true</span>   <span class="co1">-- graphics モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>timer <span class="sy0">=</span> <span class="kw4">true</span>      <span class="co1">-- timer モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>mouse <span class="sy0">=</span> <span class="kw4">true</span>      <span class="co1">-- mouse モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>sound <span class="sy0">=</span> <span class="kw4">true</span>      <span class="co1">-- sound モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>physics <span class="sy0">=</span> <span class="kw4">true</span>    <span class="co1">-- physics モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>thread <span class="sy0">=</span> <span class="kw4">true</span>     <span class="co1">-- thread モジュールの有効化 (boolean)</span>
+<span class="kw1">end</span></pre></div></div>
+<p>下記は LÖVE  <a href="0.73.html" title="0.7.2 (日本語)">0.7.2</a> 以前のオプションとデフォルト値のリストです:
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="lua source-lua"><pre class="de1"><span class="kw1">function</span> love<span class="sy0">.</span>conf<span class="br0">&#40;</span>t<span class="br0">&#41;</span>
+    t<span class="sy0">.</span>title <span class="sy0">=</span> <span class="st0">&quot;Untitled&quot;</span>        <span class="co1">-- ゲームのウィンドウ・タイトル (string)</span>
+    t<span class="sy0">.</span>author <span class="sy0">=</span> <span class="st0">&quot;Unnamed&quot;</span>        <span class="co1">-- ゲーム開発者の名称 (string)</span>
+    t<span class="sy0">.</span>identity <span class="sy0">=</span> <span class="kw4">nil</span>            <span class="co1">-- セーブ・ディレクトリの名称 (string)</span>
+    t<span class="sy0">.</span>version <span class="sy0">=</span> <span class="nu0">0</span>               <span class="co1">-- このゲームの作成に使用した LÖVE のバージョン (number)</span>
+    t<span class="sy0">.</span>console <span class="sy0">=</span> <span class="kw4">false</span>           <span class="co1">-- コンソールの表示 (boolean, Windows 専用)</span>
+    t<span class="sy0">.</span>screen<span class="sy0">.</span>width <span class="sy0">=</span> <span class="nu0">800</span>        <span class="co1">-- ウィンドウの幅 (number)</span>
+    t<span class="sy0">.</span>screen<span class="sy0">.</span>height <span class="sy0">=</span> <span class="nu0">600</span>       <span class="co1">-- ウィンドウの高さ (number)</span>
+    t<span class="sy0">.</span>screen<span class="sy0">.</span>fullscreen <span class="sy0">=</span> <span class="kw4">false</span> <span class="co1">-- 全画面表示の有効化 (boolean)</span>
+    t<span class="sy0">.</span>screen<span class="sy0">.</span>vsync <span class="sy0">=</span> <span class="kw4">true</span>       <span class="co1">-- 垂直同期の有効化 (boolean)</span>
+    t<span class="sy0">.</span>screen<span class="sy0">.</span>fsaa <span class="sy0">=</span> <span class="nu0">0</span>           <span class="co1">-- MSAA のサンプル数 (number)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>joystick <span class="sy0">=</span> <span class="kw4">true</span>   <span class="co1">-- joystick モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>audio <span class="sy0">=</span> <span class="kw4">true</span>      <span class="co1">-- audio モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>keyboard <span class="sy0">=</span> <span class="kw4">true</span>   <span class="co1">-- keyboard モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>event <span class="sy0">=</span> <span class="kw4">true</span>      <span class="co1">-- event モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>image <span class="sy0">=</span> <span class="kw4">true</span>      <span class="co1">-- image モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>graphics <span class="sy0">=</span> <span class="kw4">true</span>   <span class="co1">-- graphics モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>timer <span class="sy0">=</span> <span class="kw4">true</span>      <span class="co1">-- timer モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>mouse <span class="sy0">=</span> <span class="kw4">true</span>      <span class="co1">-- mouse モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>sound <span class="sy0">=</span> <span class="kw4">true</span>      <span class="co1">-- sound モジュールの有効化 (boolean)</span>
+    t<span class="sy0">.</span>modules<span class="sy0">.</span>physics <span class="sy0">=</span> <span class="kw4">true</span>    <span class="co1">-- physics モジュールの有効化 (boolean)</span>
+<span class="kw1">end</span></pre></div></div>
+<h2><span class="mw-headline" id=".E9.96.A2.E9.80.A3">関連</span></h2>
+<ul><li> <a href="love62.html" title="love (日本語)">love (日本語)</a></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id=".E3.81.9D.E3.81.AE.E3.81.BB.E3.81.8B.E3.81.AE.E8.A8.80.E8.AA.9E">そのほかの言語</span></h2>
+<div class="i18n">
+<p><a href="config_files_dansk.html" title="Config Files (Dansk)">Dansk</a>&#160;&#8211;
+<a href="config_files_deutsch.html" title="Config Files (Deutsch)">Deutsch</a>&#160;&#8211;
+<a href="config_files.html" title="Config Files">English</a>&#160;&#8211; 
+<a href="config_files_espa_ol.html" title="Config Files (Español)">Español</a>&#160;&#8211;
+<a href="config_files_fran_ais.html" title="Config Files (Français)">Français</a>&#160;&#8211;
+<a href="config_files_indonesia.html" title="Config Files (Indonesia)">Indonesia</a>&#160;&#8211;
+<a href="" class="new" title="Config Files (Italiano) (page does not exist)">Italiano</a>&#160;&#8211;
+<a href="" class="new" title="Config Files (Lietuviškai) (page does not exist)">Lietuviškai</a>&#160;&#8211;
+<a href="config_files_magyar.html" title="Config Files (Magyar)">Magyar</a>&#160;&#8211;
+<a href="" class="new" title="Config Files (Nederlands) (page does not exist)">Nederlands</a>&#160;&#8211;
+<a href="config_files_polski.html" title="Config Files (Polski)">Polski</a>&#160;&#8211;
+<a href="config_files_portugu_s.html" title="Config Files (Português)">Português</a>&#160;&#8211;
+<a href="" class="new" title="Config Files (Română) (page does not exist)">Română</a>&#160;&#8211;
+<a href="" class="new" title="Config Files (Slovenský) (page does not exist)">Slovenský</a>&#160;&#8211;
+<a href="" class="new" title="Config Files (Suomi) (page does not exist)">Suomi</a>&#160;&#8211;
+<a href="config_files_svenska.html" title="Config Files (Svenska)">Svenska</a>&#160;&#8211;
+<a href="" class="new" title="Config Files (Türkçe) (page does not exist)">Türkçe</a>&#160;&#8211;
+<a href="" class="new" title="Config Files (Česky) (page does not exist)">Česky</a>&#160;&#8211;
+<a href="" class="new" title="Config Files (Ελληνικά) (page does not exist)">Ελληνικά</a>&#160;&#8211;
+<a href="" class="new" title="Config Files (Български) (page does not exist)">Български</a>&#160;&#8211;
+<a href="config_files2.html" title="Config Files (Русский)">Русский</a>&#160;&#8211;
+<a href="" class="new" title="Config Files (Српски) (page does not exist)">Српски</a>&#160;&#8211;
+<a href="config_files3.html" title="Config Files (Українська)">Українська</a>&#160;&#8211;
+<a href="" class="new" title="Config Files (עברית) (page does not exist)">עברית</a>&#160;&#8211;
+<a href="" class="new" title="Config Files (ไทย) (page does not exist)">ไทย</a>&#160;&#8211;
+<strong class="selflink">日本語</strong>&#160;&#8211;
+<a href="" class="new" title="Config Files (正體中文) (page does not exist)">正體中文</a>&#160;&#8211;
+<a href="config_files4.html" title="Config Files (简体中文)">简体中文</a>&#160;&#8211;
+<a href="config_files_ti_ng_vi_t.html" title="Config Files (Tiếng Việt)">Tiếng Việt</a>&#160;&#8211;
+<a href="config_files5.html" title="Config Files (한국어)">한국어</a> 
+<br />
+<span style="text-align:right;"><i><a href="help_i18n1.html" title="Help:i18n (日本語)">詳細情報</a></i></span>
+</p>
+</div>
+
+<!-- 
+NewPP limit report
+CPU time usage: 0.304 seconds
+Real time usage: 0.310 seconds
+Preprocessor visited node count: 1358/1000000
+Preprocessor generated node count: 2683/1000000
+Post‐expand include size: 14674/2097152 bytes
+Template argument size: 3853/2097152 bytes
+Highest expansion depth: 5/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key love2d_wiki:pcache:idhash:4388-0!*!0!!*!*!* and timestamp 20200620182223 and revision id 24361
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="">http://love2d.org/w/index.php?title=Config_Files_(日本語)&amp;oldid=24361</a>"</div>
+					<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="" title="Special:Categories">Categories</a>: <ul><li><a href="category_l_ve.html" title="Category:LÖVE">LÖVE</a></li><li><a href="category_callbacks.html" title="Category:Callbacks">Callbacks</a></li></ul></div></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			<div class="portlet" id="p-personal" role="navigation">
+				<h5>Personal tools</h5>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-documentation" role="navigation">
+		<h5>documentation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-love"><a href="love.html">love</a></li>
+											<li id="n-love.audio"><a href="love1.html">love.audio</a></li>
+											<li id="n-love.data"><a href="love2.html">love.data</a></li>
+											<li id="n-love.event"><a href="love3.html">love.event</a></li>
+											<li id="n-love.filesystem"><a href="love4.html">love.filesystem</a></li>
+											<li id="n-love.font"><a href="love5.html">love.font</a></li>
+											<li id="n-love.graphics"><a href="love6.html">love.graphics</a></li>
+											<li id="n-love.image"><a href="love7.html">love.image</a></li>
+											<li id="n-love.joystick"><a href="love8.html">love.joystick</a></li>
+											<li id="n-love.keyboard"><a href="love9.html">love.keyboard</a></li>
+											<li id="n-love.math"><a href="love10.html">love.math</a></li>
+											<li id="n-love.mouse"><a href="love11.html">love.mouse</a></li>
+											<li id="n-love.physics"><a href="love12.html">love.physics</a></li>
+											<li id="n-love.sound"><a href="love13.html">love.sound</a></li>
+											<li id="n-love.system"><a href="love14.html">love.system</a></li>
+											<li id="n-love.thread"><a href="love15.html">love.thread</a></li>
+											<li id="n-love.timer"><a href="love16.html">love.timer</a></li>
+											<li id="n-love.touch"><a href="love17.html">love.touch</a></li>
+											<li id="n-love.video"><a href="love18.html">love.video</a></li>
+											<li id="n-love.window"><a href="love19.html">love.window</a></li>
+											<li id="n-lua-enet"><a href="lua_enet.html">lua-enet</a></li>
+											<li id="n-luasocket"><a href="socket.html">luasocket</a></li>
+											<li id="n-utf8"><a href="utf8.html">utf8</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-Home"><a href="love2d1.html" rel="nofollow">Home</a></li>
+											<li id="n-Forums"><a href="forums.html" rel="nofollow">Forums</a></li>
+											<li id="n-Issue-tracker"><a href="https://github.com/love2d/love/issues" rel="nofollow">Issue tracker</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-wiki_navigation" role="navigation">
+		<h5>wiki navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-mainpage-description"><a href="index.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="" title="Load a random page [x]" accesskey="x">Random page</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h5><label for="searchInput">Search</label></h5>
+
+			<div id="searchBody" class="pBody">
+				<form action="w.html" id="searchform">
+					<input type='hidden' name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search" title="Search LOVE [f]" accesskey="f" id="searchInput" />
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchGoButton" class="searchButton" />&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton" />
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h5>Tools</h5>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="">Page information</a></li>
+											<li id="t-smwbrowselink"><a href="" rel="smw-browse">Browse properties</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									<a href="http://www.gnu.org/copyleft/fdl.html"><img src="gnu_fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" /></a>
+							</div>
+					<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+									<a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last modified on 10 December 2019, at 02:05.</li>
+									<li id="viewcount">This page has been accessed 10,338 times.</li>
+									<li id="copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+									<li id="privacy"><a href="love_privacy_policy.html" title="LOVE:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="love_about.html" title="LOVE:About">About LOVE</a></li>
+									<li id="disclaimer"><a href="love_general_disclaimer.html" title="LOVE:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.smw.tooltips","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest"],null,true);
+}</script>
+<script>if(window.mw){
+document.write("\u003Cscript src=\"http://love2d.org/w/load.php?debug=false\u0026amp;lang=en\u0026amp;modules=site\u0026amp;only=scripts\u0026amp;skin=love\u0026amp;*\"\u003E\u003C/script\u003E");
+}</script>
+<script>if(window.mw){
+mw.config.set({"wgBackendResponseTime":88});
+}</script></body></html>

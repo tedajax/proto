@@ -47,3 +47,5 @@ end
 function physics_post_solve(a, b, contact, normalImpulse, tangentImpulse)
 end
 
+function physics_raycast(x, y, angle, distance)
+end

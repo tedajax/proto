@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>love.graphics.newCanvas - LOVE</title>
+<meta name="generator" content="MediaWiki 1.24.2" />
+<link rel="ExportRDF" type="application/rdf+xml" title="love.graphics.newCanvas" href="" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch_desc.php" title="LOVE (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="api.php_action_rsd" />
+<link rel="alternate" hreflang="x-default" href="" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+<link rel="alternate" type="application/atom+xml" title="LOVE Atom feed" href="" />
+<link rel="stylesheet" href="" />
+<!--[if IE 6]><link rel="stylesheet" href="ie60fixes.css" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="ie70fixes.css" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: love2d_wiki:resourceloader:filter:minify-css:7:daf253d59690fd9cabb6b95510bce103 */</style>
+<script src=""></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"love.graphics.newCanvas","wgTitle":"love.graphics.newCanvas","wgCurRevisionId":25392,"wgRevisionId":25392,"wgArticleId":2213,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Functions"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"love.graphics.newCanvas","wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":1,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rows":25,"showhiddencats":0,"shownumberswatching":1,"showtoolbar":1,"skin":"love","stubthreshold":0,"thumbsize":5,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":1,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"watchrollback":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs102":false,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs108":false,"searchNs109":false,"searchNs500":false,"searchNs501":false,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"});},{},{});
+/* cache key: love2d_wiki:resourceloader:filter:minify-js:7:201bb6cc0b4c032fe7bbe209a0125541 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.smw.style","mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-love_graphics_newCanvas skin-love action-view">
+<div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				
+						<div id="p-cactions" role="navigation">
+			<h5>Views</h5>
+
+			<div>
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="" rel="archives" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+	
+				<h1 id="firstHeading" class="firstHeading" lang="en">love.graphics.newCanvas</h1>
+
+				<div id="bodyContent">
+					<!-- <div id="siteSub">From LOVE</div> -->
+
+					<!-- <div id="contentSub"></div> -->
+										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.8.0]]">
+<tr>
+<td><i> <b>Available since LÖVE <a href="0.8.html" title="0.8.0">0.8.0</a></b> </i>
+</td></tr>
+<tr>
+<td> <small>It has been renamed from <a href="love.graphics114.html" title="love.graphics.newFramebuffer">love.graphics.newFramebuffer</a>.</small>
+</td></tr></table>
+<p>Creates a new <a href="canvas.html" title="Canvas">Canvas</a> object for offscreen rendering.
+</p>
+<table class="notice" bgcolor="gold" style="border-style:solid;border-width:1px;-moz-border-radius:3px;border-radius:3px;" align="center" width="80%">
+<tr>
+<td width="1"> <a href="file_o.html" class="image"><img alt="O.png" src="o.png" width="64" height="64" /></a>
+</td>
+<td>This function can be slow if it is called repeatedly, such as from <a href="love52.html" title="love.update">love.update</a> or <a href="love53.html" title="love.draw">love.draw</a>. If you need to use a specific resource often, create it once and store it somewhere it can be reused!
+</td>
+<td width="1">&#160;
+</td></tr></table><br /><br />
+<h2><span class="mw-headline" id="Function">Function</span></h2>
+<h3><span class="mw-headline" id="Synopsis">Synopsis</span></h3>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="lua source-lua"><pre class="de1">canvas <span class="sy0">=</span> love<span class="sy0">.</span>graphics<span class="sy0">.</span>newCanvas<span class="br0">&#40;</span> <span class="br0">&#41;</span></pre></div></div>
+<h3><span class="mw-headline" id="Arguments">Arguments</span></h3>
+<p>None.
+</p>
+<h3><span class="mw-headline" id="Returns">Returns</span></h3>
+<dl><dt><code><a href="canvas.html" title="Canvas">Canvas</a> canvas</code></dt>
+<dd> A new Canvas with dimensions equal to the window's size in pixels.</dd></dl>
+<h2><span class="mw-headline" id="Function_2">Function</span></h2>
+<h3><span class="mw-headline" id="Synopsis_2">Synopsis</span></h3>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="lua source-lua"><pre class="de1">canvas <span class="sy0">=</span> love<span class="sy0">.</span>graphics<span class="sy0">.</span>newCanvas<span class="br0">&#40;</span> width<span class="sy0">,</span> height <span class="br0">&#41;</span></pre></div></div>
+<h3><span class="mw-headline" id="Arguments_2">Arguments</span></h3>
+<dl><dt><code><a href="number.html" title="number">number</a> width</code></dt>
+<dd> The desired width of the Canvas.</dd>
+<dt><code><a href="number.html" title="number">number</a> height</code></dt>
+<dd> The desired height of the Canvas.</dd></dl>
+<h3><span class="mw-headline" id="Returns_2">Returns</span></h3>
+<dl><dt><code><a href="canvas.html" title="Canvas">Canvas</a> canvas</code></dt>
+<dd> A new Canvas with specified width and height.</dd></dl>
+<h2><span class="mw-headline" id="Function_3">Function</span></h2>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;11.0]]">
+<tr>
+<td><i> <b>Available since LÖVE <a href="113.html" title="11.0">11.0</a></b> </i>
+</td></tr>
+<tr>
+<td> <small>This variant is not supported in earlier versions.</small>
+</td></tr></table>
+<p>Creates a 2D or <a href="texturetype.html" title="TextureType">cubemap</a> Canvas using the given settings.
+</p>
+<h3><span class="mw-headline" id="Synopsis_3">Synopsis</span></h3>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="lua source-lua"><pre class="de1">canvas <span class="sy0">=</span> love<span class="sy0">.</span>graphics<span class="sy0">.</span>newCanvas<span class="br0">&#40;</span> width<span class="sy0">,</span> height<span class="sy0">,</span> settings <span class="br0">&#41;</span></pre></div></div>
+<h3><span class="mw-headline" id="Arguments_3">Arguments</span></h3>
+<dl><dt><code><a href="number.html" title="number">number</a> width</code></dt>
+<dd> The desired width of the Canvas.</dd>
+<dt><code><a href="number.html" title="number">number</a> height</code></dt>
+<dd> The desired height of the Canvas.</dd>
+<dt><code><a href="table.html" title="table">table</a> settings</code></dt>
+<dd> A table containing the given fields:
+<dl><dt><code><a href="texturetype.html" title="TextureType">TextureType</a> type ("2d")</code></dt>
+<dd> The type of Canvas to create.</dd>
+<dt><code><a href="pixelformat.html" title="PixelFormat">PixelFormat</a> format ("normal")</code></dt>
+<dd> The format of the Canvas.</dd>
+<dt><code><a href="boolean.html" title="boolean">boolean</a> readable</code></dt>
+<dd> Whether the Canvas is <a href="texture_isreadable.html" title="Texture:isReadable">readable</a> (drawable and accessible in a <a href="shader.html" title="Shader">Shader</a>). True by default for regular formats, false by default for depth/stencil formats.</dd>
+<dt><code><a href="number.html" title="number">number</a> msaa (0)</code></dt>
+<dd> The desired number of multisample antialiasing (MSAA) samples used when drawing to the Canvas.</dd>
+<dt><code><a href="number.html" title="number">number</a> dpiscale (<a href="love.graphics4.html" title="love.graphics.getDPIScale">love.graphics.getDPIScale</a>())</code></dt>
+<dd> The <a href="texture_getdpiscale.html" title="Texture:getDPIScale">DPI scale factor</a> of the Canvas, used when drawing to the Canvas as well as when drawing the Canvas to the screen.</dd>
+<dt><code><a href="canvasmipmapmode.html" title="CanvasMipmapMode">CanvasMipmapMode</a> mipmaps ("none")</code></dt>
+<dd> Whether the Canvas has mipmaps, and whether to automatically regenerate them if so.</dd></dl></dd></dl>
+<h3><span class="mw-headline" id="Returns_3">Returns</span></h3>
+<dl><dt><code><a href="canvas.html" title="Canvas">Canvas</a> canvas</code></dt>
+<dd> A new Canvas with specified width and height.</dd></dl>
+<h3><span class="mw-headline" id="Notes">Notes</span></h3>
+<p>Some Canvas formats have higher system requirements than the default format. Use <a href="love.graphics13.html" title="love.graphics.getCanvasFormats">love.graphics.getCanvasFormats</a> to check for support.
+</p>
+<h2><span class="mw-headline" id="Function_4">Function</span></h2>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;11.0]]">
+<tr>
+<td><i> <b>Available since LÖVE <a href="113.html" title="11.0">11.0</a></b> </i>
+</td></tr>
+<tr>
+<td> <small>This variant is not supported in earlier versions.</small>
+</td></tr></table>
+<p>Creates a <a href="texturetype.html" title="TextureType">volume or array</a> texture-type Canvas.
+</p>
+<h3><span class="mw-headline" id="Synopsis_4">Synopsis</span></h3>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="lua source-lua"><pre class="de1">canvas <span class="sy0">=</span> love<span class="sy0">.</span>graphics<span class="sy0">.</span>newCanvas<span class="br0">&#40;</span> width<span class="sy0">,</span> height<span class="sy0">,</span> layers<span class="sy0">,</span> settings <span class="br0">&#41;</span></pre></div></div>
+<h3><span class="mw-headline" id="Arguments_4">Arguments</span></h3>
+<dl><dt><code><a href="number.html" title="number">number</a> width</code></dt>
+<dd> The desired width of the Canvas.</dd>
+<dt><code><a href="number.html" title="number">number</a> height</code></dt>
+<dd> The desired height of the Canvas.</dd>
+<dt><code><a href="number.html" title="number">number</a> layers</code></dt>
+<dd> The number of array layers (if the Canvas is an Array Texture), or the volume depth (if the Canvas is a Volume Texture).</dd>
+<dt><code><a href="table.html" title="table">table</a> settings</code></dt>
+<dd> A table containing the given fields:
+<dl><dt><code><a href="texturetype.html" title="TextureType">TextureType</a> type ("array")</code></dt>
+<dd> The type of Canvas to create.</dd>
+<dt><code><a href="pixelformat.html" title="PixelFormat">PixelFormat</a> format ("normal")</code></dt>
+<dd> The format of the Canvas.</dd>
+<dt><code><a href="boolean.html" title="boolean">boolean</a> readable</code></dt>
+<dd> Whether the Canvas is <a href="texture_isreadable.html" title="Texture:isReadable">readable</a> (drawable and accessible in a <a href="shader.html" title="Shader">Shader</a>). True by default for regular formats, false by default for depth/stencil formats.</dd>
+<dt><code><a href="number.html" title="number">number</a> msaa (0)</code></dt>
+<dd> The desired number of multisample antialiasing (MSAA) samples used when drawing to the Canvas.</dd>
+<dt><code><a href="number.html" title="number">number</a> dpiscale (<a href="love.graphics4.html" title="love.graphics.getDPIScale">love.graphics.getDPIScale</a>())</code></dt>
+<dd> The <a href="texture_getdpiscale.html" title="Texture:getDPIScale">DPI scale factor</a> of the Canvas, used when drawing to the Canvas as well as when drawing the Canvas to the screen.</dd>
+<dt><code><a href="canvasmipmapmode.html" title="CanvasMipmapMode">CanvasMipmapMode</a> mipmaps ("none")</code></dt>
+<dd> Whether the Canvas has mipmaps, and whether to automatically regenerate them if so.</dd></dl></dd></dl>
+<h3><span class="mw-headline" id="Returns_4">Returns</span></h3>
+<dl><dt><code><a href="canvas.html" title="Canvas">Canvas</a> canvas</code></dt>
+<dd> A new Canvas with specified width and height.</dd></dl>
+<h3><span class="mw-headline" id="Notes_2">Notes</span></h3>
+<p>Not all texture types are supported by all systems. <a href="love.graphics9.html" title="love.graphics.getTextureTypes">love.graphics.getTextureTypes</a> can check for support.
+</p>
+<h2><span class="mw-headline" id="Function_5">Function</span></h2>
+<table class="removed-new-section" bgcolor="#ffacac" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.9.0]]" data-oldin="&#91;&#91;11.0]]">
+<tr>
+<td><i> <b>Available since LÖVE <a href="0.9.html" title="0.9.0">0.9.0</a> and removed in LÖVE <a href="113.html" title="11.0">11.0</a></b> </i>
+</td></tr>
+<tr>
+<td> <small>This variant is not supported in earlier or later versions.</small>
+</td></tr></table>
+<h3><span class="mw-headline" id="Synopsis_5">Synopsis</span></h3>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="lua source-lua"><pre class="de1">canvas <span class="sy0">=</span> love<span class="sy0">.</span>graphics<span class="sy0">.</span>newCanvas<span class="br0">&#40;</span> width<span class="sy0">,</span> height<span class="sy0">,</span> <span class="kw3">format</span> <span class="br0">&#41;</span></pre></div></div>
+<h3><span class="mw-headline" id="Arguments_5">Arguments</span></h3>
+<dl><dt><code><a href="number.html" title="number">number</a> width (window_width)</code></dt>
+<dd> The desired width of the Canvas.</dd>
+<dt><code><a href="number.html" title="number">number</a> height (window_height)</code></dt>
+<dd> The desired height of the Canvas.</dd>
+<dt><code><a href="canvasformat.html" title="CanvasFormat">CanvasFormat</a> format ("normal")</code></dt>
+<dd> The desired texture format of the Canvas.</dd></dl>
+<h3><span class="mw-headline" id="Returns_5">Returns</span></h3>
+<dl><dt><code><a href="canvas.html" title="Canvas">Canvas</a> canvas</code></dt>
+<dd> A new Canvas with specified width and height.</dd></dl>
+<h3><span class="mw-headline" id="Notes_3">Notes</span></h3>
+<p>Some Canvas formats have higher system requirements than the default format. Use <a href="love.graphics13.html" title="love.graphics.getCanvasFormats">love.graphics.getCanvasFormats</a> to check for support.
+</p>
+<h2><span class="mw-headline" id="Function_6">Function</span></h2>
+<table class="removed-new-section" bgcolor="#ffacac" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.9.1]]" data-oldin="&#91;&#91;11.0]]">
+<tr>
+<td><i> <b>Available since LÖVE <a href="0.92.html" title="0.9.1">0.9.1</a> and removed in LÖVE <a href="113.html" title="11.0">11.0</a></b> </i>
+</td></tr>
+<tr>
+<td> <small>This variant is not supported in earlier or later versions.</small>
+</td></tr></table>
+<h3><span class="mw-headline" id="Synopsis_6">Synopsis</span></h3>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="lua source-lua"><pre class="de1">canvas <span class="sy0">=</span> love<span class="sy0">.</span>graphics<span class="sy0">.</span>newCanvas<span class="br0">&#40;</span> width<span class="sy0">,</span> height<span class="sy0">,</span> <span class="kw3">format</span><span class="sy0">,</span> msaa <span class="br0">&#41;</span></pre></div></div>
+<h3><span class="mw-headline" id="Arguments_6">Arguments</span></h3>
+<dl><dt><code><a href="number.html" title="number">number</a> width (window_width)</code></dt>
+<dd> The desired width of the Canvas.</dd>
+<dt><code><a href="number.html" title="number">number</a> height (window_height)</code></dt>
+<dd> The desired height of the Canvas.</dd>
+<dt><code><a href="canvasformat.html" title="CanvasFormat">CanvasFormat</a> format ("normal")</code></dt>
+<dd> The desired texture format of the Canvas.</dd>
+<dt><code><a href="number.html" title="number">number</a> msaa (0)</code></dt>
+<dd> The desired number of multisample antialiasing (MSAA) samples used when drawing to the Canvas.</dd></dl>
+<h3><span class="mw-headline" id="Returns_6">Returns</span></h3>
+<dl><dt><code><a href="canvas.html" title="Canvas">Canvas</a> canvas</code></dt>
+<dd> A new Canvas with specified width and height.</dd></dl>
+<h2><span class="mw-headline" id="Notes_4">Notes</span></h2>
+<ul><li> Not all texture types are supported by all systems. <a href="love.graphics9.html" title="love.graphics.getTextureTypes">love.graphics.getTextureTypes</a> can check for support.</li>
+<li> Some Canvas formats have higher system requirements than the default format. Use <a href="love.graphics13.html" title="love.graphics.getCanvasFormats">love.graphics.getCanvasFormats</a> to check for support.</li>
+<li> The supported maximum number of MSAA samples varies depending on the system. Use <a href="love.graphics115.html" title="love.graphics.getSystemLimits">love.graphics.getSystemLimits</a> to check.</li>
+<li> If the number of MSAA samples specified is greater than the maximum supported by the system, the Canvas will still be created but only using the maximum supported amount (<b>this includes 0.</b>)</li></ul>
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<ul><li> <a href="love6.html" title="love.graphics">love.graphics</a></li>
+<li> <a href="canvas.html" title="Canvas">Canvas</a></li>
+<li> <a href="love.graphics14.html" title="love.graphics.setCanvas">love.graphics.setCanvas</a></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Other_Languages">Other Languages</span></h2>
+<div class="i18n">
+<p><a href="" class="new" title="love.graphics.newCanvas (Dansk) (page does not exist)">Dansk</a>&#160;&#8211;
+<a href="love.graphics116.html" title="love.graphics.newCanvas (Deutsch)">Deutsch</a>&#160;&#8211;
+<strong class="selflink">English</strong>&#160;&#8211; 
+<a href="" class="new" title="love.graphics.newCanvas (Español) (page does not exist)">Español</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newCanvas (Français) (page does not exist)">Français</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newCanvas (Indonesia) (page does not exist)">Indonesia</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newCanvas (Italiano) (page does not exist)">Italiano</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newCanvas (Lietuviškai) (page does not exist)">Lietuviškai</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newCanvas (Magyar) (page does not exist)">Magyar</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newCanvas (Nederlands) (page does not exist)">Nederlands</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newCanvas (Polski) (page does not exist)">Polski</a>&#160;&#8211;
+<a href="love.graphics117.html" title="love.graphics.newCanvas (Português)">Português</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newCanvas (Română) (page does not exist)">Română</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newCanvas (Slovenský) (page does not exist)">Slovenský</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newCanvas (Suomi) (page does not exist)">Suomi</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newCanvas (Svenska) (page does not exist)">Svenska</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newCanvas (Türkçe) (page does not exist)">Türkçe</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newCanvas (Česky) (page does not exist)">Česky</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newCanvas (Ελληνικά) (page does not exist)">Ελληνικά</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newCanvas (Български) (page does not exist)">Български</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newCanvas (Русский) (page does not exist)">Русский</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newCanvas (Српски) (page does not exist)">Српски</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newCanvas (Українська) (page does not exist)">Українська</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newCanvas (עברית) (page does not exist)">עברית</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newCanvas (ไทย) (page does not exist)">ไทย</a>&#160;&#8211;
+<a href="love.graphics102.html" title="love.graphics.newCanvas (日本語)">日本語</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newCanvas (正體中文) (page does not exist)">正體中文</a>&#160;&#8211;
+<a href="love.graphics118.html" title="love.graphics.newCanvas (简体中文)">简体中文</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newCanvas (Tiếng Việt) (page does not exist)">Tiếng Việt</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newCanvas (한국어) (page does not exist)">한국어</a> 
+<br />
+<span style="text-align:right;"><i><a href="help_i18n.html" title="Help:i18n">More info</a></i></span>
+</p>
+</div>
+
+<!-- 
+NewPP limit report
+CPU time usage: 0.160 seconds
+Real time usage: 0.169 seconds
+Preprocessor visited node count: 991/1000000
+Preprocessor generated node count: 3004/1000000
+Post‐expand include size: 10494/2097152 bytes
+Template argument size: 5206/2097152 bytes
+Highest expansion depth: 5/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key love2d_wiki:pcache:idhash:2213-0!*!0!!*!5!* and timestamp 20200620220043 and revision id 25392
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="">http://love2d.org/w/index.php?title=love.graphics.newCanvas&amp;oldid=25392</a>"</div>
+					<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="" title="Special:Categories">Category</a>: <ul><li><a href="category_functions.html" title="Category:Functions">Functions</a></li></ul></div></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			<div class="portlet" id="p-personal" role="navigation">
+				<h5>Personal tools</h5>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-documentation" role="navigation">
+		<h5>documentation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-love"><a href="love.html">love</a></li>
+											<li id="n-love.audio"><a href="love1.html">love.audio</a></li>
+											<li id="n-love.data"><a href="love2.html">love.data</a></li>
+											<li id="n-love.event"><a href="love3.html">love.event</a></li>
+											<li id="n-love.filesystem"><a href="love4.html">love.filesystem</a></li>
+											<li id="n-love.font"><a href="love5.html">love.font</a></li>
+											<li id="n-love.graphics"><a href="love6.html">love.graphics</a></li>
+											<li id="n-love.image"><a href="love7.html">love.image</a></li>
+											<li id="n-love.joystick"><a href="love8.html">love.joystick</a></li>
+											<li id="n-love.keyboard"><a href="love9.html">love.keyboard</a></li>
+											<li id="n-love.math"><a href="love10.html">love.math</a></li>
+											<li id="n-love.mouse"><a href="love11.html">love.mouse</a></li>
+											<li id="n-love.physics"><a href="love12.html">love.physics</a></li>
+											<li id="n-love.sound"><a href="love13.html">love.sound</a></li>
+											<li id="n-love.system"><a href="love14.html">love.system</a></li>
+											<li id="n-love.thread"><a href="love15.html">love.thread</a></li>
+											<li id="n-love.timer"><a href="love16.html">love.timer</a></li>
+											<li id="n-love.touch"><a href="love17.html">love.touch</a></li>
+											<li id="n-love.video"><a href="love18.html">love.video</a></li>
+											<li id="n-love.window"><a href="love19.html">love.window</a></li>
+											<li id="n-lua-enet"><a href="lua_enet.html">lua-enet</a></li>
+											<li id="n-luasocket"><a href="socket.html">luasocket</a></li>
+											<li id="n-utf8"><a href="utf8.html">utf8</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-Home"><a href="love2d1.html" rel="nofollow">Home</a></li>
+											<li id="n-Forums"><a href="forums.html" rel="nofollow">Forums</a></li>
+											<li id="n-Issue-tracker"><a href="https://github.com/love2d/love/issues" rel="nofollow">Issue tracker</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-wiki_navigation" role="navigation">
+		<h5>wiki navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-mainpage-description"><a href="index.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="" title="Load a random page [x]" accesskey="x">Random page</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h5><label for="searchInput">Search</label></h5>
+
+			<div id="searchBody" class="pBody">
+				<form action="w.html" id="searchform">
+					<input type='hidden' name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search" title="Search LOVE [f]" accesskey="f" id="searchInput" />
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchGoButton" class="searchButton" />&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton" />
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h5>Tools</h5>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="">Page information</a></li>
+											<li id="t-smwbrowselink"><a href="" rel="smw-browse">Browse properties</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									<a href="http://www.gnu.org/copyleft/fdl.html"><img src="gnu_fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" /></a>
+							</div>
+					<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+									<a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last modified on 8 June 2020, at 04:21.</li>
+									<li id="viewcount">This page has been accessed 62,325 times.</li>
+									<li id="copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+									<li id="privacy"><a href="love_privacy_policy.html" title="LOVE:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="love_about.html" title="LOVE:About">About LOVE</a></li>
+									<li id="disclaimer"><a href="love_general_disclaimer.html" title="LOVE:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.smw.tooltips","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest"],null,true);
+}</script>
+<script>if(window.mw){
+document.write("\u003Cscript src=\"http://love2d.org/w/load.php?debug=false\u0026amp;lang=en\u0026amp;modules=site\u0026amp;only=scripts\u0026amp;skin=love\u0026amp;*\"\u003E\u003C/script\u003E");
+}</script>
+<script>if(window.mw){
+mw.config.set({"wgBackendResponseTime":73});
+}</script></body></html>

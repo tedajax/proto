@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>love.graphics.newMesh - LOVE</title>
+<meta name="generator" content="MediaWiki 1.24.2" />
+<link rel="ExportRDF" type="application/rdf+xml" title="love.graphics.newMesh" href="" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch_desc.php" title="LOVE (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="api.php_action_rsd" />
+<link rel="alternate" hreflang="x-default" href="" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+<link rel="alternate" type="application/atom+xml" title="LOVE Atom feed" href="" />
+<link rel="stylesheet" href="" />
+<!--[if IE 6]><link rel="stylesheet" href="ie60fixes.css" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="ie70fixes.css" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: love2d_wiki:resourceloader:filter:minify-css:7:daf253d59690fd9cabb6b95510bce103 */</style>
+<script src=""></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"love.graphics.newMesh","wgTitle":"love.graphics.newMesh","wgCurRevisionId":21267,"wgRevisionId":21267,"wgArticleId":3036,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Functions"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"love.graphics.newMesh","wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":1,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rows":25,"showhiddencats":0,"shownumberswatching":1,"showtoolbar":1,"skin":"love","stubthreshold":0,"thumbsize":5,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":1,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"watchrollback":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs102":false,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs108":false,"searchNs109":false,"searchNs500":false,"searchNs501":false,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"});},{},{});
+/* cache key: love2d_wiki:resourceloader:filter:minify-js:7:201bb6cc0b4c032fe7bbe209a0125541 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.smw.style","mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-love_graphics_newMesh skin-love action-view">
+<div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				
+						<div id="p-cactions" role="navigation">
+			<h5>Views</h5>
+
+			<div>
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="" rel="archives" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+	
+				<h1 id="firstHeading" class="firstHeading" lang="en">love.graphics.newMesh</h1>
+
+				<div id="bodyContent">
+					<!-- <div id="siteSub">From LOVE</div> -->
+
+					<!-- <div id="contentSub"></div> -->
+										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.9.0]]">
+<tr>
+<td><i> <b>Available since LÖVE <a href="0.9.html" title="0.9.0">0.9.0</a></b> </i>
+</td></tr>
+<tr>
+<td> <small>This function is not supported in earlier versions.</small>
+</td></tr></table>
+<p>Creates a new <a href="mesh.html" title="Mesh">Mesh</a>.
+</p><p>Use <a href="mesh_settexture.html" title="Mesh:setTexture">Mesh:setTexture</a> if the Mesh should be textured with an <a href="image.html" title="Image">Image</a> or <a href="canvas.html" title="Canvas">Canvas</a> when it's drawn.
+</p><p>In versions prior to <a href="113.html" title="11.0">11.0</a>, color and byte component values were within the range of 0 to 255 instead of 0 to 1.
+</p><p><br />
+</p>
+<table class="notice" bgcolor="gold" style="border-style:solid;border-width:1px;-moz-border-radius:3px;border-radius:3px;" align="center" width="80%">
+<tr>
+<td width="1"> <a href="file_o.html" class="image"><img alt="O.png" src="o.png" width="64" height="64" /></a>
+</td>
+<td>This function can be slow if it is called repeatedly, such as from <a href="love52.html" title="love.update">love.update</a> or <a href="love53.html" title="love.draw">love.draw</a>. If you need to use a specific resource often, create it once and store it somewhere it can be reused!
+</td>
+<td width="1">&#160;
+</td></tr></table><br /><br />
+<h2><span class="mw-headline" id="Function">Function</span></h2>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.10.0]]">
+<tr>
+<td><i> <b>Available since LÖVE <a href="0.102.html" title="0.10.0">0.10.0</a></b> </i>
+</td></tr>
+<tr>
+<td> <small>This variant is not supported in earlier versions.</small>
+</td></tr></table>
+<p>Creates a standard Mesh with the specified vertices.
+</p>
+<h3><span class="mw-headline" id="Synopsis">Synopsis</span></h3>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="lua source-lua"><pre class="de1">mesh <span class="sy0">=</span> love<span class="sy0">.</span>graphics<span class="sy0">.</span>newMesh<span class="br0">&#40;</span> vertices<span class="sy0">,</span> mode<span class="sy0">,</span> usage <span class="br0">&#41;</span></pre></div></div>
+<h3><span class="mw-headline" id="Arguments">Arguments</span></h3>
+<dl><dt><code><a href="table.html" title="table">table</a> vertices</code></dt>
+<dd> The table filled with vertex information tables for each vertex as follows:
+<dl><dt><code><a href="number.html" title="number">number</a> [1]</code></dt>
+<dd> The position of the vertex on the x-axis.</dd>
+<dt><code><a href="number.html" title="number">number</a> [2]</code></dt>
+<dd> The position of the vertex on the y-axis.</dd>
+<dt><code><a href="number.html" title="number">number</a> [3] (0)</code></dt>
+<dd> The u texture coordinate of the vertex. Texture coordinates are normally in the range of [0, 1], but can be greater or less (see <a href="wrapmode.html" title="WrapMode">WrapMode</a>.)</dd>
+<dt><code><a href="number.html" title="number">number</a> [4] (0)</code></dt>
+<dd> The v texture coordinate of the vertex. Texture coordinates are normally in the range of [0, 1], but can be greater or less (see <a href="wrapmode.html" title="WrapMode">WrapMode</a>.)</dd>
+<dt><code><a href="number.html" title="number">number</a> [5] (1)</code></dt>
+<dd> The red component of the vertex color.</dd>
+<dt><code><a href="number.html" title="number">number</a> [6] (1)</code></dt>
+<dd> The green component of the vertex color.</dd>
+<dt><code><a href="number.html" title="number">number</a> [7] (1)</code></dt>
+<dd> The blue component of the vertex color.</dd>
+<dt><code><a href="number.html" title="number">number</a> [8] (1)</code></dt>
+<dd> The alpha component of the vertex color.</dd></dl></dd></dl>
+<dl><dt><code><a href="meshdrawmode.html" title="MeshDrawMode">MeshDrawMode</a> mode ("fan")</code></dt>
+<dd> How the vertices are used when drawing. The default mode "fan" is sufficient for simple convex polygons.</dd>
+<dt><code><a href="spritebatchusage.html" title="SpriteBatchUsage">SpriteBatchUsage</a> usage ("dynamic")</code></dt>
+<dd> The expected usage of the Mesh. The specified usage mode affects the Mesh's memory usage and performance.</dd></dl>
+<h3><span class="mw-headline" id="Returns">Returns</span></h3>
+<dl><dt><code><a href="mesh.html" title="Mesh">Mesh</a> mesh</code></dt>
+<dd> The new mesh.</dd></dl>
+<h2><span class="mw-headline" id="Function_2">Function</span></h2>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.10.0]]">
+<tr>
+<td><i> <b>Available since LÖVE <a href="0.102.html" title="0.10.0">0.10.0</a></b> </i>
+</td></tr>
+<tr>
+<td> <small>This variant is not supported in earlier versions.</small>
+</td></tr></table>
+<p>Creates a standard Mesh with the specified number of vertices.
+</p>
+<h3><span class="mw-headline" id="Synopsis_2">Synopsis</span></h3>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="lua source-lua"><pre class="de1">mesh <span class="sy0">=</span> love<span class="sy0">.</span>graphics<span class="sy0">.</span>newMesh<span class="br0">&#40;</span> vertexcount<span class="sy0">,</span> mode<span class="sy0">,</span> usage <span class="br0">&#41;</span></pre></div></div>
+<h3><span class="mw-headline" id="Arguments_2">Arguments</span></h3>
+<dl><dt><code><a href="number.html" title="number">number</a> vertexcount</code></dt>
+<dd> The total number of vertices the Mesh will use. Each vertex is initialized to <code>{0,0, 0,0, 1,1,1,1}</code>.</dd>
+<dt><code><a href="meshdrawmode.html" title="MeshDrawMode">MeshDrawMode</a> mode ("fan")</code></dt>
+<dd> How the vertices are used when drawing. The default mode "fan" is sufficient for simple convex polygons.</dd>
+<dt><code><a href="spritebatchusage.html" title="SpriteBatchUsage">SpriteBatchUsage</a> usage ("dynamic")</code></dt>
+<dd> The expected usage of the Mesh. The specified usage mode affects the Mesh's memory usage and performance.</dd></dl>
+<h3><span class="mw-headline" id="Returns_2">Returns</span></h3>
+<dl><dt><code><a href="mesh.html" title="Mesh">Mesh</a> mesh</code></dt>
+<dd> The new mesh.</dd></dl>
+<h3><span class="mw-headline" id="Notes">Notes</span></h3>
+<p><a href="mesh_setvertices.html" title="Mesh:setVertices">Mesh:setVertices</a> or <a href="mesh_setvertex.html" title="Mesh:setVertex">Mesh:setVertex</a> and <a href="mesh_setdrawrange.html" title="Mesh:setDrawRange">Mesh:setDrawRange</a> can be used to specify vertex information once the Mesh is created.
+</p>
+<h2><span class="mw-headline" id="Function_3">Function</span></h2>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.10.0]]">
+<tr>
+<td><i> <b>Available since LÖVE <a href="0.102.html" title="0.10.0">0.10.0</a></b> </i>
+</td></tr>
+<tr>
+<td> <small>This variant is not supported in earlier versions.</small>
+</td></tr></table>
+<p>Creates a Mesh with custom vertex attributes and the specified vertex data.
+</p>
+<h3><span class="mw-headline" id="Synopsis_3">Synopsis</span></h3>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="lua source-lua"><pre class="de1">mesh <span class="sy0">=</span> love<span class="sy0">.</span>graphics<span class="sy0">.</span>newMesh<span class="br0">&#40;</span> vertexformat<span class="sy0">,</span> vertices<span class="sy0">,</span> mode<span class="sy0">,</span> usage <span class="br0">&#41;</span></pre></div></div>
+<h3><span class="mw-headline" id="Arguments_3">Arguments</span></h3>
+<dl><dt><code><a href="table.html" title="table">table</a> vertexformat</code></dt>
+<dd> A table in the form of <code>{attribute, ...}</code>. Each attribute is a table which specifies a custom vertex attribute used for each vertex.
+<dl><dt><code><a href="table.html" title="table">table</a> attribute</code></dt>
+<dd> A table containing the attribute's name, it's <a href="" class="new" title="AttributeDataType (page does not exist)">data type</a>, and the number of components in the attribute, in the form of <code>{name, datatype, components}</code>.</dd>
+<dt><code><a href="table.html" title="table">table</a> ...</code></dt>
+<dd> Additional vertex attribute format tables.</dd></dl></dd></dl>
+<dl><dt><code><a href="table.html" title="table">table</a> vertices</code></dt>
+<dd> The table filled with vertex information tables for each vertex, in the form of <code>{vertex, ...}</code> where each vertex is a table in the form of <code>{attributecomponent, ...}</code>.
+<dl><dt><code><a href="number.html" title="number">number</a> attributecomponent</code></dt>
+<dd> The first component of the first vertex attribute in the vertex.</dd>
+<dt><code><a href="number.html" title="number">number</a> ...</code></dt>
+<dd> Additional components of all vertex attributes in the vertex.</dd></dl></dd></dl>
+<dl><dt><code><a href="meshdrawmode.html" title="MeshDrawMode">MeshDrawMode</a> mode ("fan")</code></dt>
+<dd> How the vertices are used when drawing. The default mode "fan" is sufficient for simple convex polygons.</dd>
+<dt><code><a href="spritebatchusage.html" title="SpriteBatchUsage">SpriteBatchUsage</a> usage ("dynamic")</code></dt>
+<dd> The expected usage of the Mesh. The specified usage mode affects the Mesh's memory usage and performance.</dd></dl>
+<h3><span class="mw-headline" id="Returns_3">Returns</span></h3>
+<dl><dt><code><a href="mesh.html" title="Mesh">Mesh</a> mesh</code></dt>
+<dd> The new mesh.</dd></dl>
+<h3><span class="mw-headline" id="Notes_2">Notes</span></h3>
+<p>The values in each vertex table are in the same order as the vertex attributes in the specified vertex format. If no value is supplied for a specific vertex attribute component, it will be set to a default value of 0 if its <a href="" class="new" title="AttributeDataType (page does not exist)">data type</a> is "float", or 1 if its data type is "byte".
+</p><p>If the data type of an attribute is "float", components can be in the range 1 to 4, if the data type is "byte" it must be 4.
+</p><p>If a custom vertex attribute uses the name "VertexPosition", "VertexTexCoord", or "VertexColor", then the vertex data for that vertex attribute will be used for the standard vertex positions, texture coordinates, or vertex colors respectively, when drawing the Mesh. Otherwise a <a href="shader.html" title="Shader">Vertex Shader</a> is required in order to make use of the vertex attribute when the Mesh is drawn.
+</p><p>A Mesh <b>must</b> have a "VertexPosition" attribute in order to be drawn, but it can be attached from a different Mesh via <a href="mesh_attachattribute.html" title="Mesh:attachAttribute">Mesh:attachAttribute</a>.
+</p><p>To use a custom named vertex attribute in a Vertex Shader, it must be declared as an <code>attribute</code> variable of the same name. Variables can be sent from Vertex Shader code to Pixel Shader code by making a <code>varying</code> variable. For example:
+</p><p><i>Vertex Shader code</i>
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="glsl source-glsl"><pre class="de1"><span class="kw2">attribute</span> <span class="kw3">vec2</span> CoolVertexAttribute<span class="sy0">;</span>
+&#160;
+<span class="kw2">varying</span> <span class="kw3">vec2</span> CoolVariable<span class="sy0">;</span>
+&#160;
+<span class="kw3">vec4</span> position<span class="br0">&#40;</span><span class="kw3">mat4</span> transform_projection<span class="sy0">,</span> <span class="kw3">vec4</span> vertex_position<span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+    CoolVariable <span class="sy0">=</span> CoolVertexAttribute<span class="sy0">;</span>
+    <span class="kw1">return</span> transform_projection <span class="sy0">*</span> vertex_position<span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div>
+<p><i>Pixel Shader code</i>
+</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="glsl source-glsl"><pre class="de1"><span class="kw2">varying</span> <span class="kw3">vec2</span> CoolVariable<span class="sy0">;</span>
+&#160;
+<span class="kw3">vec4</span> effect<span class="br0">&#40;</span><span class="kw3">vec4</span> color<span class="sy0">,</span> Image tex<span class="sy0">,</span> <span class="kw3">vec2</span> texcoord<span class="sy0">,</span> <span class="kw3">vec2</span> pixcoord<span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+    <span class="kw3">vec4</span> texcolor <span class="sy0">=</span> Texel<span class="br0">&#40;</span>tex<span class="sy0">,</span> texcoord <span class="sy0">+</span> CoolVariable<span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="kw1">return</span> texcolor <span class="sy0">*</span> color<span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div>
+<h2><span class="mw-headline" id="Function_4">Function</span></h2>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.10.0]]">
+<tr>
+<td><i> <b>Available since LÖVE <a href="0.102.html" title="0.10.0">0.10.0</a></b> </i>
+</td></tr>
+<tr>
+<td> <small>This variant is not supported in earlier versions.</small>
+</td></tr></table>
+<p>Creates a Mesh with custom vertex attributes and the specified number of vertices.
+</p>
+<h3><span class="mw-headline" id="Synopsis_4">Synopsis</span></h3>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="lua source-lua"><pre class="de1">mesh <span class="sy0">=</span> love<span class="sy0">.</span>graphics<span class="sy0">.</span>newMesh<span class="br0">&#40;</span> vertexformat<span class="sy0">,</span> vertexcount<span class="sy0">,</span> mode<span class="sy0">,</span> usage <span class="br0">&#41;</span></pre></div></div>
+<h3><span class="mw-headline" id="Arguments_4">Arguments</span></h3>
+<dl><dt><code><a href="table.html" title="table">table</a> vertexformat</code></dt>
+<dd> A table in the form of <code>{attribute, ...}</code>. Each attribute is a table which specifies a custom vertex attribute used for each vertex.
+<dl><dt><code><a href="table.html" title="table">table</a> attribute</code></dt>
+<dd> A table containing the attribute's name, it's <a href="" class="new" title="AttributeDataType (page does not exist)">data type</a>, and the number of components in the attribute, in the form of <code>{name, datatype, components}</code>.</dd>
+<dt><code><a href="table.html" title="table">table</a> ...</code></dt>
+<dd> Additional vertex attribute format tables.</dd></dl></dd></dl>
+<dl><dt><code><a href="number.html" title="number">number</a> vertexcount</code></dt>
+<dd> The total number of vertices the Mesh will use.</dd>
+<dt><code><a href="meshdrawmode.html" title="MeshDrawMode">MeshDrawMode</a> mode ("fan")</code></dt>
+<dd> How the vertices are used when drawing. The default mode "fan" is sufficient for simple convex polygons.</dd>
+<dt><code><a href="spritebatchusage.html" title="SpriteBatchUsage">SpriteBatchUsage</a> usage ("dynamic")</code></dt>
+<dd> The expected usage of the Mesh. The specified usage mode affects the Mesh's memory usage and performance.</dd></dl>
+<h3><span class="mw-headline" id="Returns_4">Returns</span></h3>
+<dl><dt><code><a href="mesh.html" title="Mesh">Mesh</a> mesh</code></dt>
+<dd> The new mesh.</dd></dl>
+<h3><span class="mw-headline" id="Notes_3">Notes</span></h3>
+<p>Each vertex attribute component is initialized to 0 if its data type is "float", or 1 if its data type is "byte". <a href="mesh_setvertices.html" title="Mesh:setVertices">Mesh:setVertices</a> or <a href="mesh_setvertex.html" title="Mesh:setVertex">Mesh:setVertex</a> and <a href="mesh_setdrawrange.html" title="Mesh:setDrawRange">Mesh:setDrawRange</a> can be used to specify vertex information once the Mesh is created.
+</p><p>If the data type of an attribute is "float", components can be in the range 1 to 4, if the data type is "byte" it must be 4.
+</p><p>If a custom vertex attribute uses the name "VertexPosition", "VertexTexCoord", or "VertexColor", then the vertex data for that vertex attribute will be used for the standard vertex positions, texture coordinates, or vertex colors respectively, when drawing the Mesh. Otherwise a <a href="shader.html" title="Shader">Vertex Shader</a> is required in order to make use of the vertex attribute when the Mesh is drawn.
+</p><p>A Mesh <b>must</b> have a "VertexPosition" attribute in order to be drawn, but it can be attached from a different Mesh via <a href="mesh_attachattribute.html" title="Mesh:attachAttribute">Mesh:attachAttribute</a>.
+</p>
+<h2><span class="mw-headline" id="Function_5">Function</span></h2>
+<table class="removed-section" bgcolor="#ffacac" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-oldin="&#91;&#91;0.10.0]]">
+<tr>
+<td><i> <b>Removed in LÖVE <a href="0.102.html" title="0.10.0">0.10.0</a></b> </i>
+</td></tr>
+<tr>
+<td> <small>This variant is not supported in that and later versions.</small>
+</td></tr></table>
+<h3><span class="mw-headline" id="Synopsis_5">Synopsis</span></h3>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="lua source-lua"><pre class="de1">mesh <span class="sy0">=</span> love<span class="sy0">.</span>graphics<span class="sy0">.</span>newMesh<span class="br0">&#40;</span> vertices<span class="sy0">,</span> texture<span class="sy0">,</span> mode <span class="br0">&#41;</span></pre></div></div>
+<h3><span class="mw-headline" id="Arguments_5">Arguments</span></h3>
+<dl><dt><code><a href="table.html" title="table">table</a> vertices</code></dt>
+<dd> The table filled with vertex information tables for each vertex as follows:
+<dl><dt><code><a href="number.html" title="number">number</a> [1]</code></dt>
+<dd> The position of the vertex on the x-axis.</dd>
+<dt><code><a href="number.html" title="number">number</a> [2]</code></dt>
+<dd> The position of the vertex on the y-axis.</dd>
+<dt><code><a href="number.html" title="number">number</a> [3]</code></dt>
+<dd> The u texture coordinate. Texture coordinates are normally in the range of [0, 1], but can be greater or less (see <a href="wrapmode.html" title="WrapMode">WrapMode</a>.)</dd>
+<dt><code><a href="number.html" title="number">number</a> [4]</code></dt>
+<dd> The v texture coordinate. Texture coordinates are normally in the range of [0, 1], but can be greater or less (see <a href="wrapmode.html" title="WrapMode">WrapMode</a>.)</dd>
+<dt><code><a href="number.html" title="number">number</a> [5] (255)</code></dt>
+<dd> The red color component.</dd>
+<dt><code><a href="number.html" title="number">number</a> [6] (255)</code></dt>
+<dd> The green color component.</dd>
+<dt><code><a href="number.html" title="number">number</a> [7] (255)</code></dt>
+<dd> The blue color component.</dd>
+<dt><code><a href="number.html" title="number">number</a> [8] (255)</code></dt>
+<dd> The alpha color component.</dd></dl></dd></dl>
+<dl><dt><code><a href="texture.html" title="Texture">Texture</a> texture (nil)</code></dt>
+<dd> The <a href="image.html" title="Image">Image</a> or <a href="canvas.html" title="Canvas">Canvas</a> to use when drawing the Mesh. May be nil to use no texture.</dd>
+<dt><code><a href="meshdrawmode.html" title="MeshDrawMode">MeshDrawMode</a> mode ("fan")</code></dt>
+<dd> How the vertices are used when drawing. The default mode "fan" is sufficient for simple convex polygons.</dd></dl>
+<h3><span class="mw-headline" id="Returns_5">Returns</span></h3>
+<dl><dt><code><a href="mesh.html" title="Mesh">Mesh</a> mesh</code></dt>
+<dd> The new mesh.</dd></dl>
+<h2><span class="mw-headline" id="Function_6">Function</span></h2>
+<table class="removed-new-section" bgcolor="#ffacac" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.9.1]]" data-oldin="&#91;&#91;0.10.0]]">
+<tr>
+<td><i> <b>Available since LÖVE <a href="0.92.html" title="0.9.1">0.9.1</a> and removed in LÖVE <a href="0.102.html" title="0.10.0">0.10.0</a></b> </i>
+</td></tr>
+<tr>
+<td> <small>This variant is not supported in earlier or later versions.</small>
+</td></tr></table>
+<h3><span class="mw-headline" id="Synopsis_6">Synopsis</span></h3>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="lua source-lua"><pre class="de1">mesh <span class="sy0">=</span> love<span class="sy0">.</span>graphics<span class="sy0">.</span>newMesh<span class="br0">&#40;</span> vertexcount<span class="sy0">,</span> texture<span class="sy0">,</span> mode <span class="br0">&#41;</span></pre></div></div>
+<h3><span class="mw-headline" id="Arguments_6">Arguments</span></h3>
+<dl><dt><code><a href="number.html" title="number">number</a> vertexcount</code></dt>
+<dd> The total number of vertices the Mesh will use. Each vertex is initialized to <code>{0,0, 0,0, 255,255,255,255}</code>.</dd>
+<dt><code><a href="texture.html" title="Texture">Texture</a> texture (nil)</code></dt>
+<dd> The <a href="image.html" title="Image">Image</a> or <a href="canvas.html" title="Canvas">Canvas</a> to use when drawing the Mesh. May be nil to use no texture.</dd>
+<dt><code><a href="meshdrawmode.html" title="MeshDrawMode">MeshDrawMode</a> mode ("fan")</code></dt>
+<dd> How the vertices are used when drawing. The default mode "fan" is sufficient for simple convex polygons.</dd></dl>
+<h3><span class="mw-headline" id="Returns_6">Returns</span></h3>
+<dl><dt><code><a href="mesh.html" title="Mesh">Mesh</a> mesh</code></dt>
+<dd> The new mesh.</dd></dl>
+<h3><span class="mw-headline" id="Notes_4">Notes</span></h3>
+<p><a href="mesh_setvertices.html" title="Mesh:setVertices">Mesh:setVertices</a> or <a href="mesh_setvertex.html" title="Mesh:setVertex">Mesh:setVertex</a> and <a href="mesh_setdrawrange.html" title="Mesh:setDrawRange">Mesh:setDrawRange</a> can be used to specify vertex information once the Mesh is created.
+</p>
+<h2><span class="mw-headline" id="Examples">Examples</span></h2>
+<h3><span class="mw-headline" id="Creates_and_draws_a_Mesh_identical_to_a_normal_drawn_image_but_with_different_colors_at_each_corner">Creates and draws a Mesh identical to a normal drawn image but with different colors at each corner</span></h3>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="lua source-lua"><pre class="de1"><span class="kw1">function</span> love<span class="sy0">.</span>load<span class="br0">&#40;</span><span class="br0">&#41;</span>
+	image <span class="sy0">=</span> love<span class="sy0">.</span>graphics<span class="sy0">.</span>newImage<span class="br0">&#40;</span><span class="st0">&quot;pig.png&quot;</span><span class="br0">&#41;</span>
+&#160;
+	<span class="kw1">local</span> vertices <span class="sy0">=</span> <span class="br0">&#123;</span>
+		<span class="br0">&#123;</span>
+			<span class="co1">-- top-left corner (red-tinted)</span>
+			<span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="co1">-- position of the vertex</span>
+			<span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="co1">-- texture coordinate at the vertex position</span>
+			<span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="co1">-- color of the vertex</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="br0">&#123;</span>
+			<span class="co1">-- top-right corner (green-tinted)</span>
+			image<span class="sy0">:</span>getWidth<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span>
+			<span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="co1">-- texture coordinates are in the range of [0, 1]</span>
+			<span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">0</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="br0">&#123;</span>
+			<span class="co1">-- bottom-right corner (blue-tinted)</span>
+			image<span class="sy0">:</span>getWidth<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span> image<span class="sy0">:</span>getHeight<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+			<span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span>
+			<span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">1</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="br0">&#123;</span>
+			<span class="co1">-- bottom-left corner (yellow-tinted)</span>
+			<span class="nu0">0</span><span class="sy0">,</span> image<span class="sy0">:</span>getHeight<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+			<span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span>
+			<span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">0</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span>
+	<span class="br0">&#125;</span>
+&#160;
+	<span class="co1">-- the Mesh DrawMode &quot;fan&quot; works well for 4-vertex Meshes.</span>
+	mesh <span class="sy0">=</span> love<span class="sy0">.</span>graphics<span class="sy0">.</span>newMesh<span class="br0">&#40;</span>vertices<span class="sy0">,</span> <span class="st0">&quot;fan&quot;</span><span class="br0">&#41;</span>
+        mesh<span class="sy0">:</span>setTexture<span class="br0">&#40;</span>image<span class="br0">&#41;</span>
+<span class="kw1">end</span>
+&#160;
+<span class="kw1">function</span> love<span class="sy0">.</span>draw<span class="br0">&#40;</span><span class="br0">&#41;</span>
+	love<span class="sy0">.</span>graphics<span class="sy0">.</span>draw<span class="br0">&#40;</span>mesh<span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="br0">&#41;</span>
+<span class="kw1">end</span></pre></div></div>
+<h3><span class="mw-headline" id="Creates_and_draws_a_textured_circle_with_a_red_tint_at_the_center.">Creates and draws a textured circle with a red tint at the center.</span></h3>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="lua source-lua"><pre class="de1"><span class="kw1">function</span> CreateTexturedCircle<span class="br0">&#40;</span>image<span class="sy0">,</span> segments<span class="br0">&#41;</span>
+	segments <span class="sy0">=</span> segments <span class="kw2">or</span> <span class="nu0">40</span>
+	<span class="kw1">local</span> vertices <span class="sy0">=</span> <span class="br0">&#123;</span><span class="br0">&#125;</span>
+&#160;
+	<span class="co1">-- The first vertex is at the center, and has a red tint. We're centering the circle around the origin (0, 0).</span>
+	<span class="kw3">table.insert</span><span class="br0">&#40;</span>vertices<span class="sy0">,</span> <span class="br0">&#123;</span><span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0.5</span><span class="sy0">,</span> <span class="nu0">0.5</span><span class="sy0">,</span> <span class="nu0">255</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="br0">&#125;</span><span class="br0">&#41;</span>
+&#160;
+	<span class="co1">-- Create the vertices at the edge of the circle.</span>
+	<span class="kw1">for</span> i<span class="sy0">=</span><span class="nu0">0</span><span class="sy0">,</span> segments <span class="kw1">do</span>
+		<span class="kw1">local</span> angle <span class="sy0">=</span> <span class="br0">&#40;</span>i <span class="sy0">/</span> segments<span class="br0">&#41;</span> <span class="sy0">*</span> <span class="kw3">math.pi</span> <span class="sy0">*</span> <span class="nu0">2</span>
+&#160;
+		<span class="co1">-- Unit-circle.</span>
+		<span class="kw1">local</span> x <span class="sy0">=</span> <span class="kw3">math.cos</span><span class="br0">&#40;</span>angle<span class="br0">&#41;</span>
+		<span class="kw1">local</span> y <span class="sy0">=</span> <span class="kw3">math.sin</span><span class="br0">&#40;</span>angle<span class="br0">&#41;</span>
+&#160;
+		<span class="co1">-- Our position is in the range of [-1, 1] but we want the texture coordinate to be in the range of [0, 1].</span>
+		<span class="kw1">local</span> u <span class="sy0">=</span> <span class="br0">&#40;</span>x <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">&#41;</span> <span class="sy0">*</span> <span class="nu0">0.5</span>
+		<span class="kw1">local</span> v <span class="sy0">=</span> <span class="br0">&#40;</span>y <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">&#41;</span> <span class="sy0">*</span> <span class="nu0">0.5</span>
+&#160;
+		<span class="co1">-- The per-vertex color defaults to white.</span>
+		<span class="kw3">table.insert</span><span class="br0">&#40;</span>vertices<span class="sy0">,</span> <span class="br0">&#123;</span>x<span class="sy0">,</span> y<span class="sy0">,</span> u<span class="sy0">,</span> v<span class="br0">&#125;</span><span class="br0">&#41;</span>
+	<span class="kw1">end</span>
+&#160;
+	<span class="co1">-- The &quot;fan&quot; draw mode is perfect for our circle.</span>
+	<span class="kw1">local</span> mesh <span class="sy0">=</span> love<span class="sy0">.</span>graphics<span class="sy0">.</span>newMesh<span class="br0">&#40;</span>vertices<span class="sy0">,</span> <span class="st0">&quot;fan&quot;</span><span class="br0">&#41;</span>
+        mesh<span class="sy0">:</span>setTexture<span class="br0">&#40;</span>image<span class="br0">&#41;</span>
+&#160;
+        <span class="kw1">return</span> mesh
+<span class="kw1">end</span>
+&#160;
+<span class="kw1">function</span> love<span class="sy0">.</span>load<span class="br0">&#40;</span><span class="br0">&#41;</span>
+	image <span class="sy0">=</span> love<span class="sy0">.</span>graphics<span class="sy0">.</span>newImage<span class="br0">&#40;</span><span class="st0">&quot;pig.png&quot;</span><span class="br0">&#41;</span>
+	mesh <span class="sy0">=</span> CreateTexturedCircle<span class="br0">&#40;</span>image<span class="br0">&#41;</span>
+<span class="kw1">end</span>
+&#160;
+<span class="kw1">function</span> love<span class="sy0">.</span>draw<span class="br0">&#40;</span><span class="br0">&#41;</span>
+	<span class="kw1">local</span> radius <span class="sy0">=</span> <span class="nu0">100</span>
+	<span class="kw1">local</span> mx<span class="sy0">,</span> my <span class="sy0">=</span> love<span class="sy0">.</span>mouse<span class="sy0">.</span>getPosition<span class="br0">&#40;</span><span class="br0">&#41;</span>
+&#160;
+	<span class="co1">-- We created a unit-circle, so we can use the scale parameter for the radius directly.</span>
+	love<span class="sy0">.</span>graphics<span class="sy0">.</span>draw<span class="br0">&#40;</span>mesh<span class="sy0">,</span> mx<span class="sy0">,</span> my<span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> radius<span class="sy0">,</span> radius<span class="br0">&#41;</span>
+<span class="kw1">end</span></pre></div></div>
+<h3><span class="mw-headline" id="Creates_a_circle_and_draws_it_more_efficiently_than_love.graphics.circle.">Creates a circle and draws it more efficiently than love.graphics.circle.</span></h3>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr"><div class="lua source-lua"><pre class="de1"><span class="kw1">function</span> CreateCircle<span class="br0">&#40;</span>segments<span class="br0">&#41;</span>
+	segments <span class="sy0">=</span> segments <span class="kw2">or</span> <span class="nu0">40</span>
+	<span class="kw1">local</span> vertices <span class="sy0">=</span> <span class="br0">&#123;</span><span class="br0">&#125;</span>
+&#160;
+	<span class="co1">-- The first vertex is at the origin (0, 0) and will be the center of the circle.</span>
+	<span class="kw3">table.insert</span><span class="br0">&#40;</span>vertices<span class="sy0">,</span> <span class="br0">&#123;</span><span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="br0">&#125;</span><span class="br0">&#41;</span>
+&#160;
+	<span class="co1">-- Create the vertices at the edge of the circle.</span>
+	<span class="kw1">for</span> i<span class="sy0">=</span><span class="nu0">0</span><span class="sy0">,</span> segments <span class="kw1">do</span>
+		<span class="kw1">local</span> angle <span class="sy0">=</span> <span class="br0">&#40;</span>i <span class="sy0">/</span> segments<span class="br0">&#41;</span> <span class="sy0">*</span> <span class="kw3">math.pi</span> <span class="sy0">*</span> <span class="nu0">2</span>
+&#160;
+		<span class="co1">-- Unit-circle.</span>
+		<span class="kw1">local</span> x <span class="sy0">=</span> <span class="kw3">math.cos</span><span class="br0">&#40;</span>angle<span class="br0">&#41;</span>
+		<span class="kw1">local</span> y <span class="sy0">=</span> <span class="kw3">math.sin</span><span class="br0">&#40;</span>angle<span class="br0">&#41;</span>
+&#160;
+		<span class="kw3">table.insert</span><span class="br0">&#40;</span>vertices<span class="sy0">,</span> <span class="br0">&#123;</span>x<span class="sy0">,</span> y<span class="br0">&#125;</span><span class="br0">&#41;</span>
+	<span class="kw1">end</span>
+&#160;
+	<span class="co1">-- The &quot;fan&quot; draw mode is perfect for our circle.</span>
+	<span class="kw1">return</span> love<span class="sy0">.</span>graphics<span class="sy0">.</span>newMesh<span class="br0">&#40;</span>vertices<span class="sy0">,</span> <span class="st0">&quot;fan&quot;</span><span class="br0">&#41;</span>
+<span class="kw1">end</span>
+&#160;
+<span class="kw1">function</span> love<span class="sy0">.</span>load<span class="br0">&#40;</span><span class="br0">&#41;</span>
+	mesh <span class="sy0">=</span> CreateCircle<span class="br0">&#40;</span><span class="br0">&#41;</span>
+<span class="kw1">end</span>
+&#160;
+<span class="kw1">function</span> love<span class="sy0">.</span>draw<span class="br0">&#40;</span><span class="br0">&#41;</span>
+	<span class="kw1">local</span> radius <span class="sy0">=</span> <span class="nu0">100</span>
+	<span class="kw1">local</span> mx<span class="sy0">,</span> my <span class="sy0">=</span> love<span class="sy0">.</span>mouse<span class="sy0">.</span>getPosition<span class="br0">&#40;</span><span class="br0">&#41;</span>
+&#160;
+	<span class="co1">-- We created a unit-circle, so we can use the scale parameter for the radius directly.</span>
+	love<span class="sy0">.</span>graphics<span class="sy0">.</span>draw<span class="br0">&#40;</span>mesh<span class="sy0">,</span> mx<span class="sy0">,</span> my<span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> radius<span class="sy0">,</span> radius<span class="br0">&#41;</span>
+<span class="kw1">end</span></pre></div></div>
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<ul><li> <a href="love6.html" title="love.graphics">love.graphics</a></li>
+<li> <a href="mesh.html" title="Mesh">Mesh</a></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Other_Languages">Other Languages</span></h2>
+<div class="i18n">
+<p><a href="" class="new" title="love.graphics.newMesh (Dansk) (page does not exist)">Dansk</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newMesh (Deutsch) (page does not exist)">Deutsch</a>&#160;&#8211;
+<strong class="selflink">English</strong>&#160;&#8211; 
+<a href="" class="new" title="love.graphics.newMesh (Español) (page does not exist)">Español</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newMesh (Français) (page does not exist)">Français</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newMesh (Indonesia) (page does not exist)">Indonesia</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newMesh (Italiano) (page does not exist)">Italiano</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newMesh (Lietuviškai) (page does not exist)">Lietuviškai</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newMesh (Magyar) (page does not exist)">Magyar</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newMesh (Nederlands) (page does not exist)">Nederlands</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newMesh (Polski) (page does not exist)">Polski</a>&#160;&#8211;
+<a href="love.graphics149.html" title="love.graphics.newMesh (Português)">Português</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newMesh (Română) (page does not exist)">Română</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newMesh (Slovenský) (page does not exist)">Slovenský</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newMesh (Suomi) (page does not exist)">Suomi</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newMesh (Svenska) (page does not exist)">Svenska</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newMesh (Türkçe) (page does not exist)">Türkçe</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newMesh (Česky) (page does not exist)">Česky</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newMesh (Ελληνικά) (page does not exist)">Ελληνικά</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newMesh (Български) (page does not exist)">Български</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newMesh (Русский) (page does not exist)">Русский</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newMesh (Српски) (page does not exist)">Српски</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newMesh (Українська) (page does not exist)">Українська</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newMesh (עברית) (page does not exist)">עברית</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newMesh (ไทย) (page does not exist)">ไทย</a>&#160;&#8211;
+<a href="love.graphics88.html" title="love.graphics.newMesh (日本語)">日本語</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newMesh (正體中文) (page does not exist)">正體中文</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newMesh (简体中文) (page does not exist)">简体中文</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newMesh (Tiếng Việt) (page does not exist)">Tiếng Việt</a>&#160;&#8211;
+<a href="" class="new" title="love.graphics.newMesh (한국어) (page does not exist)">한국어</a> 
+<br />
+<span style="text-align:right;"><i><a href="help_i18n.html" title="Help:i18n">More info</a></i></span>
+</p>
+</div>
+
+<!-- 
+NewPP limit report
+CPU time usage: 0.240 seconds
+Real time usage: 0.260 seconds
+Preprocessor visited node count: 1272/1000000
+Preprocessor generated node count: 3912/1000000
+Post‐expand include size: 13129/2097152 bytes
+Template argument size: 6807/2097152 bytes
+Highest expansion depth: 5/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key love2d_wiki:pcache:idhash:3036-0!*!0!!*!5!* and timestamp 20200620034801 and revision id 21267
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="">http://love2d.org/w/index.php?title=love.graphics.newMesh&amp;oldid=21267</a>"</div>
+					<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="" title="Special:Categories">Category</a>: <ul><li><a href="category_functions.html" title="Category:Functions">Functions</a></li></ul></div></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			<div class="portlet" id="p-personal" role="navigation">
+				<h5>Personal tools</h5>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-documentation" role="navigation">
+		<h5>documentation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-love"><a href="love.html">love</a></li>
+											<li id="n-love.audio"><a href="love1.html">love.audio</a></li>
+											<li id="n-love.data"><a href="love2.html">love.data</a></li>
+											<li id="n-love.event"><a href="love3.html">love.event</a></li>
+											<li id="n-love.filesystem"><a href="love4.html">love.filesystem</a></li>
+											<li id="n-love.font"><a href="love5.html">love.font</a></li>
+											<li id="n-love.graphics"><a href="love6.html">love.graphics</a></li>
+											<li id="n-love.image"><a href="love7.html">love.image</a></li>
+											<li id="n-love.joystick"><a href="love8.html">love.joystick</a></li>
+											<li id="n-love.keyboard"><a href="love9.html">love.keyboard</a></li>
+											<li id="n-love.math"><a href="love10.html">love.math</a></li>
+											<li id="n-love.mouse"><a href="love11.html">love.mouse</a></li>
+											<li id="n-love.physics"><a href="love12.html">love.physics</a></li>
+											<li id="n-love.sound"><a href="love13.html">love.sound</a></li>
+											<li id="n-love.system"><a href="love14.html">love.system</a></li>
+											<li id="n-love.thread"><a href="love15.html">love.thread</a></li>
+											<li id="n-love.timer"><a href="love16.html">love.timer</a></li>
+											<li id="n-love.touch"><a href="love17.html">love.touch</a></li>
+											<li id="n-love.video"><a href="love18.html">love.video</a></li>
+											<li id="n-love.window"><a href="love19.html">love.window</a></li>
+											<li id="n-lua-enet"><a href="lua_enet.html">lua-enet</a></li>
+											<li id="n-luasocket"><a href="socket.html">luasocket</a></li>
+											<li id="n-utf8"><a href="utf8.html">utf8</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-Home"><a href="love2d1.html" rel="nofollow">Home</a></li>
+											<li id="n-Forums"><a href="forums.html" rel="nofollow">Forums</a></li>
+											<li id="n-Issue-tracker"><a href="https://github.com/love2d/love/issues" rel="nofollow">Issue tracker</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-wiki_navigation" role="navigation">
+		<h5>wiki navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-mainpage-description"><a href="index.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="" title="Load a random page [x]" accesskey="x">Random page</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h5><label for="searchInput">Search</label></h5>
+
+			<div id="searchBody" class="pBody">
+				<form action="w.html" id="searchform">
+					<input type='hidden' name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search" title="Search LOVE [f]" accesskey="f" id="searchInput" />
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchGoButton" class="searchButton" />&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton" />
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h5>Tools</h5>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="">Page information</a></li>
+											<li id="t-smwbrowselink"><a href="" rel="smw-browse">Browse properties</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									<a href="http://www.gnu.org/copyleft/fdl.html"><img src="gnu_fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" /></a>
+							</div>
+					<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+									<a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last modified on 1 April 2018, at 22:22.</li>
+									<li id="viewcount">This page has been accessed 41,606 times.</li>
+									<li id="copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+									<li id="privacy"><a href="love_privacy_policy.html" title="LOVE:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="love_about.html" title="LOVE:About">About LOVE</a></li>
+									<li id="disclaimer"><a href="love_general_disclaimer.html" title="LOVE:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.smw.tooltips","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest"],null,true);
+}</script>
+<script>if(window.mw){
+document.write("\u003Cscript src=\"http://love2d.org/w/load.php?debug=false\u0026amp;lang=en\u0026amp;modules=site\u0026amp;only=scripts\u0026amp;skin=love\u0026amp;*\"\u003E\u003C/script\u003E");
+}</script>
+<script>if(window.mw){
+mw.config.set({"wgBackendResponseTime":137});
+}</script></body></html>

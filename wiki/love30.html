@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>love.thread (한국어) - LOVE</title>
+<meta name="generator" content="MediaWiki 1.24.2" />
+<link rel="ExportRDF" type="application/rdf+xml" title="love.thread (한국어)" href="" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch_desc.php" title="LOVE (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="api.php_action_rsd" />
+<link rel="alternate" hreflang="x-default" href="" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+<link rel="alternate" type="application/atom+xml" title="LOVE Atom feed" href="" />
+<link rel="stylesheet" href="" />
+<!--[if IE 6]><link rel="stylesheet" href="ie60fixes.css" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="ie70fixes.css" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: love2d_wiki:resourceloader:filter:minify-css:7:daf253d59690fd9cabb6b95510bce103 */</style>
+<script src=""></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"love.thread_(한국어)","wgTitle":"love.thread (한국어)","wgCurRevisionId":12756,"wgRevisionId":12756,"wgArticleId":3167,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Modules"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"love.thread_(한국어)","wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":1,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rows":25,"showhiddencats":0,"shownumberswatching":1,"showtoolbar":1,"skin":"love","stubthreshold":0,"thumbsize":5,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":1,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"watchrollback":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs102":false,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs108":false,"searchNs109":false,"searchNs500":false,"searchNs501":false,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"});},{},{});
+/* cache key: love2d_wiki:resourceloader:filter:minify-js:7:201bb6cc0b4c032fe7bbe209a0125541 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.smw.style","mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-love_thread_한국어 skin-love action-view">
+<div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				
+						<div id="p-cactions" role="navigation">
+			<h5>Views</h5>
+
+			<div>
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="" rel="archives" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+	
+				<h1 id="firstHeading" class="firstHeading" lang="en">love.thread (한국어)</h1>
+
+				<div id="bodyContent">
+					<!-- <div id="siteSub">From LOVE</div> -->
+
+					<!-- <div id="contentSub"></div> -->
+										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.7.0]]">
+<tr>
+<td><i> <b>Available since LÖVE <a href="0.7.html" title="0.7.0">0.7.0</a></b> </i>
+</td></tr>
+<tr>
+<td> <small>This module is not supported in earlier versions.</small>
+</td></tr></table>
+<p>멀티 스레딩을 제공하는 모듈입니다.
+</p><p>스레드는 메인 코드로부터 Lua 환경을 분리해 병렬적으로 실행됩니다. 이로서 메인 코드의 프레임 레이트를 감소시키는 일 없이 복잡한 연산을 효과적으로 수행할 수 있습니다. 그러나 분리된 환경은 메인 스레드의 변수나 함수에 접근할 수 없고, 각 스레드 간 통신 또한 자유롭지 못하기 때문에 각별한 주의가 필요합니다.
+</p><p>LOVE에서 제공하는 객체(또는 유저데이터)들은 모든 스레드에서 공유되기 때문에 이들을 다른 스레드에서 사용하려면 객체 내용을 통째로 복사할 필요가 없이 오직 참조만 전달하면 됩니다. 물론 동시에 여러 스레드에서 같은 객체에 접근할 경우 동기화 관련 문제가 발생할 수 있습니다.
+</p><p><a href="thread3.html" title="Thread (한국어)">스레드</a>는 시작되면서 love.thread 모듈만을 로드합니다. 다른 모든 모듈은 require선언을 통해 명시적으로 불러서 사용해야 합니다.
+</p>
+<table class="notice" bgcolor="gold" style="border-style:solid;border-width:1px;-moz-border-radius:3px;border-radius:3px;" align="center" width="80%">
+<tr>
+<td width="1"> <a href="file_o.html" class="image"><img alt="O.png" src="o.png" width="64" height="64" /></a>
+</td>
+<td>생성한 스레드에서는 <a href="love155.html" title="love.graphics (한국어)">love.graphics</a>와 <a href="love156.html" title="love.window (한국어)">love.window</a>의 몇몇 기능이 제한되어 있으니 이런 모듈들은 되도록이면 메인 스레드에서 사용하시길 바랍니다.
+</td>
+<td width="1">&#160;
+</td></tr></table><br />
+<h2><span class="mw-headline" id=".ED.83.80.EC.9E.85">타입</span></h2>
+<table class="smwtable" style="background-color: #eeeeff;">
+
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="channel3.html" title="Channel (한국어)">Channel (한국어)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">서로 다른 스레드 사이에 데이터를 주고받는 데 사용되는 객체입니다.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="add.png" width="8" height="11" /> <a href="0.9.html" title="0.9.0">0.9.0</a> </td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="thread3.html" title="Thread (한국어)">Thread (한국어)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">스레드를 표현하는 타입입니다.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="add.png" width="8" height="11" /> <a href="0.7.html" title="0.7.0">0.7.0</a> </td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+</table>
+<h2><span class="mw-headline" id=".ED.95.A8.EC.88.98">함수</span></h2>
+<table class="smwtable" style="background-color: #eeeeff;">
+
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.thread11.html" title="love.thread.getChannel (한국어)">love.thread.getChannel (한국어)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">이름 있는 스레드 채널을 생성하거나 얻어옵니다.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="add.png" width="8" height="11" /> <a href="0.9.html" title="0.9.0">0.9.0</a> </td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.thread12.html" title="love.thread.newChannel (한국어)">love.thread.newChannel (한국어)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">이름 없는 스레드 채널을 생성합니다.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="add.png" width="8" height="11" /> <a href="0.9.html" title="0.9.0">0.9.0</a> </td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.thread13.html" title="love.thread.newThread (한국어)">love.thread.newThread (한국어)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">루아 파일이나 FileData로부터 새로운 스레드를 생성합니다.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="add.png" width="8" height="11" /> <a href="0.7.html" title="0.7.0">0.7.0</a> </td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+</table>
+<p><br />
+</p>
+<h2><span class="mw-headline" id=".EA.B0.99.EC.9D.B4_.EB.B3.B4.EA.B8.B0">같이 보기</span></h2>
+<ul><li> <a href="love157.html" title="love (한국어)">love (한국어)</a></li></ul>
+<h2><span class="mw-headline" id=".EB.8B.A4.EB.A5.B8_.EC.96.B8.EC.96.B4">다른 언어</span></h2>
+<div class="i18n">
+<p><a href="" class="new" title="love.thread (Dansk) (page does not exist)">Dansk</a>&#160;&#8211;
+<a href="love21.html" title="love.thread (Deutsch)">Deutsch</a>&#160;&#8211;
+<a href="love15.html" title="love.thread">English</a>&#160;&#8211; 
+<a href="" class="new" title="love.thread (Español) (page does not exist)">Español</a>&#160;&#8211;
+<a href="love22.html" title="love.thread (Français)">Français</a>&#160;&#8211;
+<a href="" class="new" title="love.thread (Indonesia) (page does not exist)">Indonesia</a>&#160;&#8211;
+<a href="" class="new" title="love.thread (Italiano) (page does not exist)">Italiano</a>&#160;&#8211;
+<a href="" class="new" title="love.thread (Lietuviškai) (page does not exist)">Lietuviškai</a>&#160;&#8211;
+<a href="" class="new" title="love.thread (Magyar) (page does not exist)">Magyar</a>&#160;&#8211;
+<a href="" class="new" title="love.thread (Nederlands) (page does not exist)">Nederlands</a>&#160;&#8211;
+<a href="" class="new" title="love.thread (Polski) (page does not exist)">Polski</a>&#160;&#8211;
+<a href="love23.html" title="love.thread (Português)">Português</a>&#160;&#8211;
+<a href="love24.html" title="love.thread (Română)">Română</a>&#160;&#8211;
+<a href="" class="new" title="love.thread (Slovenský) (page does not exist)">Slovenský</a>&#160;&#8211;
+<a href="" class="new" title="love.thread (Suomi) (page does not exist)">Suomi</a>&#160;&#8211;
+<a href="" class="new" title="love.thread (Svenska) (page does not exist)">Svenska</a>&#160;&#8211;
+<a href="" class="new" title="love.thread (Türkçe) (page does not exist)">Türkçe</a>&#160;&#8211;
+<a href="" class="new" title="love.thread (Česky) (page does not exist)">Česky</a>&#160;&#8211;
+<a href="" class="new" title="love.thread (Ελληνικά) (page does not exist)">Ελληνικά</a>&#160;&#8211;
+<a href="" class="new" title="love.thread (Български) (page does not exist)">Български</a>&#160;&#8211;
+<a href="love25.html" title="love.thread (Русский)">Русский</a>&#160;&#8211;
+<a href="" class="new" title="love.thread (Српски) (page does not exist)">Српски</a>&#160;&#8211;
+<a href="love26.html" title="love.thread (Українська)">Українська</a>&#160;&#8211;
+<a href="" class="new" title="love.thread (עברית) (page does not exist)">עברית</a>&#160;&#8211;
+<a href="" class="new" title="love.thread (ไทย) (page does not exist)">ไทย</a>&#160;&#8211;
+<a href="love27.html" title="love.thread (日本語)">日本語</a>&#160;&#8211;
+<a href="" class="new" title="love.thread (正體中文) (page does not exist)">正體中文</a>&#160;&#8211;
+<a href="love28.html" title="love.thread (简体中文)">简体中文</a>&#160;&#8211;
+<a href="love29.html" title="love.thread (Tiếng Việt)">Tiếng Việt</a>&#160;&#8211;
+<strong class="selflink">한국어</strong> 
+<br />
+<span style="text-align:right;"><i><a href="help_i18n.html" title="Help:i18n">More info</a></i></span>
+</p>
+</div>
+
+<!-- 
+NewPP limit report
+CPU time usage: 0.128 seconds
+Real time usage: 0.146 seconds
+Preprocessor visited node count: 515/1000000
+Preprocessor generated node count: 1657/1000000
+Post‐expand include size: 11321/2097152 bytes
+Template argument size: 2379/2097152 bytes
+Highest expansion depth: 5/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key love2d_wiki:pcache:idhash:3167-0!*!0!!*!5!* and timestamp 20200620105301 and revision id 12756
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="">http://love2d.org/w/index.php?title=love.thread_(한국어)&amp;oldid=12756</a>"</div>
+					<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="" title="Special:Categories">Category</a>: <ul><li><a href="category_modules.html" title="Category:Modules">Modules</a></li></ul></div></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			<div class="portlet" id="p-personal" role="navigation">
+				<h5>Personal tools</h5>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-documentation" role="navigation">
+		<h5>documentation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-love"><a href="love.html">love</a></li>
+											<li id="n-love.audio"><a href="love1.html">love.audio</a></li>
+											<li id="n-love.data"><a href="love2.html">love.data</a></li>
+											<li id="n-love.event"><a href="love3.html">love.event</a></li>
+											<li id="n-love.filesystem"><a href="love4.html">love.filesystem</a></li>
+											<li id="n-love.font"><a href="love5.html">love.font</a></li>
+											<li id="n-love.graphics"><a href="love6.html">love.graphics</a></li>
+											<li id="n-love.image"><a href="love7.html">love.image</a></li>
+											<li id="n-love.joystick"><a href="love8.html">love.joystick</a></li>
+											<li id="n-love.keyboard"><a href="love9.html">love.keyboard</a></li>
+											<li id="n-love.math"><a href="love10.html">love.math</a></li>
+											<li id="n-love.mouse"><a href="love11.html">love.mouse</a></li>
+											<li id="n-love.physics"><a href="love12.html">love.physics</a></li>
+											<li id="n-love.sound"><a href="love13.html">love.sound</a></li>
+											<li id="n-love.system"><a href="love14.html">love.system</a></li>
+											<li id="n-love.thread"><a href="love15.html">love.thread</a></li>
+											<li id="n-love.timer"><a href="love16.html">love.timer</a></li>
+											<li id="n-love.touch"><a href="love17.html">love.touch</a></li>
+											<li id="n-love.video"><a href="love18.html">love.video</a></li>
+											<li id="n-love.window"><a href="love19.html">love.window</a></li>
+											<li id="n-lua-enet"><a href="lua_enet.html">lua-enet</a></li>
+											<li id="n-luasocket"><a href="socket.html">luasocket</a></li>
+											<li id="n-utf8"><a href="utf8.html">utf8</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-Home"><a href="love2d1.html" rel="nofollow">Home</a></li>
+											<li id="n-Forums"><a href="forums.html" rel="nofollow">Forums</a></li>
+											<li id="n-Issue-tracker"><a href="https://github.com/love2d/love/issues" rel="nofollow">Issue tracker</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-wiki_navigation" role="navigation">
+		<h5>wiki navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-mainpage-description"><a href="index.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="" title="Load a random page [x]" accesskey="x">Random page</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h5><label for="searchInput">Search</label></h5>
+
+			<div id="searchBody" class="pBody">
+				<form action="w.html" id="searchform">
+					<input type='hidden' name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search" title="Search LOVE [f]" accesskey="f" id="searchInput" />
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchGoButton" class="searchButton" />&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton" />
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h5>Tools</h5>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="">Page information</a></li>
+											<li id="t-smwbrowselink"><a href="" rel="smw-browse">Browse properties</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									<a href="http://www.gnu.org/copyleft/fdl.html"><img src="gnu_fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31" /></a>
+							</div>
+					<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+									<a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31" /></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last modified on 28 January 2014, at 08:49.</li>
+									<li id="viewcount">This page has been accessed 11,262 times.</li>
+									<li id="copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+									<li id="privacy"><a href="love_privacy_policy.html" title="LOVE:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="love_about.html" title="LOVE:About">About LOVE</a></li>
+									<li id="disclaimer"><a href="love_general_disclaimer.html" title="LOVE:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.smw.tooltips","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest"],null,true);
+}</script>
+<script>if(window.mw){
+document.write("\u003Cscript src=\"http://love2d.org/w/load.php?debug=false\u0026amp;lang=en\u0026amp;modules=site\u0026amp;only=scripts\u0026amp;skin=love\u0026amp;*\"\u003E\u003C/script\u003E");
+}</script>
+<script>if(window.mw){
+mw.config.set({"wgBackendResponseTime":77});
+}</script></body></html>

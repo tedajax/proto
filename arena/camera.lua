@@ -7,8 +7,8 @@ Camera = {
     zoom = 1,
 }
 
-function Camera:new()
-    local camera = {}
+function Camera:new(camera)
+    camera = camera or {}
     setmetatable(camera, self)
     self.__index = self
     return camera

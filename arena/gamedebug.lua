@@ -72,12 +72,12 @@ function debug_render()
 end
 
 function debug_watch(message)
-    table.insert(Debug.watches, message)
+    table.insert(Debug.watches, tostring(message))
 end
 
 function debug_log(message, duration)
     duration = duration or math.huge
-    table.insert(Debug.logs, { message = message, time = duration})
+    table.insert(Debug.logs, { message = tostring(message), time = duration})
 end
 
 function debug_log_clear()

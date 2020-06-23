@@ -4,6 +4,7 @@ require 'gamedebug'
 require 'hsv'
 require 'camera'
 require 'gamestate'
+require 'character'
 
 Game = {}
 
@@ -12,7 +13,7 @@ function love.load()
 
     local sx, sy = love.graphics.getDimensions()
 
-    physics_init(64, 0, 300)
+    physics_init(16, 0, 900)
 
     Game.conf = {}
     Game.width = 320
@@ -47,6 +48,8 @@ function love.load()
         { format = "normal", msaa = 0 })
     Game.canvas:setFilter("nearest", "nearest")
 
+    love.graphics.setLineStyle("rough")
+
     gamestates_init({
         play = {
             init = play_init,
@@ -73,6 +76,10 @@ function love.keypressed(key)
         debug_log(tostring(love.math.random(0, 10)), 5)
     elseif key == "~" then
         debug.debug()
+    elseif key == "n" then
+        attach_capsule(player, make_capsule(player.body, 8, player.capsule.height + 10))
+    elseif key == "m" then
+        attach_capsule(player, make_capsule(player.body, 8, player.capsule.height - 10))
     end
 end
 
@@ -101,14 +108,52 @@ function love.draw()
     debug_render()
 end
 
+function make_capsule(physicsBody, radius, height)
+    height = math.max(height, 0)
+    local bodyHeight = math.max(height - radius * 2, 0)
+    local halfBodyHeight = bodyHeight / 2
+    local feetShape = love.physics.newCircleShape(0, halfBodyHeight, radius)
+    local headShape = love.physics.newCircleShape(0, -halfBodyHeight, radius)
+
+    local bodyShape = love.physics.newRectangleShape(0, 0, radius * 2 - 1, math.max(bodyHeight, 1))
+
+    local feet = love.physics.newFixture(physicsBody, feetShape)
+    local head = love.physics.newFixture(physicsBody, headShape)
+    local body = love.physics.newFixture(physicsBody, bodyShape)
+
+    feet:setFriction(0.1)
+    head:setFriction(0)
+    body:setFriction(0)
+
+    return {
+        physicsBody = physicsBody,
+        radius = radius, height = height,
+        fixtures = { feet = feet, head = head, body = body },
+    }
+end
+
+function destroy_capsule(capsule)
+    if capsule ~= nil then
+        for key, fixture in pairs(capsule.fixtures) do
+            fixture:destroy()
+            capsule.fixtures[key] = nil
+        end
+        capsule.radius = 0
+        capsule.height = 0
+    end
+end
+
+function attach_capsule(object, capsule)
+    object = object or {}
+    destroy_capsule(object.capsule)
+    object.capsule = capsule
+    return object
+end
+
 function play_init()
     Game.camera = Camera:new()
-    player = {}
-    player.body = love.physics.newBody(physics.world, 0, 0, "dynamic")
-    player.footShape = love.physics.newCircleShape(8)
-    player.footFixture = love.physics.newFixture(player.body, player.footShape)
-    player.bodyShape = love.physics.newRectangleShape(0, -6, 16, 18)
-    player.bodyFixture = love.physics.newFixture(player.body, player.bodyShape)
+
+    player = make_character()
 
     ground = {}
     ground.body = love.physics.newBody(physics.world, 0, 90, "static")
@@ -120,10 +165,14 @@ function play_update(dt)
     Game.time.elapsed = Game.time.elapsed + dt
     Game.time.dt = dt
 
-    physics_update(dt)
-
     local ix, iy = input_get_axis("horizontal"), input_get_axis("vertical")
     ix, iy = norm(ix, iy)
+    local jump = input_get_button_down("jump")
+
+    character_control(player, ix, iy, jump)
+    character_move(player)
+
+    physics_update(dt)
 end
 
 function play_render(dt)
@@ -133,16 +182,37 @@ function play_render(dt)
 
     camera_push(Game.camera)
         love.graphics.setColor(1, 1, 0)
-        
-        for i, fixture in ipairs(player.body:getFixtureList()) do
-            local fixtureType = fixture:getType()
-            if fixtureType == "circle" then
-                local shape = fixture:getShape()
-                local px, py = player.body:getWorldPoints(shape:getPoint())
-                love.graphics.circle("line", px, py, shape:getRadius())
-            elseif fixtureType == "polygon" then
-                local shape = fixture:getShape()
-                love.graphics.polygon("line", player.body:getWorldPoints(shape:getPoints()))
+        local bodies = physics.world:getBodies()
+        for _, body in ipairs(bodies) do
+            local user = body:getUserData()
+            if user and user.capsule then
+                -- capsule draw
+                local headShape = user.capsule.fixtures.head:getShape()
+                local feetShape = user.capsule.fixtures.feet:getShape()
+                local angle = body:getAngle()
+                local hx, hy = body:getWorldPoints(headShape:getPoint())
+                local fx, fy = body:getWorldPoints(feetShape:getPoint())
+                local mx, my = norm(fx - hx, fy - hy)
+                local rad = headShape:getRadius()
+                mx, my = -my * rad, mx * rad
+                love.graphics.line(hx + mx, hy + my, fx + mx, fy + my)
+                love.graphics.line(hx - mx, hy - my, fx - mx, fy - my)
+                love.graphics.arc("line", "open", hx, hy, rad, angle + math.pi, angle + math.pi * 2)
+                love.graphics.arc("line", "open", fx, fy, rad, angle, angle + math.pi)
+            else
+                for _, fixture in ipairs(body:getFixtures()) do
+                    local fixtureType = fixture:getType()
+                    if fixtureType == "circle" then
+                        local shape = fixture:getShape()
+                        local px, py = body:getWorldPoints(shape:getPoint())
+                        love.graphics.circle("line", px, py, shape:getRadius())
+                    elseif fixtureType == "polygon" then
+                        local shape = fixture:getShape()
+                        love.graphics.polygon("line", body:getWorldPoints(shape:getPoints()))
+                    elseif fixtureType == "edge" or fixtureType == "chain" then
+                        love.graphics.line(body:getWorldPoints(fixture:getShape():getPoints()))
+                    end
+                end
             end
         end    
     camera_pop()

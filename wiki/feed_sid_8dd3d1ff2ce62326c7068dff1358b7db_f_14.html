@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2020-06-20T21:00:18</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed</id>
+
+		<entry>
+		<author><name><![CDATA[duaner]]></name></author>
+		<updated>2020-06-20T21:00:18</updated>
+
+		<published>2020-06-20T21:00:18</published>
+		<id>https://love2d.org/forums/viewtopic.php?t=88995&amp;p=234415#p234415</id>
+		<link href="https://love2d.org/forums/viewtopic.php?t=88995&amp;p=234415#p234415"/>
+		<title type="html"><![CDATA[Support and Development • Re: Game random crash on a start]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?t=88995&amp;p=234415#p234415"><![CDATA[
+I don't think you've got exactly the same symptoms I did. However, the last time I ran into a random crash like that, it turned out that I was starting the game before my editor had actually finished saving it. Love was trying to run the project with a missing or partial file (with hilarious consequences).<br><br>The real problem was my ssd going into sleep mode unnecessarily, delaying the write. After fixing that, the problem went away.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=149722">duaner</a> — Sat Jun 20, 2020 9:00 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Harrylechienfou]]></name></author>
+		<updated>2020-06-20T20:54:25</updated>
+
+		<published>2020-06-20T20:54:25</published>
+		<id>https://love2d.org/forums/viewtopic.php?t=88943&amp;p=234414#p234414</id>
+		<link href="https://love2d.org/forums/viewtopic.php?t=88943&amp;p=234414#p234414"/>
+		<title type="html"><![CDATA[General • Re: Create a desktop application with LÖVE : how to export files in a chose location ?]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?t=88943&amp;p=234414#p234414"><![CDATA[
+Ok, I'll take a look at it, thanks !<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=142409">Harrylechienfou</a> — Sat Jun 20, 2020 8:54 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ReFreezed]]></name></author>
+		<updated>2020-06-20T20:05:59</updated>
+
+		<published>2020-06-20T20:05:59</published>
+		<id>https://love2d.org/forums/viewtopic.php?t=88943&amp;p=234412#p234412</id>
+		<link href="https://love2d.org/forums/viewtopic.php?t=88943&amp;p=234412#p234412"/>
+		<title type="html"><![CDATA[General • Re: Create a desktop application with LÖVE : how to export files in a chose location ?]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?t=88943&amp;p=234412#p234412"><![CDATA[
+Note that io.open() is not made to take Unicode strings - at least not in Windows. I'd suggest looking at how the problem is solved in e.g. <a href="https://github.com/megagrump/nativefs" class="postlink">nativefs</a>.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137182">ReFreezed</a> — Sat Jun 20, 2020 8:05 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ReFreezed]]></name></author>
+		<updated>2020-06-20T19:50:43</updated>
+
+		<published>2020-06-20T19:50:43</published>
+		<id>https://love2d.org/forums/viewtopic.php?t=88993&amp;p=234411#p234411</id>
+		<link href="https://love2d.org/forums/viewtopic.php?t=88993&amp;p=234411#p234411"/>
+		<title type="html"><![CDATA[Support and Development • Re: What exactly does Canvas:renderTo do?]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?t=88993&amp;p=234411#p234411"><![CDATA[
+You can use love.graphics.push("all") before changing the canvas, and then love.graphics.pop() to restore the previous one. I'm assuming the wiki just needs to be updated with a more accurate example.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137182">ReFreezed</a> — Sat Jun 20, 2020 7:50 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Harrylechienfou]]></name></author>
+		<updated>2020-06-20T19:48:03</updated>
+
+		<published>2020-06-20T19:48:03</published>
+		<id>https://love2d.org/forums/viewtopic.php?t=88943&amp;p=234410#p234410</id>
+		<link href="https://love2d.org/forums/viewtopic.php?t=88943&amp;p=234410#p234410"/>
+		<title type="html"><![CDATA[General • Re: Create a desktop application with LÖVE : how to export files in a chose location ?]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?t=88943&amp;p=234410#p234410"><![CDATA[
+Thank you for your very clear and simple answer !<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=142409">Harrylechienfou</a> — Sat Jun 20, 2020 7:48 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ReFreezed]]></name></author>
+		<updated>2020-06-20T19:28:51</updated>
+
+		<published>2020-06-20T19:28:51</published>
+		<id>https://love2d.org/forums/viewtopic.php?t=88995&amp;p=234409#p234409</id>
+		<link href="https://love2d.org/forums/viewtopic.php?t=88995&amp;p=234409#p234409"/>
+		<title type="html"><![CDATA[Support and Development • Re: Game random crash on a start]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?t=88995&amp;p=234409#p234409"><![CDATA[
+Does the game freeze with the white window during a specific function call? Did you try running the game through cmd.exe instead of Sublime?<br><br>Maybe try printing something before each operation that interacts with the system (like loading an image, iterating over folder items or resizing the window) to see if the problem happens in the same place. (You can easily monkey patch all the functions in the love table. Make sure buffering is disabled for STDOUT and STDERR too.) Try using a different computer to see if the problem is maybe just on your computer.<br><br>After some googling, I think using a debugger may possibly be necessary to find the actual problem, which I'm assuming is in LÖVE, SDL, or some other part of the framework rather than in your code (unless you're using FFI or something in a bad way).<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137182">ReFreezed</a> — Sat Jun 20, 2020 7:28 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[D0NM]]></name></author>
+		<updated>2020-06-20T18:43:14</updated>
+
+		<published>2020-06-20T18:43:14</published>
+		<id>https://love2d.org/forums/viewtopic.php?t=88850&amp;p=234408#p234408</id>
+		<link href="https://love2d.org/forums/viewtopic.php?t=88850&amp;p=234408#p234408"/>
+		<title type="html"><![CDATA[Support and Development • Re: OpenGL error after updating windows]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?t=88850&amp;p=234408#p234408"><![CDATA[
+<blockquote class="uncited"><div>I'm using a desktop pc with an integrated GPU only (Intel g45/g43 express chipset)</div></blockquote>Try to use this driver installer. instead of shady driver booster<br><a href="https://sdi-tool.org/" class="postlink">https://sdi-tool.org/</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137525">D0NM</a> — Sat Jun 20, 2020 6:43 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[D0NM]]></name></author>
+		<updated>2020-06-20T18:33:06</updated>
+
+		<published>2020-06-20T18:33:06</published>
+		<id>https://love2d.org/forums/viewtopic.php?t=88960&amp;p=234407#p234407</id>
+		<link href="https://love2d.org/forums/viewtopic.php?t=88960&amp;p=234407#p234407"/>
+		<title type="html"><![CDATA[Support and Development • Re: Can I use spritesheets with löve]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?t=88960&amp;p=234407#p234407"><![CDATA[
+<blockquote class="uncited"><div>Can I use spritesheets with löve ? I hadn't found anything in the docs  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-cry.png" width="16" height="16" alt=":cry:" title="Cry"></div></blockquote>This nifty tool could help u to obtain sprites quads (regions) from the spritesheet and<br>generate a ready to use .lua file <br><br><a href="https://github.com/25A0/Quadtastic" class="postlink">https://github.com/25A0/Quadtastic</a><br><br><img src="https://raw.githubusercontent.com/25A0/Quadtastic/master/screenshots/wand.gif" class="postimage" alt="Image"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137525">D0NM</a> — Sat Jun 20, 2020 6:33 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ReFreezed]]></name></author>
+		<updated>2020-06-20T18:31:05</updated>
+
+		<published>2020-06-20T18:31:05</published>
+		<id>https://love2d.org/forums/viewtopic.php?t=88918&amp;p=234406#p234406</id>
+		<link href="https://love2d.org/forums/viewtopic.php?t=88918&amp;p=234406#p234406"/>
+		<title type="html"><![CDATA[Support and Development • Re: Server on Love]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?t=88918&amp;p=234406#p234406"><![CDATA[
+<blockquote class="uncited"><div>Do you mean RGB values of <strong>fully</strong> transparent pixels? I did some of that too ^_^</div></blockquote>Yup. Linear filtering of textures makes it pretty much necessary to fix transparent pixels next to opaque/half-transparent pixels if you don't want a black "halo" when drawing the image at non-integer coordinates or when scaling the image (not to mention mipmaps). At least it's necessary for images created in Photoshop.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137182">ReFreezed</a> — Sat Jun 20, 2020 6:31 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[soulgirl2020]]></name></author>
+		<updated>2020-06-20T17:55:44</updated>
+
+		<published>2020-06-20T17:55:44</published>
+		<id>https://love2d.org/forums/viewtopic.php?t=88977&amp;p=234405#p234405</id>
+		<link href="https://love2d.org/forums/viewtopic.php?t=88977&amp;p=234405#p234405"/>
+		<title type="html"><![CDATA[General • Re: Access variables in different files]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?t=88977&amp;p=234405#p234405"><![CDATA[
+OMG! Thank you so much, it works now. I did not instantiate the class file in main.lua. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=151707">soulgirl2020</a> — Sat Jun 20, 2020 5:55 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Sasha264]]></name></author>
+		<updated>2020-06-20T12:14:43</updated>
+
+		<published>2020-06-20T12:14:43</published>
+		<id>https://love2d.org/forums/viewtopic.php?t=88994&amp;p=234401#p234401</id>
+		<link href="https://love2d.org/forums/viewtopic.php?t=88994&amp;p=234401#p234401"/>
+		<title type="html"><![CDATA[Support and Development • Re: How to send matrix parameter to a shader?]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?t=88994&amp;p=234401#p234401"><![CDATA[
+Wow! Somehow I missed that  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-huh.png" width="16" height="16" alt=":huh:" title="Huuh..."> <br>Thank you! =)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135618">Sasha264</a> — Sat Jun 20, 2020 12:14 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zorg]]></name></author>
+		<updated>2020-06-20T11:52:50</updated>
+
+		<published>2020-06-20T11:52:50</published>
+		<id>https://love2d.org/forums/viewtopic.php?t=88994&amp;p=234400#p234400</id>
+		<link href="https://love2d.org/forums/viewtopic.php?t=88994&amp;p=234400#p234400"/>
+		<title type="html"><![CDATA[Support and Development • Re: How to send matrix parameter to a shader?]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?t=88994&amp;p=234400#p234400"><![CDATA[
+Docs page: <a href="/wiki/Shader:send">Shader:send</a><br>Quote:<blockquote class="uncited"><div>Synopsis<br>Shader:send( name, matrix, ... )<br>Arguments<br>string name<br>Name of the matrix to send to the shader.<br>table matrix<br>2x2, 3x3, or 4x4 matrix to send to the uniform variable. Using table form: {{a,b,c,d}, {e,f,g,h}, ... } or (since version 0.10.2) {a,b,c,d, e,f,g,h, ...}. The order in 0.10.2 is column-major; starting in 11.0 it's row-major instead.<br>table ...<br>Additional matrices of the same type as matrix to store in a uniform array.<br>Returns<br>Nothing.</div></blockquote>It's there. (There's also a second version where you can define the matrix layout as well, below the one i quoted)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=80325">zorg</a> — Sat Jun 20, 2020 11:52 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[4vZEROv]]></name></author>
+		<updated>2020-06-20T11:30:09</updated>
+
+		<published>2020-06-20T11:30:09</published>
+		<id>https://love2d.org/forums/viewtopic.php?t=88977&amp;p=234399#p234399</id>
+		<link href="https://love2d.org/forums/viewtopic.php?t=88977&amp;p=234399#p234399"/>
+		<title type="html"><![CDATA[General • Re: Access variables in different files]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?t=88977&amp;p=234399#p234399"><![CDATA[
+When you write require('file') you are essentially pasting all the content of the file at the place of the require line.<br>Also you can see here : <a href="https://love2d.org/wiki/love.run" class="postlink">https://love2d.org/wiki/love.run</a> where the love.load() function is really called inside the love2d game loop.<br><br>If you want to use a global variable in the file 'fileexemple.lua'<br><br>--main.lua<div class="codebox"><p>CODE: </p><pre><code>my_global_variable = 100require('fileexemple')</code></pre></div>--fileexemple.lua<div class="codebox"><p>CODE: </p><pre><code>print(my_global_variable )</code></pre></div>Your player file look like a class.<br>If you want to use it, you need to instantiate it.<div class="codebox"><p>CODE: </p><pre><code>global_var = 100require('player')local my_player = player:init()</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=141677">4vZEROv</a> — Sat Jun 20, 2020 11:30 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Sasha264]]></name></author>
+		<updated>2020-06-20T11:25:14</updated>
+
+		<published>2020-06-20T11:25:14</published>
+		<id>https://love2d.org/forums/viewtopic.php?t=88995&amp;p=234398#p234398</id>
+		<link href="https://love2d.org/forums/viewtopic.php?t=88995&amp;p=234398#p234398"/>
+		<title type="html"><![CDATA[Support and Development • Game random crash on a start]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?t=88995&amp;p=234398#p234398"><![CDATA[
+Hi everyone  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-shy.png" width="16" height="16" alt=":oops:" title="Embarrassed"> <br>Waited for a few months before asking this, and now is the time, because I found nothing  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-ehem.png" width="16" height="16" alt=":ehem:" title="Ehem ..."> <br><br>I have a relatively complex game on love 11.2 (or 11.3 no difference for that aspect).<br>I am running it through SublimeText Ctrl+B that executes love.exe with folder parameter.<br>It runs correctly in approximately 49 from 50 runs (with no change in code (or sublime settings or whatever) between runs).<br>And in 1 run from 50 I have this:<ul><li>game 'loads' correctly as I see with my custom console output, no warnings no errors</li><li>then I see a pure white window for a few seconds</li><li>then game crashes, sometimes with no output, sometimes with following output:</li></ul><div class="codebox"><p>CODE: </p><pre><code>Loaded 'current' in 0.18 secondsDetected refreshrate 60 HzLoaded in 1.36 seconds[Finished in 5.0s with exit code 3221225477][cmd ['D_repoMegaFactorycode_buildlove-win64love.exe', 'D_repoMegaFactorycode']][dir D_repoMegaFactorycodejournal][path CProgram Files (x86)Common FilesOracleJavajavapath;CProgram Files (x86)Common FilesIntelShared FilescppbinIntel64;CProgram Files (x86)Razer Chroma SDKbin;CProgram FilesRazer Chroma SDKbin;CWINDOWSsystem32;CWINDOWS;CWINDOWSSystem32Wbem;CWINDOWSSystem32WindowsPowerShellv1.0;CProgram FilesGitcmd;CProgram FilesMicrosoft Windows Performance Toolkit;CProgram FilesMicrosoft SQL Server120ToolsBinn;CProgram FilesMicrosoft SQL Server130ToolsBinn;CProgram Files (x86)Lua5.1;CProgram Files (x86)Lua5.1clibs;CProgram Files (x86)NVIDIA CorporationPhysXCommon;CProgram FilesLua;CProgram Files (x86)Lua5.1;CUsersUserAppDataLocalMicrosoftWindowsApps;CProgram Files (x86)GtkSharp2.12bin;CWINDOWSsystem32;CWINDOWS;CWINDOWSSystem32Wbem;CWINDOWSSystem32WindowsPowerShellv1.0;CWINDOWSSystem32OpenSSH;CProgram FilesMicrosoft VS Codebin;CProgram FilesNVIDIA CorporationNVIDIA NvDLISR;CProgram FilesLua;CProgram Files (x86)Lua5.1;CUsersUserAppDataLocalMicrosoftWindowsApps;CProgram FilesMicrosoft VS Codebin;CUsersUserAppDataLocalGitHubDesktopbin;%USERPROFILE%AppDataLocalMicrosoftWindowsApps;]</code></pre></div>I googled 3221225477 and found this:<div class="codebox"><p>CODE: </p><pre><code>3221225477 converted to hex is 0xC0000005, which stands for STATUS_ACCESS_VIOLATION, which means you tried to access (read, write or execute) invalid memory.</code></pre></div>And this happening only with this particular game, so it is lua-code-related.<br><span style="color:#BFBFBF">And when I concatenate love.exe with zipped folder to obtain mygame.exe and then run it, I have not noticed that behaviour, but maybe I just did not do this enough times.</span><br>I have no clue how to find the source of that error?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135618">Sasha264</a> — Sat Jun 20, 2020 11:25 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Sasha264]]></name></author>
+		<updated>2020-06-20T12:15:10 </updated>
+
+		<published>2020-06-20T10:51:43</published>
+		<id>https://love2d.org/forums/viewtopic.php?t=88994&amp;p=234397#p234397</id>
+		<link href="https://love2d.org/forums/viewtopic.php?t=88994&amp;p=234397#p234397"/>
+		<title type="html"><![CDATA[Support and Development • [SOLVED] How to send matrix parameter to a shader?]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?t=88994&amp;p=234397#p234397"><![CDATA[
+Hello!  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-emo.png" width="16" height="16" alt=":emo:" title="Emo"> <br>Did not found this in docs...<div class="codebox"><p>CODE: </p><pre><code>local pixelcode = [[extern mat2 myMatrix;vec4 effect(vec4 color, Image texture, vec2 tc, vec2 sc){// some use of the myMatrix herereturn Texel(texture, tc) * color;}]]local shader = love.graphics.newShader(pixelcode)shader:send("myMatrix", ?)</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135618">Sasha264</a> — Sat Jun 20, 2020 10:51 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Sasha264]]></name></author>
+		<updated>2020-06-20T10:29:08</updated>
+
+		<published>2020-06-20T10:29:08</published>
+		<id>https://love2d.org/forums/viewtopic.php?t=88981&amp;p=234396#p234396</id>
+		<link href="https://love2d.org/forums/viewtopic.php?t=88981&amp;p=234396#p234396"/>
+		<title type="html"><![CDATA[Support and Development • Re: Help With Images]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?t=88981&amp;p=234396#p234396"><![CDATA[
+@SmellyFishstiks, welcome!  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-three.png" width="16" height="16" alt=":3" title="Awww"> <br><br>In love Image &amp; Canvas is stored in video (gpu) memory and ImageData is stored in cpu memory.<br>And here is some methods to copy from one to another.<br>To copy gpu -&gt; cpu here is this function <a href="https://love2d.org/wiki/Canvas:newImageData" class="postlink">https://love2d.org/wiki/Canvas:newImageData</a><br><br>I used it a lot in my projects. Because there is no another way to do some sort of things.<br>Yes, it is inefficient because of hardware architecture (as some people keep telling me), but it is not <strong>that bad</strong> inefficient.<br>In my experience I still can achieve 240+ fps, even if I copy <strong>small</strong> canvas every frame to cpu memory.<br><span style="color:#AAAAAA">And if game runs on device with integrated gpu, then the word 'inefficient' can be skipped at all =)</span><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135618">Sasha264</a> — Sat Jun 20, 2020 10:29 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Sasha264]]></name></author>
+		<updated>2020-06-20T10:08:02</updated>
+
+		<published>2020-06-20T10:08:02</published>
+		<id>https://love2d.org/forums/viewtopic.php?t=88993&amp;p=234395#p234395</id>
+		<link href="https://love2d.org/forums/viewtopic.php?t=88993&amp;p=234395#p234395"/>
+		<title type="html"><![CDATA[Support and Development • What exactly does Canvas:renderTo do?]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?t=88993&amp;p=234395#p234395"><![CDATA[
+Good day!  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-crazy.png" width="16" height="16" alt=":crazy:" title="Hurr Durr"> <br>As wiki says <a href="https://love2d.org/wiki/Canvas:renderTo" class="postlink">https://love2d.org/wiki/Canvas:renderTo</a><div class="codebox"><p>CODE: </p><pre><code>canvas:renderTo(func)</code></pre></div> do this:<div class="codebox"><p>CODE: </p><pre><code>love.graphics.setCanvas(canvas)func()love.graphics.setCanvas()</code></pre></div>Is it correct?<br>In my experience it does something like this:<div class="codebox"><p>CODE: </p><pre><code>local oldCanvas = love.graphics.getCanvas()love.graphics.setCanvas(canvas)func()love.graphics.setCanvas(oldCanvas)</code></pre></div>Wait a minute, maybe even something like this:<div class="codebox"><p>CODE: </p><pre><code>local oldCanvases = { love.graphics.getCanvas() }love.graphics.setCanvas(canvas)func()love.graphics.setCanvas(unpack(oldCanvases))</code></pre></div>Oh, and since love 11 here is some mipmaps + stencils + setup wrapper + something more that you can do with<br><a href="https://love2d.org/wiki/love.graphics.setCanvas" class="postlink">https://love2d.org/wiki/love.graphics.setCanvas</a><br><br>So, the final question: renderTo restores <strong>every</strong> aspect of current canvases setup after use?<br>If so, then how to do that 'manually' if I don't use renderTo?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135618">Sasha264</a> — Sat Jun 20, 2020 10:08 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Sasha264]]></name></author>
+		<updated>2020-06-20T09:53:25</updated>
+
+		<published>2020-06-20T09:53:25</published>
+		<id>https://love2d.org/forums/viewtopic.php?t=88918&amp;p=234394#p234394</id>
+		<link href="https://love2d.org/forums/viewtopic.php?t=88918&amp;p=234394#p234394"/>
+		<title type="html"><![CDATA[Support and Development • Re: Server on Love]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?t=88918&amp;p=234394#p234394"><![CDATA[
+@ThatBonk, sure, why not =)<br><blockquote class="uncited"><div>...where I needed to update the RGB values for transparent pixels in a specific way to solve a minor visual glitch.</div></blockquote>Do you mean RGB values of <strong>fully</strong> transparent pixels? I did some of that too ^_^<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135618">Sasha264</a> — Sat Jun 20, 2020 9:53 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SmellyFishstiks]]></name></author>
+		<updated>2020-06-20T07:48:54</updated>
+
+		<published>2020-06-20T07:48:54</published>
+		<id>https://love2d.org/forums/viewtopic.php?t=88981&amp;p=234392#p234392</id>
+		<link href="https://love2d.org/forums/viewtopic.php?t=88981&amp;p=234392#p234392"/>
+		<title type="html"><![CDATA[Support and Development • Re: Help With Images]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?t=88981&amp;p=234392#p234392"><![CDATA[
+ok; I'll see if I want to atempt it later then. I came from PICO-8 and in pico there's a built-in way to test the screen and super easy useing Pget and Pset. IDK thanks for anwsering!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=150880">SmellyFishstiks</a> — Sat Jun 20, 2020 7:48 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jeeper]]></name></author>
+		<updated>2020-06-19T22:14:28</updated>
+
+		<published>2020-06-19T22:14:28</published>
+		<id>https://love2d.org/forums/viewtopic.php?t=88988&amp;p=234389#p234389</id>
+		<link href="https://love2d.org/forums/viewtopic.php?t=88988&amp;p=234389#p234389"/>
+		<title type="html"><![CDATA[Support and Development • Re: Attempt to index global player]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?t=88988&amp;p=234389#p234389"><![CDATA[
+You make a table named "Player", with a capital P. But then in most of the code you type "player.variable" with a lowercase p. Though I would recommend sticking to using "self" as you do when you declare the player width.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=101561">Jeeper</a> — Fri Jun 19, 2020 10:14 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[soulgirl2020]]></name></author>
+		<updated>2020-06-19T21:32:28</updated>
+
+		<published>2020-06-19T21:32:28</published>
+		<id>https://love2d.org/forums/viewtopic.php?t=88988&amp;p=234386#p234386</id>
+		<link href="https://love2d.org/forums/viewtopic.php?t=88988&amp;p=234386#p234386"/>
+		<title type="html"><![CDATA[Support and Development • Attempt to index global player]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?t=88988&amp;p=234386#p234386"><![CDATA[
+I'm building a very basic Zelda 1986 game. I'm trying to get my game to run again after switching to the box2D collision along with the windfield library. Initially, my world was created and tied back to a file name Map.lua. I had to change everything back to main since I want to use windfield along with box2D. My issue is every-time I try to update or render the player.lua file in main, it always returns nill at line 198. Why is this? Also, I am new to love2d.<br><br>main.lua<div class="codebox"><p>CODE: </p><pre><code>Class = require 'class'push = require 'push'require 'Util'player =require 'Player'require 'Enemy1'wf = require 'windfield_master/windfield'TILE_EMPTY = -1-- Tree tilesTILE_TREE = 4-- Top wall tilesTILE_WALL = 2SECRET_WALL = 6TILE_HEART = 1RED_OCTO_1 = 9RED_OCTO_2 = 10RED_OCTO_3 = 11RED_OCTO_4 = 12RED_OCTO_5 = 13RED_OCTO_6 = 14RED_OCTO_7 = 15RED_OCTO_8 = 16-- close resolution to NES but 16:9VIRTUAL_WIDTH = 432VIRTUAL_HEIGHT = 243-- actual window resolutionWINDOW_WIDTH = 1280WINDOW_HEIGHT = 720local SCROLL_SPEED = 65love.graphics.setDefaultFilter('nearest', 'nearest')local tileWidth = 16local tileHeight = 16local mapWidth = 30local mapHeight = 28local xOffset = 8local yOffset = 10local tiles = {}function love.load()    world = wf.newWorld(0, 0, true)        push:setupScreen(VIRTUAL_WIDTH, VIRTUAL_HEIGHT, WINDOW_WIDTH, WINDOW_HEIGHT, {        fullscreen = false,        resizable = true    })        spritesheet = love.graphics.newImage('hearts_tree_walls.png')           -- camera offsets    camX = 0    camY = -3    sprites = generateQuads(spritesheet, 16, 16)        -- cache width and height of map in pixels    mapWidthPixels = mapWidth * tileWidth    mapHeightPixels = mapHeight * tileHeight-- sets a tile at a given x-y coordinate to an integer value    -- first, fill map with empty tiles    for y = 1, mapHeight do        for x = 1, mapWidth do                        -- support for multiple sheets per tile; storing tiles as tables             setTile(x, y, TILE_EMPTY)        end    end    -- create wall tiles on the bottom of the screen    for y = mapHeight / 2 + 1, mapHeight / 2 + 1  do        for x = 0, 25 do            setTile(x, y, TILE_WALL)        end    end    -- Secret wall    for y = mapHeight / 2 + 1, mapHeight / 2 + 1  do        for x = 26, 26 do            setTile(x, y, SECRET_WALL)        end    end    --left hand side tile    for y = 0, 25  do        for x = 1, 1 do            setTile(x, y, TILE_WALL)        end    end    -- Upper right hand side tiles    for y = 0, 25  do        for x = 27, 27 do            setTile(x, y, TILE_WALL)        end    end    --Top screen tiles    for y = 1, 1   do        for x = 0, 26 do            setTile(x, y, TILE_WALL)        end    end    -- tree top left    for y = 5, 5   do        for x = 5, 15 do            setTile(x, y, TILE_TREE)        end    end    -- tree bottom-left    for y = 9, 9   do        for x = 5, 15 do            setTile(x, y, TILE_TREE)        end    end    -- tree right     for y = mapHeight / 2 - 10, mapHeight / 2 - 4   do        for x = 22, 22 do            setTile(x, y, TILE_TREE)        end    end    for y = mapHeight / 2 - 12, mapHeight / 2 - 12   do        for x = 26, 26 do            setTile(x, y, TILE_HEART)        end    end    love.window.setTitle('Legend of Zelda')    love.keyboard.keysPressed = {}    love.keyboard.keysReleased = {}endfunction setTile(x, y, id)    tiles[(y - 1) * mapWidth + x] = idend-- gets the tile type at a given pixel coordinatefunction tileAt(x, y)    return {        x = math.floor(x / tileWidth) + 1,        y = math.floor(y / tileHeight) + 1,        id = getTile(math.floor(x / tileWidth) + 1, math.floor(y / tileHeight) + 1)    }end-- returns an integer value for the tile at a given x-y coordinatefunction getTile(x, y)    return tiles[(y - 1) * mapWidth + x]endfunction love.resize(w,h)    push:resize(w,h)endfunction love.keyboard.wasReleased(key)    if (love.keyboard.keysReleased[key]) then        return true    else        return false    endendfunction love.keypressed(key)    if key == 'escape' then        love.event.quit()    end    love.keyboard.keysPressed[key] = true    player.collider:setPosition(0, 0)        player.collider:setLinearVelocity(0, 0)endfunction love.keyreleased(key)    love.keyboard.keysReleased[key] = trueendfunction love.update(dt)    if love.keyboard.isDown('w') then        camY = math.max(0,camY - dt * SCROLL_SPEED)    elseif love.keyboard.isDown('s') then        camY = math.min(camY + dt * SCROLL_SPEED, mapHeightPixels - VIRTUAL_HEIGHT)    end    world:update(dt)    player:update(dt)    enemy1:update(dt)    enemy2:update(dt)    enemy3:update(dt)      -- reset all keys pressed and released this frame    love.keyboard.keysPressed = {}    love.keyboard.keysReleased = {}    endfunction love.draw()    push:apply('start')    world:draw()    love.graphics.clear(252/255, 216/255, 169/255, 1)    local scaleX = -1    for y = 1, mapHeight do        for x = 1, mapWidth do            local tile = getTile(x, y)            if tile ~= TILE_EMPTY then                love.graphics.draw(spritesheet, sprites[tile],                    (x - 1) * tileWidth, (y - 1) * tileHeight)            end        end    end    player:render()    enemy:render()    push:apply('end')end</code></pre></div><br>Player.lua <div class="codebox"><p>CODE: </p><pre><code>--[[    Represents our player in the game, with its own sprit]]Player = {}require 'Animation'local WALKING_SPEED = 140local MOVE_SPEED = 80local tileWidth = 16local tileHeight = 16local mapWidth = 30local mapHeight = 28local xOffset = 8local yOffset = 10WALKING_RIGHT_1 = 3WALKING_RIGHT_2 = 4WALKING_LEFT_1 = 7WALKING_LEFT_2 = 8WALKING_UP_1 = 5WALKING_UP_2 = 6WALKING_DOWN_1 = 1WALKING_DOWN_2 = 2function Player:init(main)-- player physics collision --player.collider = world:newRectangleCollider(16,16,16,16)--player.collider:setCollisionClass("player")    self.width = 16    player.height = 16    -- offset refrence point from top left corner to center of sprite for X axis    player.xOffset = 8    player.yOffset = 16    -- offset refrence point from top left corner to center of sprite for Y axis    player.xOffset2 = 16    player.yOffset2 = 8    player.x = tileWidth * 10    player.y = tileHeight * (mapHeight / 2 - 1) - player.height    player.dx = 0    player.dy =0    player.direction = nil    player.map = map    player.currentFrame = nil       player.texture = love.graphics.newImage('Link_movement.png')    player.frames = {}    player.state = 'idle_down'    player.animations = {        ['idle_right'] = Animation {            texture = player.texture,            frames = {                love.graphics.newQuad(48,0,16,16,player.texture:getDimensions())            },            interval = 1        },        ['idle_left'] = Animation {            texture = player.texture,            frames = {                love.graphics.newQuad(48,16,16,16,player.texture:getDimensions())            },            interval = 1        },        ['idle_up'] = Animation {            texture = player.texture,            frames = {                love.graphics.newQuad(0,16,16,16,player.texture:getDimensions())            },            interval = 1        },        ['idle_down'] = Animation {            texture = player.texture,            frames = {                love.graphics.newQuad(0,0,16,16,player.texture:getDimensions())            },            interval = 1        },        ['walking_right'] = Animation {            texture = player.texture,            frames = {                --4 and 3                love.graphics.newQuad(48,0,16,16,player.texture:getDimensions()),                love.graphics.newQuad(32,0,16,16,player.texture:getDimensions())            },            interval = 0.15        },        ['walking_left'] = Animation {            texture = player.texture,            frames = {                -- 7 and 8                love.graphics.newQuad(32,16,16,16,player.texture:getDimensions()),                love.graphics.newQuad(48,16,16,16,player.texture:getDimensions())            },            interval = 0.15        },        ['walking_up'] = Animation {            texture = player.texture,            frames = {                --6 and 5                love.graphics.newQuad(16,16,16,16,player.texture:getDimensions()),                love.graphics.newQuad(0,16,16,16,player.texture:getDimensions())            },            interval = 0.15        },        ['walking_down'] = Animation {            texture = player.texture,            frames = {                 -- 2 and 1                love.graphics.newQuad(16,0,16,16,player.texture:getDimensions()),                love.graphics.newQuad(0,0,16,16,player.texture:getDimensions())            },            interval = 0.15        },        ['sword_up'] = Animation {            texture = player.texture,            frames = {                -- 10 and 14                love.graphics.newQuad(16,64,16,-32,player.texture:getDimensions())            },            interval = 1        },        ['sword_down'] = Animation {            texture = player.texture,            frames = {                -- 9 adn 13 FLIP FOR UP                love.graphics.newQuad(0,32,16,32,player.texture:getDimensions())            },            interval = 1        },        ['sword_left'] = Animation {            texture = player.texture,            frames = {                -- 15,16                love.graphics.newQuad(32,48,32,16,player.texture:getDimensions())            },            interval = 1        },        ['sword_right'] = Animation {            texture = player.texture,            frames = {                -- 11 and 12 FLIP FOR LEFT                love.graphics.newQuad(32,32,32,16,player.texture:getDimensions())            },            interval = 1        }    }    player.behaviors = {        ['idle_down'] = function(dt)            if love.keyboard.isDown('up') then                player.y = player.y -MOVE_SPEED * dt                player.animation = player.animations['walking_up']                player.state = 'idle_up'                          elseif love.keyboard.isDown('down') then                player.y = player.y + MOVE_SPEED * dt                player.animation = player.animations['walking_down']                player.state = 'idle_down'                         elseif love.keyboard.isDown('left') then                player.x = player.x -MOVE_SPEED * dt                player.animation = player.animations['walking_left']                player.state = 'idle_left'                           elseif love.keyboard.isDown('right') then                player.x = player.x + MOVE_SPEED * dt                player.animation = player.animations['walking_right']                player.state = 'idle_right'                        elseif love.keyboard.isDown('space')  then                player.animation = player.animations['sword_down']            else                player.animation = player.animations['idle_down']                    end                              end,              ['idle_up'] = function (dt)            if love.keyboard.isDown('up') then                player.y = player.y -MOVE_SPEED * dt                player.animation = player.animations['walking_up']                player.state = 'idle_up'                               elseif love.keyboard.isDown('down') then                player.y = player.y + MOVE_SPEED * dt                player.animation = player.animations['walking_down']                player.state = 'idle_down'                                      elseif love.keyboard.isDown('left') then                player.x = player.x -MOVE_SPEED * dt                player.animation = player.animations['walking_left']                player.state = 'idle_left'                                   elseif love.keyboard.isDown('right') then                player.x = player.x + MOVE_SPEED * dt                player.animation = player.animations['walking_right']                player.state = 'idle_right'                           elseif love.keyboard.isDown('space')  then                player.direction = 'up'                player.animation = player.animations['sword_down']            else                              player.animation = player.animations['idle_up']            end        end,        ['idle_right'] = function (dt)            if love.keyboard.isDown('up') then                player.y = player.y -MOVE_SPEED * dt                player.animation = player.animations['walking_up']                player.state = 'idle_up'                           elseif love.keyboard.isDown('down') then                player.y = player.y + MOVE_SPEED * dt                player.animation = player.animations['walking_down']                player.state = 'idle_down'                            elseif love.keyboard.isDown('left') then                player.x = player.x -MOVE_SPEED * dt                player.animation = player.animations['walking_left']                player.state = 'idle_left'                           elseif love.keyboard.isDown('right') then                player.x = player.x + MOVE_SPEED * dt                player.animation = player.animations['walking_right']                player.state = 'idle_right'                        elseif love.keyboard.isDown('space')  then                            player.animation = player.animations['sword_right']                        else                player.animation = player.animations['idle_right']            end                                                              end,            ['idle_left'] = function (dt)                if love.keyboard.isDown('up') then                    player.y = player.y -MOVE_SPEED * dt                    player.animation = player.animations['walking_up']                    player.state = 'idle_up'                              elseif love.keyboard.isDown('down') then                    player.y = player.y + MOVE_SPEED * dt                    player.animation = player.animations['walking_down']                    player.state = 'idle_down'                                elseif love.keyboard.isDown('left') then                    player.x = player.x -MOVE_SPEED * dt                    player.animation = player.animations['walking_left']                    player.state = 'idle_left'                                  elseif love.keyboard.isDown('right') then                    player.x = player.x + MOVE_SPEED * dt                    player.animation = player.animations['walking_right']                    player.state = 'idle_right'                                 elseif love.keyboard.isDown('space')  then                    player.direction = 'left'                    player.animation = player.animations['sword_right']                      else                    player.animation = player.animations['idle_left']                end                         end    }        function Player:update(dt)        -- Update behaviors, animations, and frames        player.behaviors[player.state](dt)        player.animation:update(dt)         player.currentFrame = player.animation:getCurrentFrame()            end    function Player:render()        -- Define scale variables        local scaleX         local scaleY         -- If space is pressed and the state is left then it will take that current frame (sword_right) and flip it horizontally        -- This was done since everything is drawn to its upper left corner and to keep consistency         if love.keyboard.isDown('space') and player.state == 'idle_left' then            --Flips 180 degrees            scaleX = -1        else            -- No flip            scaleX = 1        end        -- If space is pressed and the state is up then it will take that current frame and flip it vertically        if love.keyboard.isDown('space') and player.state == 'idle_up' then            scaleY = -1        else            scaleY = 1        end        -- Change reference point from top left corner to the center so it can flip within the same position for both x and y axis flips        if love.keyboard.isDown('space') and player.state == 'idle_left' then            love.graphics.draw(player.texture, player.currentFrame, math.floor(player.x + player.xOffset),math.floor(player.y + player.yOffset),            0,scaleX,1,player.xOffset,player.yOffset)        elseif love.keyboard.isDown('space') and player.state == 'idle_up' then            love.graphics.draw(player.texture, player.currentFrame, math.floor(player.x + player.xOffset2),math.floor(player.y + player.yOffset2),            0,1,scaleY,player.xOffset2,player.yOffset2)        else            -- If the first two conditions does not appy, just render the current frames without any scaling or rotation            love.graphics.draw(player.texture, player.currentFrame, math.floor(player.x),math.floor(player.y))         end    endend</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=151707">soulgirl2020</a> — Fri Jun 19, 2020 9:32 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zorg]]></name></author>
+		<updated>2020-06-19T20:33:37</updated>
+
+		<published>2020-06-19T20:33:37</published>
+		<id>https://love2d.org/forums/viewtopic.php?t=88981&amp;p=234385#p234385</id>
+		<link href="https://love2d.org/forums/viewtopic.php?t=88981&amp;p=234385#p234385"/>
+		<title type="html"><![CDATA[Support and Development • Re: Help With Images]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?t=88981&amp;p=234385#p234385"><![CDATA[
+Well, with today's GPU architectures, what you want to do is highly inefficient, not to mention that the function i linked is not exactly "frame-accurate", in that it might capture a frame different from what you'd be expecting to.<br><br>Usually, you'd want to do all pixel-like manipulations on the CPU side instead... and that tends to have its own limits as well.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=80325">zorg</a> — Fri Jun 19, 2020 8:33 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zorg]]></name></author>
+		<updated>2020-06-19T20:31:52</updated>
+
+		<published>2020-06-19T20:31:52</published>
+		<id>https://love2d.org/forums/viewtopic.php?t=88980&amp;p=234384#p234384</id>
+		<link href="https://love2d.org/forums/viewtopic.php?t=88980&amp;p=234384#p234384"/>
+		<title type="html"><![CDATA[Support and Development • Re: how to download older versions]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?t=88980&amp;p=234384#p234384"><![CDATA[
+<blockquote class="uncited"><div>how do i download version 0.9.1? i am on a mac.</div></blockquote>Just curious, why do you want an old version?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=80325">zorg</a> — Fri Jun 19, 2020 8:31 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TypicalHB]]></name></author>
+		<updated>2020-06-19T15:20:54</updated>
+
+		<published>2020-06-19T15:20:54</published>
+		<id>https://love2d.org/forums/viewtopic.php?t=88986&amp;p=234382#p234382</id>
+		<link href="https://love2d.org/forums/viewtopic.php?t=88986&amp;p=234382#p234382"/>
+		<title type="html"><![CDATA[Support and Development • Re: Help With Folders And Require.]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?t=88986&amp;p=234382#p234382"><![CDATA[
+<blockquote class="uncited"><div>Change the require call to require("Steam.luasteam"). The module name uses "." as folder separator (instead of "/").</div></blockquote>Thank you, this helped a lot.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=144538">TypicalHB</a> — Fri Jun 19, 2020 3:20 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ReFreezed]]></name></author>
+		<updated>2020-06-19T14:57:49</updated>
+
+		<published>2020-06-19T14:57:49</published>
+		<id>https://love2d.org/forums/viewtopic.php?t=88986&amp;p=234381#p234381</id>
+		<link href="https://love2d.org/forums/viewtopic.php?t=88986&amp;p=234381#p234381"/>
+		<title type="html"><![CDATA[Support and Development • Re: Help With Folders And Require.]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?t=88986&amp;p=234381#p234381"><![CDATA[
+Change the require call to require("Steam.luasteam"). The module name uses "." as folder separator (instead of "/").<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137182">ReFreezed</a> — Fri Jun 19, 2020 2:57 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>
